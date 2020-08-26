@@ -1,0 +1,38 @@
+header {
+
+    .container_flex {
+        justify-content: space-between;
+
+        .flex_item_header {
+            flex-basis: 50%;
+
+            h1 {
+                @include h1;
+                padding-top: 30px;
+            }
+        
+            p {
+                @include p;
+                max-width: 500px;
+                text-align: justify;
+                line-height: 1.7;
+            }
+        
+            a {
+                @include h1;
+            }
+
+            ul.container_flex {
+                justify-content: flex-end;
+                list-style: none;
+
+                li {
+                    padding: 30px 20px;
+                }
+            }
+
+        }
+    }
+    
+    
+}

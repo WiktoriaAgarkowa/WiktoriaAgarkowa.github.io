@@ -1,0 +1,13 @@
+@mixin h1 {
+    color: $base-text-color;
+    font-family: $base-font;
+    font-weight: 300;
+    font-size: 25px;
+}
+
+@mixin p {
+    color: $base-text-color;
+    font-family: $base-font;
+    font-weight: 300;
+    font-size: 13px;
+}

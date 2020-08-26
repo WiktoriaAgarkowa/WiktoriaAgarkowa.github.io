@@ -1,0 +1,18 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    background-color: $base-bg-color;
+}
+
+.container {
+    max-width: 1400px;
+    margin: auto;
+    position: relative;
+}
+
+.container_flex {
+    display: flex;
+    flex-wrap: wrap;
+}
