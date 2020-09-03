@@ -1,0 +1,60 @@
+#projects {
+    .header_projects {
+        text-align: center;
+        padding: 20px 0;
+        border: 1px solid $fifth-text-color;
+        border-radius: 50px;
+        transition: all .5s;
+
+        h2 {
+            @include h1;
+            display: inline;
+            padding: 0 55px;
+            color: $fifth-text-color;
+            transition: all .5s;
+        }
+
+        h2:hover {
+            cursor: pointer;
+        }
+
+        h2:nth-child(1):hover {
+            color: $second-text-color;
+        }
+
+        h2:nth-child(3):hover {
+            color: $third-text-color;
+        }
+
+        h2:nth-child(5):hover {
+            color: $fourth-text-color;
+        }
+
+        .small_screen {
+            display: none;
+        }
+    }
+
+    .social_app {
+        border: 1px solid $second-text-color;
+    }
+
+    .laning_page {
+        border: 1px solid $third-text-color;
+    }
+
+    .wether_app {
+        border: 1px solid $fourth-text-color;
+    }
+
+    .progect_display {
+        margin-top: 70px;
+        h1 {
+            @include h1;
+            font-size: 100px;
+            text-align: center;
+            color: $fifth-text-color;
+            transition: all .5s;
+        }
+    }
+}

@@ -277,18 +277,18 @@ a:focus {
       flex-basis: 60%;
 }
 
-header .container_flex {
+#main_header .container_flex {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 
-header .container_flex .flex_item_header {
+#main_header .container_flex .flex_item_header {
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
 }
 
-header .container_flex .flex_item_header h1 {
+#main_header .container_flex .flex_item_header h1 {
   color: #FFFFFF;
   font-family: "Inconsolata", monospace;
   font-weight: 300;
@@ -296,7 +296,7 @@ header .container_flex .flex_item_header h1 {
   padding-top: 30px;
 }
 
-header .container_flex .flex_item_header p {
+#main_header .container_flex .flex_item_header p {
   color: #FFFFFF;
   font-family: "Inconsolata", monospace;
   font-weight: 300;
@@ -306,14 +306,14 @@ header .container_flex .flex_item_header p {
   line-height: 1.7;
 }
 
-header .container_flex .flex_item_header p .link {
+#main_header .container_flex .flex_item_header p .link {
   color: #7BDCFE;
   font-family: "Inconsolata", monospace;
   font-weight: 300;
   font-size: 13px;
 }
 
-header .container_flex .flex_item_header a {
+#main_header .container_flex .flex_item_header a {
   color: #FFFFFF;
   font-family: "Inconsolata", monospace;
   font-weight: 300;
@@ -322,19 +322,88 @@ header .container_flex .flex_item_header a {
   text-decoration: none;
 }
 
-header .container_flex .flex_item_header a:hover {
+#main_header .container_flex .flex_item_header a:hover {
   border-bottom: 1px solid #FFFFFF;
 }
 
-header .container_flex .flex_item_header ul.container_flex {
+#main_header .container_flex .flex_item_header ul.container_flex {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
   list-style: none;
 }
 
-header .container_flex .flex_item_header ul.container_flex li {
+#main_header .container_flex .flex_item_header ul.container_flex li {
   padding: 30px 20px;
+}
+
+#projects .header_projects {
+  text-align: center;
+  padding: 20px 0;
+  border: 1px solid #4A4A4A;
+  border-radius: 50px;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+#projects .header_projects h2 {
+  color: #FFFFFF;
+  font-family: "Inconsolata", monospace;
+  font-weight: 300;
+  font-size: 25px;
+  display: inline;
+  padding: 0 55px;
+  color: #4A4A4A;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+#projects .header_projects h2:hover {
+  cursor: pointer;
+}
+
+#projects .header_projects h2:nth-child(1):hover {
+  color: #7BDCFE;
+}
+
+#projects .header_projects h2:nth-child(3):hover {
+  color: #FFE799;
+}
+
+#projects .header_projects h2:nth-child(5):hover {
+  color: #FFB496;
+}
+
+#projects .header_projects .small_screen {
+  display: none;
+}
+
+#projects .social_app {
+  border: 1px solid #7BDCFE;
+}
+
+#projects .laning_page {
+  border: 1px solid #FFE799;
+}
+
+#projects .wether_app {
+  border: 1px solid #FFB496;
+}
+
+#projects .progect_display {
+  margin-top: 70px;
+}
+
+#projects .progect_display h1 {
+  color: #FFFFFF;
+  font-family: "Inconsolata", monospace;
+  font-weight: 300;
+  font-size: 25px;
+  font-size: 100px;
+  text-align: center;
+  color: #4A4A4A;
+  -webkit-transition: all .5s;
+  transition: all .5s;
 }
 
 #skills h2 {
@@ -436,5 +505,28 @@ footer p {
   color: red;
   font-size: 12px;
   font-family: "Inconsolata", monospace;
+}
+
+hr {
+  width: 100px;
+  margin-top: 50px;
+  border: 1px solid #4A4A4A;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+hr:nth-child(1) {
+  -webkit-transform: rotate(60deg);
+          transform: rotate(60deg);
+}
+
+hr:nth-child(2) {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+hr:nth-child(3) {
+  -webkit-transform: rotate(120deg);
+          transform: rotate(120deg);
 }
 /*# sourceMappingURL=style.css.map */
