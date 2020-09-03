@@ -16,10 +16,23 @@ header {
                 max-width: 500px;
                 text-align: justify;
                 line-height: 1.7;
+
+                .link {
+                    color: $second-text-color;
+                    font-family: $base-font;
+                    font-weight: 300;
+                    font-size: 13px;
+                }
             }
         
             a {
                 @include h1;
+                font-size: 12px;
+                text-decoration: none;
+                
+                &:hover {
+                    border-bottom: 1px solid $base-text-color;
+                }
             }
 
             ul.container_flex {

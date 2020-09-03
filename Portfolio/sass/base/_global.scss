@@ -16,3 +16,21 @@ html {
     display: flex;
     flex-wrap: wrap;
 }
+
+a {
+    &:focus {
+        outline: none;
+    }
+}
+
+#body {
+    padding: 50px 0;
+}
+
+.flex_item_body {
+    flex-basis: 20%;
+}
+
+.flex_item_body_middle {
+    flex-basis: 60%;
+}

@@ -1,0 +1,6 @@
+#contact {
+    h2 {
+        @include h1;
+        padding-bottom: 20px;
+    }
+}

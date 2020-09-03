@@ -1,0 +1,14 @@
+#skills {
+
+    h2 {
+        @include h1;
+        text-align: right;
+    }
+
+    p {
+        @include p;
+        max-width: 500px;
+        text-align: right;
+        line-height: 1.7;
+    }
+}

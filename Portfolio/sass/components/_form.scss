@@ -1,0 +1,69 @@
+#contact {
+
+    form {
+        position: relative;
+
+        input, textarea {
+            display: block;
+            margin: 10px 0;
+            padding: 10px 15px;
+            background-color: transparent;
+            border: 1px solid $base-text-color;
+            color: $base-text-color;
+            font-family: $base-font;
+            font-size: 12px;
+
+            &.error {
+                border: 1px solid red;
+            }
+
+            &:focus {
+                outline: none;
+            }
+
+            &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+                color: $base-text-color;
+                font-size: 12px;
+                
+              }
+        
+              &::-moz-placeholder { /* Firefox 19+ */
+                color: $base-text-color;
+                font-size: 12px;
+                
+              }
+        
+              &:-ms-input-placeholder { /* IE 10+ */
+                color: $base-text-color;
+                font-size: 12px;
+                
+              }
+        
+              &:-moz-placeholder { /* Firefox 18- */
+                color: $base-text-color;
+                font-size: 12px;
+                
+              }
+            
+            
+        }
+
+        textarea {
+            height: 100px;
+        }
+
+        button {
+            font-family: $base-font;
+            font-size: 12px;
+            padding: 10px 15px;
+            font-weight: bold;
+        }
+
+        #error_msg {
+            color: red;
+            font-size: 12px;
+            font-family: $base-font;
+        }
+    }
+
+}
