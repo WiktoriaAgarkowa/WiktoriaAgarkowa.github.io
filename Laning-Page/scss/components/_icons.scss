@@ -1,0 +1,29 @@
+//---HEADER ICONS---//
+
+.reserve-icon {
+    padding-left: 10px;
+}
+
+.play {
+    font-size: 40px;
+    color: $base-text-color;
+    padding: 0 5px 0 20px;
+    
+}
+
+
+@media screen and (max-width: 480px) {
+    header {
+        .container {
+            .btn-reserve {
+                .reserve-icon {
+                    display: none;
+                }
+            }
+                        
+        }
+    }
+}
+
+
+

@@ -346,7 +346,7 @@ a:focus {
   transition: all .5s;
 }
 
-#projects .header_projects h2 {
+#projects .header_projects button {
   color: #FFFFFF;
   font-family: "Inconsolata", monospace;
   font-weight: 300;
@@ -354,23 +354,33 @@ a:focus {
   display: inline;
   padding: 0 55px;
   color: #4A4A4A;
+  text-decoration: none;
+  background-color: transparent;
+  border: 0;
   -webkit-transition: all .5s;
   transition: all .5s;
 }
 
-#projects .header_projects h2:hover {
+#projects .header_projects button:focus {
+  outline: none;
+}
+
+#projects .header_projects button:hover {
   cursor: pointer;
 }
 
-#projects .header_projects h2:nth-child(1):hover {
+#projects .header_projects button:nth-child(1):hover,
+#projects .header_projects button:nth-child(1):focus {
   color: #7BDCFE;
 }
 
-#projects .header_projects h2:nth-child(3):hover {
+#projects .header_projects button:nth-child(3):hover,
+#projects .header_projects button:nth-child(3):focus {
   color: #FFE799;
 }
 
-#projects .header_projects h2:nth-child(5):hover {
+#projects .header_projects button:nth-child(5):hover,
+#projects .header_projects button:nth-child(5):focus {
   color: #FFB496;
 }
 
@@ -390,11 +400,7 @@ a:focus {
   border: 1px solid #FFB496;
 }
 
-#projects .progect_display {
-  margin-top: 70px;
-}
-
-#projects .progect_display h1 {
+#projects .project_display h1 {
   color: #FFFFFF;
   font-family: "Inconsolata", monospace;
   font-weight: 300;
@@ -402,8 +408,62 @@ a:focus {
   font-size: 100px;
   text-align: center;
   color: #4A4A4A;
-  -webkit-transition: all .5s;
-  transition: all .5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+#projects .project_display .panel {
+  overflow: hidden;
+  -webkit-transition: -webkit-transform 0.5s ease-out;
+  transition: -webkit-transform 0.5s ease-out;
+  transition: transform 0.5s ease-out;
+  transition: transform 0.5s ease-out, -webkit-transform 0.5s ease-out;
+  height: auto;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+}
+
+#projects .project_display .panel .description {
+  padding: 0 20px 30px 20px;
+  font-family: "Quicksand", sans-serif;
+  color: white;
+  text-align: center;
+}
+
+#projects .project_display .active {
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+}
+
+@-webkit-keyframes showText {
+  0%, 100% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+  50% {
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+  }
+}
+
+@keyframes showText {
+  0%, 100% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+  50% {
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+  }
+}
+
+.change_text {
+  -webkit-animation-name: showText;
+          animation-name: showText;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
 }
 
 #skills h2 {
@@ -528,5 +588,78 @@ hr:nth-child(2) {
 hr:nth-child(3) {
   -webkit-transform: rotate(120deg);
           transform: rotate(120deg);
+}
+
+#projects .project_display {
+  margin-top: 70px;
+  position: relative;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+#projects .project_display::before, #projects .project_display::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  content: '';
+  position: absolute;
+  border: 2px solid transparent;
+  width: 0;
+  height: 0;
+}
+
+#projects .project_display::before {
+  top: 0;
+  left: 0;
+}
+
+#projects .project_display::after {
+  bottom: 0;
+  right: 0;
+}
+
+#projects .clicked::before,
+#projects .clicked::after {
+  width: 100%;
+  height: 100%;
+}
+
+#projects .clicked::before {
+  -webkit-transition: width 0.25s ease-out,  height 0.25s ease-out 0.25s;
+  transition: width 0.25s ease-out,  height 0.25s ease-out 0.25s;
+}
+
+#projects .clicked::after {
+  -webkit-transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
+  transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
+}
+
+#projects .social_app_description::before {
+  border-top-color: #7BDCFE;
+  border-right-color: #7BDCFE;
+}
+
+#projects .social_app_description::after {
+  border-bottom-color: #7BDCFE;
+  border-left-color: #7BDCFE;
+}
+
+#projects .landing_page_description::before {
+  border-top-color: #FFE799;
+  border-right-color: #FFE799;
+}
+
+#projects .landing_page_description::after {
+  border-bottom-color: #FFE799;
+  border-left-color: #FFE799;
+}
+
+#projects .wether_app_description::before {
+  border-top-color: #FFB496;
+  border-right-color: #FFB496;
+}
+
+#projects .wether_app_description::after {
+  border-bottom-color: #FFB496;
+  border-left-color: #FFB496;
 }
 /*# sourceMappingURL=style.css.map */

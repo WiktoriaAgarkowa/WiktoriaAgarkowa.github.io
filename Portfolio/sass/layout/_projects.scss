@@ -1,4 +1,5 @@
 #projects {
+    
     .header_projects {
         text-align: center;
         padding: 20px 0;
@@ -6,27 +7,37 @@
         border-radius: 50px;
         transition: all .5s;
 
-        h2 {
+        button {
             @include h1;
             display: inline;
             padding: 0 55px;
             color: $fifth-text-color;
+            text-decoration: none;
+            background-color: transparent;
+            border: 0;
             transition: all .5s;
         }
 
-        h2:hover {
+        button:focus {
+            outline: none;
+        }
+
+        button:hover {
             cursor: pointer;
         }
 
-        h2:nth-child(1):hover {
+        button:nth-child(1):hover,
+        button:nth-child(1):focus  {
             color: $second-text-color;
         }
 
-        h2:nth-child(3):hover {
+        button:nth-child(3):hover,
+        button:nth-child(3):focus {
             color: $third-text-color;
         }
 
-        h2:nth-child(5):hover {
+        button:nth-child(5):hover,
+        button:nth-child(5):focus {
             color: $fourth-text-color;
         }
 
@@ -47,14 +58,52 @@
         border: 1px solid $fourth-text-color;
     }
 
-    .progect_display {
-        margin-top: 70px;
+
+    .project_display {
+
         h1 {
             @include h1;
             font-size: 100px;
             text-align: center;
             color: $fifth-text-color;
-            transition: all .5s;
+            transition: all 0.5s;
+        }
+
+        .panel {
+            overflow: hidden;
+            transition: transform 0.5s ease-out;
+            height: auto;
+            transform: scaleY(0);
+
+            .description {
+                padding: 0 20px 30px 20px;
+                font-family: $secondary-font;
+                color: white;
+                text-align: center;
+            }
+            
+        }
+
+        .active {
+            transform: scaleY(1);
         }
     }
+
+    
 }
+
+@keyframes showText {
+    0% , 100% {
+      transform: scaleY(1);
+    }
+  
+    50% {
+      transform: scaleY(0);
+    }
+  }
+  
+  .change_text {
+    animation-name: showText;
+    animation-duration: 2s;
+    animation-iteration-count: 1;   
+  }

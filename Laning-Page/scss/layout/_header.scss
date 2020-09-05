@@ -1,0 +1,77 @@
+header {
+    position: relative;
+
+    .bg-image {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 40%;
+        z-index: 20;
+    }
+
+    .bg-image-second {
+        position: absolute;
+        top: 200px;
+        left: -40px;
+        height: 70%;
+        z-index: -10;
+    }
+
+    .container {
+        padding-top: 200px;
+
+        h1 {
+            font-family: $font-secondary;
+            font-size: 50px;
+            color: $color-darker;
+        }
+
+        h3 {
+            @include heading-h3(16px, $font-secondary, $base-text-color);
+            text-transform: $text-transorm-heading;
+        }
+
+        p {
+            @include paragraphs($base-font-size);
+        }
+
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    header {
+        .bg-image {
+            display: none;
+        }
+        
+        .bg-image-second {
+            height: 40%;
+        }
+    }
+    
+} 
+
+@media screen and (max-width: 996px) {
+    header {       
+        .bg-image-second {
+            height: 15%;
+            left: -5px;
+            top: 280px;
+        }
+    }
+    
+} 
+
+@media screen and (max-width: 480px) {
+    header {
+        .container {
+
+            .play {
+                font-size: 30px;
+            }
+            .play_invite {
+                @include paragraphs(11px);
+            }
+        }
+    }
+}

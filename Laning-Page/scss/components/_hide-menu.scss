@@ -1,0 +1,39 @@
+.hide_menu {
+            display: none;
+            
+
+            &.open {
+                display: block;
+                position: fixed;
+                right: 0;
+                background-color: $base-bg-color;
+                z-index: 30;
+                width: 80%;
+                box-shadow: 0 5px 20px #424141;
+                
+    
+                .hide_list_menu{
+                    list-style: none;
+                    text-align: right;
+                    padding: 30px 40px;
+    
+                    li {
+                        padding: 0 0 40px 0;
+                    }
+
+                    i {
+                            font-size: $base-font-size * 1.5;
+                            color: $color-lighter;
+                        }
+                
+                    a {
+                        color: $color-lighter;
+                        font-size: $base-font-size * 2;
+                        font-weight: 400;
+                        
+                    }
+    
+                }
+            }
+        }
+
