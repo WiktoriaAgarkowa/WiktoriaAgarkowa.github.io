@@ -255,8 +255,8 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -ms-flex-wrap: wrap-reverse;
+      flex-wrap: wrap-reverse;
 }
 
 a:focus {
@@ -275,6 +275,21 @@ a:focus {
 .flex_item_body_middle {
   -ms-flex-preferred-size: 60%;
       flex-basis: 60%;
+}
+
+@media screen and (max-width: 1480px) {
+  .container {
+    padding: 0 50px;
+  }
+  #body {
+    padding: 50px 50px;
+  }
+  .flex_item_body {
+    -ms-flex-preferred-size: 33%;
+        flex-basis: 33%;
+    -ms-flex-wrap: wrap-reverse;
+        flex-wrap: wrap-reverse;
+  }
 }
 
 #main_header .container_flex {
@@ -400,7 +415,7 @@ a:focus {
   border: 1px solid #FFB496;
 }
 
-#projects .project_display h1 {
+#projects .project_display h2 {
   color: #FFFFFF;
   font-family: "Inconsolata", monospace;
   font-weight: 300;
@@ -410,6 +425,19 @@ a:focus {
   color: #4A4A4A;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+}
+
+#projects .project_display .sources {
+  text-align: center;
+  padding: 0 0 20px 0;
+}
+
+#projects .project_display .sources a {
+  color: #FFFFFF;
+  font-family: "Inconsolata", monospace;
+  font-weight: 300;
+  font-size: 12px;
+  padding: 0 10px;
 }
 
 #projects .project_display .panel {
@@ -430,40 +458,17 @@ a:focus {
   text-align: center;
 }
 
+#projects .project_display .panel .example {
+  color: #FFFFFF;
+  font-family: "Inconsolata", monospace;
+  font-weight: 300;
+  font-size: 12px;
+  padding-bottom: 20px;
+}
+
 #projects .project_display .active {
   -webkit-transform: scaleY(1);
           transform: scaleY(1);
-}
-
-@-webkit-keyframes showText {
-  0%, 100% {
-    -webkit-transform: scaleY(1);
-            transform: scaleY(1);
-  }
-  50% {
-    -webkit-transform: scaleY(0);
-            transform: scaleY(0);
-  }
-}
-
-@keyframes showText {
-  0%, 100% {
-    -webkit-transform: scaleY(1);
-            transform: scaleY(1);
-  }
-  50% {
-    -webkit-transform: scaleY(0);
-            transform: scaleY(0);
-  }
-}
-
-.change_text {
-  -webkit-animation-name: showText;
-          animation-name: showText;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
 }
 
 #skills h2 {
@@ -479,9 +484,23 @@ a:focus {
   font-family: "Inconsolata", monospace;
   font-weight: 300;
   font-size: 12px;
-  max-width: 500px;
+  max-width: 200px;
   text-align: right;
   line-height: 1.7;
+}
+
+@media screen and (max-width: 1480px) {
+  #skills.flex_item_body {
+    -ms-flex-preferred-size: 30%;
+        flex-basis: 30%;
+  }
+  #skills.flex_item_body p, #skills.flex_item_body h2 {
+    text-align: center;
+    max-width: none;
+  }
+  #skills.flex_item_body h2 {
+    padding-top: 50px;
+  }
 }
 
 #contact h2 {
@@ -619,6 +638,7 @@ hr:nth-child(3) {
 
 #projects .clicked::before,
 #projects .clicked::after {
+  z-index: -1;
   width: 100%;
   height: 100%;
 }
@@ -661,5 +681,36 @@ hr:nth-child(3) {
 #projects .wether_app_description::after {
   border-bottom-color: #FFB496;
   border-left-color: #FFB496;
+}
+
+@-webkit-keyframes showText {
+  0%, 100% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+  50% {
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+  }
+}
+
+@keyframes showText {
+  0%, 100% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+  50% {
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+  }
+}
+
+.change_text {
+  -webkit-animation-name: showText;
+          animation-name: showText;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
 }
 /*# sourceMappingURL=style.css.map */

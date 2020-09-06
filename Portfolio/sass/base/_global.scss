@@ -14,7 +14,7 @@ html {
 
 .container_flex {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
 }
 
 a {
@@ -33,4 +33,19 @@ a {
 
 .flex_item_body_middle {
     flex-basis: 60%;
+}
+
+@media screen and (max-width: 1480px) {
+    .container {
+        padding: 0 50px;
+    }
+
+    #body {
+        padding: 50px 50px;
+    }
+
+    .flex_item_body {
+        flex-basis: 33%;
+        flex-wrap: wrap-reverse;
+    }
 }

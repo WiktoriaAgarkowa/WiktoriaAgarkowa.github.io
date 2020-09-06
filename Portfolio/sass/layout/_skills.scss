@@ -7,8 +7,23 @@
 
     p {
         @include p;
-        max-width: 500px;
+        max-width: 200px;
         text-align: right;
         line-height: 1.7;
+    }
+}
+
+@media screen and (max-width: 1480px) {
+    #skills.flex_item_body {
+        flex-basis: 30%;
+
+        p, h2 {
+            text-align: center;
+            max-width: none;
+        }
+
+        h2 {
+            padding-top: 50px;
+        }
     }
 }

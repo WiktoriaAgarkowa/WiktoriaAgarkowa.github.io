@@ -42,37 +42,41 @@ let description = document.querySelector('.description');
 let display = document.querySelector('.project_display');
 let panel = document.querySelector('.panel');
 
-function socialApp() {
-  header.style.border = '1px solid #7BDCFE';
-  lines[0].style.border = '1px solid #7BDCFE';
-  projectHeading.style.color = '#7BDCFE';
-}
+// function socialApp() {
+//   header.style.border = '1px solid #7BDCFE';
+//   lines[0].style.border = '1px solid #7BDCFE';
+//   projectHeading.style.color = '#7BDCFE';
+// }
 
-function landingPage() {
-  header.style.border = '1px solid #FFE799';
-  lines[1].style.border = '1px solid #FFE799';
-  projectHeading.style.color = '#FFE799';
-}
+// function landingPage() {
+//   header.style.border = '1px solid #FFE799';
+//   lines[1].style.border = '1px solid #FFE799';
+//   projectHeading.style.color = '#FFE799';
+// }
 
-function wetherApp() {
-  header.style.border = '1px solid #FFB496';
-  lines[2].style.border = '1px solid #FFB496';
-  projectHeading.style.color = '#FFB496';
-}
+// function wetherApp() {
+//   header.style.border = '1px solid #FFB496';
+//   lines[2].style.border = '1px solid #FFB496';
+//   projectHeading.style.color = '#FFB496';
+// }
 
 
 
-projectNames[0].addEventListener('mouseenter', socialApp);
-projectNames[1].addEventListener('mouseenter', landingPage);
-projectNames[2].addEventListener('mouseenter', wetherApp);
+// projectNames[0].addEventListener('mouseenter', socialApp);
+// projectNames[1].addEventListener('mouseenter', landingPage);
+// projectNames[2].addEventListener('mouseenter', wetherApp);
 
 let buttonClicked = false;
 
 for (i=0; i<projectNames.length; i++) {
   projectNames[i].addEventListener('click', function() {
-    panel.classList.toggle('active'); 
+    panel.classList.add('active'); 
     buttonClicked = true;
-
+    console.log(buttonClicked);
+    
+    if(buttonClicked=== true) {
+      console.log('lalala')
+    }
     return buttonClicked;
   });
   
@@ -81,6 +85,14 @@ for (i=0; i<projectNames.length; i++) {
 
 
 function socialAppDescritpion() {
+
+  for(i=0; i<lines.length; i++) {
+    lines[i].removeAttribute('style');
+  }
+  header.style.border = '1px solid #7BDCFE';
+  lines[0].style.border = '1px solid #7BDCFE';
+  projectHeading.style.color = '#7BDCFE';
+
 
   display.classList.remove('landing_page_description','wether_app_description');
   display.classList.add('clicked');
@@ -92,21 +104,36 @@ function socialAppDescritpion() {
 
 function landingPageDescritpion() {
 
+  for(i=0; i<lines.length; i++) {
+    lines[i].removeAttribute('style');
+  }
+  header.style.border = '1px solid #FFE799';
+  lines[1].style.border = '1px solid #FFE799';
+  projectHeading.style.color = '#FFE799';
+
   display.classList.remove('social_app_description','wether_app_description');
 
   display.classList.add('clicked');
   display.classList.add('landing_page_description');
   projectHeading.innerText = 'Landing-Page';
-  description.innerHTML = "I made the Social-App as part of the assignment during the course. The application has the ability to register (after registration, the data is not saved in the API), it is also possible to login and log out. If you are not logged in, 10 posts of random users are displayed on the main page. When authorizing, posts of users are added to which you are subscribed. <br> <span> Technologies: </ span> <br> HTML, CSS, ReactJS, Styled Components" 
+  description.innerHTML = "I made the Landing-Page as part of the assignment during the course. The application has the ability to register (after registration, the data is not saved in the API), it is also possible to login and log out. If you are not logged in, 10 posts of random users are displayed on the main page. When authorizing, posts of users are added to which you are subscribed. <br> <span> Technologies: </ span> <br> HTML, CSS, ReactJS, Styled Components" 
 }
 
 function wetherAppDescritpion() {
+
+  for(i=0; i<lines.length; i++) {
+    lines[i].removeAttribute('style');
+  }
+  header.style.border = '1px solid #FFB496';
+  lines[2].style.border = '1px solid #FFB496';
+  projectHeading.style.color = '#FFB496';
 
   display.classList.remove('social_app_description','landing_page_description');
 
   display.classList.add('clicked');
   display.classList.add('wether_app_description');
-  projectHeading.innerText = 'Wether-App'; 
+  projectHeading.innerText = 'Wether-App';
+  description.innerHTML = "The Wether-App application has the ability to register (after registration, the data is not saved in the API), it is also possible to login and log out. If you are not logged in, 10 posts of random users are displayed on the main page. When authorizing, posts of users are added to which you are subscribed. <br> <span> Technologies: </ span> <br> HTML, CSS, ReactJS, Styled Components <br>" 
 }
 
 projectNames[0].addEventListener('click', socialAppDescritpion);
@@ -114,22 +141,24 @@ projectNames[1].addEventListener('click', landingPageDescritpion);
 projectNames[2].addEventListener('click', wetherAppDescritpion);
 
 
-if(buttonClicked === false) {
+// if(buttonClicked === false) {
 
-  for (let i=0; i<projectNames.length; i++){
-    projectNames[i].addEventListener('mouseleave', 
+//   for (let i=0; i<projectNames.length; i++){
+//     projectNames[i].addEventListener('mouseleave', 
   
-      function removeColor() {
-        header.style.border = '1px solid #4A4A4A'
-        projectHeading.style.color = '#4A4A4A';
+//       function removeColor() {
+//         header.style.border = '1px solid #4A4A4A'
+//         projectHeading.style.color = '#4A4A4A';
         
-        for (let i=0; i<lines.length; i++){
-          lines[i].style.border = '1px solid #4A4A4A'
-        }
+//         for (let i=0; i<lines.length; i++){
+//           lines[i].style.border = '1px solid #4A4A4A'
+//           console.log(buttonClicked)
+//         }
 
-      });
-  }
-} 
+//       });
+//   }
+// } 
+
 
 console.log(buttonClicked)
 

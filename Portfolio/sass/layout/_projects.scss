@@ -61,12 +61,22 @@
 
     .project_display {
 
-        h1 {
+        h2 {
             @include h1;
             font-size: 100px;
             text-align: center;
             color: $fifth-text-color;
             transition: all 0.5s;
+        }
+
+        .sources {
+            text-align: center;
+            padding: 0 0 20px 0;
+
+            a {
+                @include p;
+                padding: 0 10px;
+            }
         }
 
         .panel {
@@ -81,6 +91,12 @@
                 color: white;
                 text-align: center;
             }
+
+            .example {
+                @include p;
+    
+                padding-bottom: 20px;
+            }
             
         }
 
@@ -91,19 +107,3 @@
 
     
 }
-
-@keyframes showText {
-    0% , 100% {
-      transform: scaleY(1);
-    }
-  
-    50% {
-      transform: scaleY(0);
-    }
-  }
-  
-  .change_text {
-    animation-name: showText;
-    animation-duration: 2s;
-    animation-iteration-count: 1;   
-  }
