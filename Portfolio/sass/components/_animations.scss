@@ -1,15 +1,48 @@
-@keyframes showText {
-    0% , 100% {
+.project_display {
+
+  .close {
+    transform: scaleY(0);
+  }
+
+  .active {
       transform: scaleY(1);
+  }
+}
+
+
+
+@keyframes showText {
+
+    0%, 100% {
+      transform: scaleY(1)
     }
-  
+
     50% {
-      transform: scaleY(0);
+      transform: scaleY(0)
     }
+
+  }
+
+  @keyframes showTextTwice {
+
+    0%, 100% {
+      transform: scaleY(1)
+    }
+
+    50% {
+      transform: scaleY(0)
+    }
+    
   }
   
   .change_text {
     animation-name: showText;
+    animation-duration: 2s;
+    animation-iteration-count: 1;   
+  }
+
+  .change_text_twice {
+    animation-name: showTextTwice;
     animation-duration: 2s;
     animation-iteration-count: 1;   
   }

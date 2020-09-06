@@ -67,6 +67,7 @@
             text-align: center;
             color: $fifth-text-color;
             transition: all 0.5s;
+            margin: 0;
         }
 
         .sources {
@@ -83,7 +84,6 @@
             overflow: hidden;
             transition: transform 0.5s ease-out;
             height: auto;
-            transform: scaleY(0);
 
             .description {
                 padding: 0 20px 30px 20px;
@@ -100,9 +100,6 @@
             
         }
 
-        .active {
-            transform: scaleY(1);
-        }
     }
 
     

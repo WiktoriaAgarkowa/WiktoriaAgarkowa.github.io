@@ -425,6 +425,7 @@ a:focus {
   color: #4A4A4A;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+  margin: 0;
 }
 
 #projects .project_display .sources {
@@ -447,8 +448,6 @@ a:focus {
   transition: transform 0.5s ease-out;
   transition: transform 0.5s ease-out, -webkit-transform 0.5s ease-out;
   height: auto;
-  -webkit-transform: scaleY(0);
-          transform: scaleY(0);
 }
 
 #projects .project_display .panel .description {
@@ -464,11 +463,6 @@ a:focus {
   font-weight: 300;
   font-size: 12px;
   padding-bottom: 20px;
-}
-
-#projects .project_display .active {
-  -webkit-transform: scaleY(1);
-          transform: scaleY(1);
 }
 
 #skills h2 {
@@ -683,6 +677,16 @@ hr:nth-child(3) {
   border-left-color: #FFB496;
 }
 
+.project_display .close {
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+}
+
+.project_display .active {
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+}
+
 @-webkit-keyframes showText {
   0%, 100% {
     -webkit-transform: scaleY(1);
@@ -705,9 +709,40 @@ hr:nth-child(3) {
   }
 }
 
+@-webkit-keyframes showTextTwice {
+  0%, 100% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+  50% {
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+  }
+}
+
+@keyframes showTextTwice {
+  0%, 100% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+  50% {
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+  }
+}
+
 .change_text {
   -webkit-animation-name: showText;
           animation-name: showText;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+.change_text_twice {
+  -webkit-animation-name: showTextTwice;
+          animation-name: showTextTwice;
   -webkit-animation-duration: 2s;
           animation-duration: 2s;
   -webkit-animation-iteration-count: 1;

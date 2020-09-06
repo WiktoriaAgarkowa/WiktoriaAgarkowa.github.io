@@ -42,35 +42,17 @@ let description = document.querySelector('.description');
 let display = document.querySelector('.project_display');
 let panel = document.querySelector('.panel');
 
-// function socialApp() {
-//   header.style.border = '1px solid #7BDCFE';
-//   lines[0].style.border = '1px solid #7BDCFE';
-//   projectHeading.style.color = '#7BDCFE';
-// }
-
-// function landingPage() {
-//   header.style.border = '1px solid #FFE799';
-//   lines[1].style.border = '1px solid #FFE799';
-//   projectHeading.style.color = '#FFE799';
-// }
-
-// function wetherApp() {
-//   header.style.border = '1px solid #FFB496';
-//   lines[2].style.border = '1px solid #FFB496';
-//   projectHeading.style.color = '#FFB496';
-// }
-
-
-
-// projectNames[0].addEventListener('mouseenter', socialApp);
-// projectNames[1].addEventListener('mouseenter', landingPage);
-// projectNames[2].addEventListener('mouseenter', wetherApp);
 
 let buttonClicked = false;
 
 for (i=0; i<projectNames.length; i++) {
   projectNames[i].addEventListener('click', function() {
-    panel.classList.add('active'); 
+    
+    panel.classList.remove('close');
+    panel.classList.toggle('active');
+    panel.classList.toggle('change_text');
+    panel.classList.toggle('change_text_twice');
+    
     buttonClicked = true;
     console.log(buttonClicked);
     
