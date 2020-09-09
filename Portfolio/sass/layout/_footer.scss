@@ -1,6 +1,6 @@
 footer {
     position: relative;
-    bottom: 0;
+    bottom: -70px;
     p {
         color: $base-text-color;
         font-family: $secondary-font;
@@ -9,3 +9,12 @@ footer {
 
 }
 
+@media screen and (max-width: 880px) {
+    footer {
+
+        bottom: 10px;
+        p {
+            font-size: small;
+        }
+    }
+}

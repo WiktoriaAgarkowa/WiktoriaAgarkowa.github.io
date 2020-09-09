@@ -4,3 +4,29 @@
         padding-bottom: 20px;
     }
 }
+
+
+@media screen and (max-width: 1480px) {
+    #contact {
+        padding-top: 50px;
+        flex-basis: 100%;
+
+        h2 {
+            text-align: center;
+        }
+    }
+}
+
+@media screen and (max-width: 870px) {
+    #contact {
+        padding: 20px 0;
+        background-color: $base-text-color;
+
+        h2 {
+            color: $fifth-text-color;
+            font-weight: 500;
+        }
+    }
+
+    
+}

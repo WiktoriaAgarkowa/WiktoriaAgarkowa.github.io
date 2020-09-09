@@ -285,10 +285,24 @@ a:focus {
     padding: 50px 50px;
   }
   .flex_item_body {
-    -ms-flex-preferred-size: 33%;
-        flex-basis: 33%;
     -ms-flex-wrap: wrap-reverse;
         flex-wrap: wrap-reverse;
+  }
+  .flex_item_body_middle {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+}
+
+@media screen and (max-width: 870px) {
+  .container {
+    padding: 0;
+  }
+  #body {
+    padding: 50px 0;
   }
 }
 
@@ -352,8 +366,40 @@ a:focus {
   padding: 30px 20px;
 }
 
+@media screen and (max-width: 880px) {
+  #main_header {
+    padding: 0 20px;
+  }
+  #main_header .container_flex {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  #main_header .container_flex .flex_item_header {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  #main_header .container_flex .flex_item_header h1 {
+    text-align: center;
+  }
+  #main_header .container_flex .flex_item_header p {
+    font-size: 13px;
+    margin: auto;
+    display: block;
+  }
+  #main_header .container_flex .flex_item_header a {
+    font-size: 13px;
+  }
+  #main_header .container_flex .flex_item_header ul.container_flex {
+    padding: 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 #projects .header_projects {
-  text-align: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   padding: 20px 0;
   border: 1px solid #4A4A4A;
   border-radius: 50px;
@@ -384,35 +430,23 @@ a:focus {
   cursor: pointer;
 }
 
-#projects .header_projects button:nth-child(1):hover,
-#projects .header_projects button:nth-child(1):focus {
+#projects .header_projects .social_app:hover,
+#projects .header_projects .social_app:focus {
   color: #7BDCFE;
 }
 
-#projects .header_projects button:nth-child(3):hover,
-#projects .header_projects button:nth-child(3):focus {
+#projects .header_projects .landing_page:hover,
+#projects .header_projects .landing_page:focus {
   color: #FFE799;
 }
 
-#projects .header_projects button:nth-child(5):hover,
-#projects .header_projects button:nth-child(5):focus {
+#projects .header_projects .weather_app:hover,
+#projects .header_projects .weather_app:focus {
   color: #FFB496;
 }
 
 #projects .header_projects .small_screen {
   display: none;
-}
-
-#projects .social_app {
-  border: 1px solid #7BDCFE;
-}
-
-#projects .laning_page {
-  border: 1px solid #FFE799;
-}
-
-#projects .wether_app {
-  border: 1px solid #FFB496;
 }
 
 #projects .project_display h2 {
@@ -465,6 +499,48 @@ a:focus {
   padding-bottom: 20px;
 }
 
+@media screen and (max-width: 880px) {
+  #projects .header_projects {
+    border: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #projects .header_projects button {
+    position: relative;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+    padding: 20px 0;
+  }
+  #projects .header_projects .small_screen {
+    color: #FFFFFF;
+    font-family: "Inconsolata", monospace;
+    font-weight: 300;
+    font-size: 12px;
+    display: none;
+    max-width: 500px;
+    text-align: justify;
+    line-height: 1.7;
+    font-size: 13px;
+    margin: auto;
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+  }
+  #projects .project_display {
+    display: none;
+  }
+  #projects .small_screen_open {
+    display: block;
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+}
+
 #skills h2 {
   color: #FFFFFF;
   font-family: "Inconsolata", monospace;
@@ -485,8 +561,8 @@ a:focus {
 
 @media screen and (max-width: 1480px) {
   #skills.flex_item_body {
-    -ms-flex-preferred-size: 30%;
-        flex-basis: 30%;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
   }
   #skills.flex_item_body p, #skills.flex_item_body h2 {
     text-align: center;
@@ -494,6 +570,15 @@ a:focus {
   }
   #skills.flex_item_body h2 {
     padding-top: 50px;
+  }
+}
+
+@media screen and (max-width: 880px) {
+  #skills {
+    padding-bottom: 40px;
+  }
+  #skills p {
+    font-size: 13px;
   }
 }
 
@@ -505,15 +590,46 @@ a:focus {
   padding-bottom: 20px;
 }
 
+@media screen and (max-width: 1480px) {
+  #contact {
+    padding-top: 50px;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  #contact h2 {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 870px) {
+  #contact {
+    padding: 20px 0;
+    background-color: #FFFFFF;
+  }
+  #contact h2 {
+    color: #4A4A4A;
+    font-weight: 500;
+  }
+}
+
 footer {
   position: relative;
-  bottom: 0;
+  bottom: -70px;
 }
 
 footer p {
   color: #FFFFFF;
   font-family: "Quicksand", sans-serif;
   text-align: center;
+}
+
+@media screen and (max-width: 880px) {
+  footer {
+    bottom: 10px;
+  }
+  footer p {
+    font-size: small;
+  }
 }
 
 #contact form {
@@ -580,6 +696,79 @@ footer p {
   font-family: "Inconsolata", monospace;
 }
 
+@media screen and (max-width: 1480px) {
+  #contact form input, #contact form textarea {
+    margin: auto;
+  }
+  #contact form input, #contact form textarea {
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    padding-right: 150px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #FFFFFF;
+    color: #FFFFFF;
+    font-family: "Inconsolata", monospace;
+    font-size: 12px;
+  }
+  #contact form button {
+    position: relative;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 870px) {
+  #contact form input, #contact form textarea {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #4A4A4A;
+    color: #4A4A4A;
+    font-family: "Inconsolata", monospace;
+    font-weight: bold;
+  }
+  #contact form input.error, #contact form textarea.error {
+    border: none;
+    border-bottom: 1px solid red;
+  }
+  #contact form input::-webkit-input-placeholder, #contact form textarea::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: #4A4A4A;
+    font-weight: bold;
+    letter-spacing: 0.3em;
+  }
+  #contact form input::-moz-placeholder, #contact form textarea::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #4A4A4A;
+    font-weight: bold;
+    letter-spacing: 0.3em;
+  }
+  #contact form input:-ms-input-placeholder, #contact form textarea:-ms-input-placeholder {
+    /* IE 10+ */
+    color: #4A4A4A;
+    font-weight: bold;
+    letter-spacing: 0.3em;
+  }
+  #contact form input:-moz-placeholder, #contact form textarea:-moz-placeholder {
+    /* Firefox 18- */
+    color: #4A4A4A;
+    font-weight: bold;
+    letter-spacing: 0.3em;
+  }
+  #contact form button {
+    background-color: #4A4A4A;
+    color: #FFFFFF;
+  }
+  #contact form button:focus {
+    outline: none;
+  }
+  #contact form #error_msg {
+    text-align: center;
+  }
+}
+
 hr {
   width: 100px;
   margin-top: 50px;
@@ -601,6 +790,12 @@ hr:nth-child(2) {
 hr:nth-child(3) {
   -webkit-transform: rotate(120deg);
           transform: rotate(120deg);
+}
+
+@media screen and (max-width: 880px) {
+  hr {
+    display: none;
+  }
 }
 
 #projects .project_display {
@@ -677,14 +872,10 @@ hr:nth-child(3) {
   border-left-color: #FFB496;
 }
 
-.project_display .close {
-  -webkit-transform: scaleY(0);
-          transform: scaleY(0);
-}
-
-.project_display .active {
-  -webkit-transform: scaleY(1);
-          transform: scaleY(1);
+@media screen and (max-width: 870px) {
+  #projects .project_display::before, #projects .project_display::after {
+    display: none;
+  }
 }
 
 @-webkit-keyframes showText {
@@ -734,8 +925,8 @@ hr:nth-child(3) {
 .change_text {
   -webkit-animation-name: showText;
           animation-name: showText;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
 }
@@ -743,9 +934,19 @@ hr:nth-child(3) {
 .change_text_twice {
   -webkit-animation-name: showTextTwice;
           animation-name: showTextTwice;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
+}
+
+.project_display .close {
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+}
+
+.project_display .active {
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
 }
 /*# sourceMappingURL=style.css.map */

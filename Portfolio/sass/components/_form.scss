@@ -67,3 +67,94 @@
     }
 
 }
+
+@media screen and (max-width: 1480px) {
+
+    #contact {
+
+        form {
+
+            input, textarea {
+                margin: auto;
+            }
+            input, textarea {
+                margin-bottom: 20px;
+                padding: 10px 15px;
+                padding-right: 150px;
+                background-color: transparent;
+                border: none;
+                border-bottom: 1px solid $base-text-color;
+                color: $base-text-color;
+                font-family: $base-font;
+                font-size: 12px;
+            }
+
+            button {
+                position: relative;
+                left: 50%;
+                transform: translate(-50%, 0);
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 870px) {
+
+    #contact {
+        form {
+
+            input, textarea {
+                background-color: transparent;
+                border: none;
+                border-bottom: 1px solid $fifth-text-color;
+                color: $fifth-text-color;
+                font-family: $base-font;
+                font-weight: bold;
+
+                &.error {
+                    border: none;
+                    border-bottom: 1px solid red;
+                }
+
+                &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+                    color: $fifth-text-color;
+                    font-weight: bold;
+                    letter-spacing: 0.3em;
+                  }
+            
+                  &::-moz-placeholder { /* Firefox 19+ */
+                    color: $fifth-text-color;
+                    font-weight: bold;
+                    letter-spacing: 0.3em;
+                  }
+            
+                  &:-ms-input-placeholder { /* IE 10+ */
+                    color: $fifth-text-color;
+                    font-weight: bold;
+                    letter-spacing: 0.3em;
+                  }
+            
+                  &:-moz-placeholder { /* Firefox 18- */
+                    color: $fifth-text-color;    
+                    font-weight: bold;
+                    letter-spacing: 0.3em;
+                  }
+                
+            }
+
+            button {
+                background-color: $fifth-text-color;
+                color: $base-text-color;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+            
+            #error_msg {
+                text-align: center;
+            }
+        }
+    }
+}

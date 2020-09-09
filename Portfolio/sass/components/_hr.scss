@@ -16,3 +16,9 @@ hr:nth-child(2) {
 hr:nth-child(3) {
     transform: rotate(120deg);
 }
+
+@media screen and (max-width: 880px) {
+    hr {
+        display: none;
+    }
+}

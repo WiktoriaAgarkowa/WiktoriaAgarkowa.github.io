@@ -42,6 +42,10 @@ let description = document.querySelector('.description');
 let display = document.querySelector('.project_display');
 let panel = document.querySelector('.panel');
 
+let width = window.innerWidth;
+
+console.log(width)
+
 
 let buttonClicked = false;
 
@@ -118,9 +122,16 @@ function wetherAppDescritpion() {
   description.innerHTML = "The Wether-App application has the ability to register (after registration, the data is not saved in the API), it is also possible to login and log out. If you are not logged in, 10 posts of random users are displayed on the main page. When authorizing, posts of users are added to which you are subscribed. <br> <span> Technologies: </ span> <br> HTML, CSS, ReactJS, Styled Components <br>" 
 }
 
-projectNames[0].addEventListener('click', socialAppDescritpion);
-projectNames[1].addEventListener('click', landingPageDescritpion);
-projectNames[2].addEventListener('click', wetherAppDescritpion);
+if(width> 880 ) {
+
+  projectNames[0].addEventListener('click', socialAppDescritpion);
+  projectNames[1].addEventListener('click', landingPageDescritpion);
+  projectNames[2].addEventListener('click', wetherAppDescritpion);
+
+  console.log('szerokość większa niż 870px')
+} else {
+  console.log('szerokość mniejsza niż 870px')
+}
 
 
 // if(buttonClicked === false) {
@@ -143,4 +154,20 @@ projectNames[2].addEventListener('click', wetherAppDescritpion);
 
 
 console.log(buttonClicked)
+
+//---small-screen settings---//
+
+let descriptionSmallScreen = document.getElementsByClassName('small_screen');
+
+console.log(descriptionSmallScreen)
+
+if(header.classList.contains('header_projects')) {
+  console.log('klasa sprawdzona')
+}
+
+// descriptionSmallScreen.addEventListener('click', function showescription() {
+//   for (i=0; i<descriptionSmallScreen.length; i++) {
+
+//   }
+// })
 

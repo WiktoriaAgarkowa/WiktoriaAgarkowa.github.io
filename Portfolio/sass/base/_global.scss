@@ -44,8 +44,24 @@ a {
         padding: 50px 50px;
     }
 
-    .flex_item_body {
-        flex-basis: 33%;
+    .flex_item_body { 
         flex-wrap: wrap-reverse;
     }
+
+    .flex_item_body_middle {
+        flex-basis: 100%;
+        order: 1;
+    }
 }
+
+
+@media screen and (max-width: 870px) {
+    .container {
+        padding: 0;
+    }
+
+    #body {
+        padding: 50px 0;
+    }
+}
+

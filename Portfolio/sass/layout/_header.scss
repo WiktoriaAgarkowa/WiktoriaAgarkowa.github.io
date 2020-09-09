@@ -50,10 +50,38 @@
     
 }
 
-// @media screen and (max-width: 1440px) {
-//     #main_header {
-//         .container_flex {
+@media screen and (max-width: 880px) {
 
-//         }
-//     }
-// }
+    #main_header {
+        padding: 0 20px;
+
+        .container_flex {
+            flex-wrap: wrap;
+
+            .flex_item_header {
+                flex-basis: 100%;
+
+                h1 {
+                    text-align: center;
+                }
+
+                p {
+                    font-size: 13px;
+                    margin: auto;
+                    display: block;
+                }
+
+                a {
+                    font-size: 13px;
+                }
+
+                ul.container_flex {
+                    padding: 0;
+                    justify-content: center;
+                }
+            }
+        }
+
+    
+    }
+}

@@ -1,16 +1,3 @@
-.project_display {
-
-  .close {
-    transform: scaleY(0);
-  }
-
-  .active {
-      transform: scaleY(1);
-  }
-}
-
-
-
 @keyframes showText {
 
     0%, 100% {
@@ -37,12 +24,23 @@
   
   .change_text {
     animation-name: showText;
-    animation-duration: 2s;
+    animation-duration: 1s;
     animation-iteration-count: 1;   
   }
 
   .change_text_twice {
     animation-name: showTextTwice;
-    animation-duration: 2s;
+    animation-duration: 1s;
     animation-iteration-count: 1;   
+  }
+
+  .project_display {
+
+    .close {
+      transform: scaleY(0);
+    }
+  
+    .active {
+        transform: scaleY(1);
+    }
   }
