@@ -449,6 +449,10 @@ a:focus {
   display: none;
 }
 
+#projects .header_projects .small_screen + div {
+  display: none;
+}
+
 #projects .project_display h2 {
   color: #FFFFFF;
   font-family: "Inconsolata", monospace;
@@ -460,19 +464,6 @@ a:focus {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   margin: 0;
-}
-
-#projects .project_display .sources {
-  text-align: center;
-  padding: 0 0 20px 0;
-}
-
-#projects .project_display .sources a {
-  color: #FFFFFF;
-  font-family: "Inconsolata", monospace;
-  font-weight: 300;
-  font-size: 12px;
-  padding: 0 10px;
 }
 
 #projects .project_display .panel {
@@ -499,6 +490,19 @@ a:focus {
   padding-bottom: 20px;
 }
 
+#projects .sources {
+  text-align: center;
+  padding: 0 0 20px 0;
+}
+
+#projects .sources a {
+  color: #FFFFFF;
+  font-family: "Inconsolata", monospace;
+  font-weight: 300;
+  font-size: 12px;
+  padding: 0 10px;
+}
+
 @media screen and (max-width: 880px) {
   #projects .header_projects {
     border: none;
@@ -517,27 +521,56 @@ a:focus {
             transform: translate(-50%, 0);
     padding: 20px 0;
   }
+  #projects .header_projects button::before {
+    -webkit-box-sizing: inherit;
+            box-sizing: inherit;
+    content: '';
+    position: absolute;
+    border: 2px solid transparent;
+    width: 0;
+    height: 0;
+    bottom: 0;
+    right: 0;
+    -webkit-transition: all .75s;
+    transition: all .75s;
+    z-index: -1;
+  }
+  #projects .header_projects button:hover::before {
+    width: 100%;
+    height: 100%;
+    background-color: red;
+  }
+  #projects .header_projects .body_flex_item_small_screen {
+    max-height: 0;
+    overflow: hidden;
+    -webkit-transition: max-height 0.2s ease-out;
+    transition: max-height 0.2s ease-out;
+  }
   #projects .header_projects .small_screen {
     color: #FFFFFF;
     font-family: "Inconsolata", monospace;
     font-weight: 300;
     font-size: 12px;
-    display: none;
+    display: block;
     max-width: 500px;
     text-align: justify;
     line-height: 1.7;
     font-size: 13px;
     margin: auto;
-    -webkit-transform: scaleY(0);
-            transform: scaleY(0);
+    padding: 20px 20px;
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
   }
-  #projects .project_display {
-    display: none;
-  }
-  #projects .small_screen_open {
+  #projects .header_projects .small_screen_open {
     display: block;
     -webkit-transform: scaleY(1);
             transform: scaleY(1);
+  }
+  #projects .header_projects .small_screen + div {
+    display: block;
+  }
+  #projects .project_display {
+    display: none;
   }
 }
 
@@ -556,6 +589,8 @@ a:focus {
   font-size: 12px;
   max-width: 200px;
   text-align: right;
+  display: block;
+  margin-left: auto;
   line-height: 1.7;
 }
 

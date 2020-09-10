@@ -44,6 +44,10 @@
         .small_screen {
             display: none;
         }
+
+        .small_screen + div {
+            display: none;
+        }
     }
 
     // .social_app {
@@ -70,16 +74,6 @@
             margin: 0;
         }
 
-        .sources {
-            text-align: center;
-            padding: 0 0 20px 0;
-
-            a {
-                @include p;
-                padding: 0 10px;
-            }
-        }
-
         .panel {
             overflow: hidden;
             transition: transform 0.5s ease-out;
@@ -102,6 +96,16 @@
 
     }
 
+    .sources {
+        text-align: center;
+        padding: 0 0 20px 0;
+
+        a {
+            @include p;
+            padding: 0 10px;
+        }
+    }
+
     
 }
 
@@ -120,41 +124,79 @@
                 left: 50%;
                 transform: translate(-50%, 0);
                 padding: 20px 0;
+
+                &::before {
+                    box-sizing: inherit;
+                    content: '';
+                    position: absolute;
+                    border: 2px solid transparent;
+                    width: 0;
+                    height: 0;
+                    bottom: 0;
+                    right: 0;
+                    transition: all .75s;
+                    z-index: -1;
+                }
+
+                &:hover::before {
+                    width: 100%;
+                    height: 100%;
+                    background-color: red;
+                }
+
+                
             }
+
+            .body_flex_item_small_screen {
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.2s ease-out;
+            }
+
+            // .social_app:hover,
+            // .social_app:focus  {
+            //     background-color: $second-text-color;
+            //     color: $base-text-color;
+            // }
+
+            // .landing_page:hover,
+            // .landing_page:focus {
+            //     background-color: $third-text-color;
+            //     color: $base-text-color;
+            // }
+
+            // .weather_app:hover,
+            // .weather_app:focus {
+            //     background-color: $fourth-text-color;
+            //     color: $base-text-color;
+            // }
 
             
 
             .small_screen {
                 @include p;
-                display: none;
+                display: block;
                 max-width: 500px;
                 text-align: justify;
                 line-height: 1.7;
                 font-size: 13px;
                 margin: auto;
-                transform: scaleY(0);
+                padding: 20px 20px;
+                transform: scaleY(1);
+            }
+
+            .small_screen_open {
+                display: block;
+                transform: scaleY(1);
+            }
+
+            .small_screen + div {
+                display: block;
             }
         }
 
-        // .social_app {
-        //     color: $second-text-color;
-        // }
-    
-        // .laning_page {
-        //     color: $third-text-color;
-        // }
-    
-        // .wether_app {
-        //     color: $fourth-text-color;
-        // }
-
         .project_display {
             display: none;
-        }
-
-        .small_screen_open {
-            display: block;
-            transform: scaleY(1);
         }
         
 

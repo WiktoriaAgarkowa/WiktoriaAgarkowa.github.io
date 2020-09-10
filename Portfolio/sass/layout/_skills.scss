@@ -9,6 +9,8 @@
         @include p;
         max-width: 200px;
         text-align: right;
+        display: block;
+        margin-left: auto;
         line-height: 1.7;
     }
 }

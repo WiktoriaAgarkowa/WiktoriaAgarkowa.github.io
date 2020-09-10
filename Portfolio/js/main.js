@@ -32,6 +32,9 @@ const formValidate = (e) => {
 
 contactForm.addEventListener('submit', formValidate);
 
+
+
+
 //---Project section animation---//
 
 let projectNames = document.getElementsByClassName('project_name');
@@ -41,10 +44,49 @@ let projectHeading = document.querySelector('.main_headnig');
 let description = document.querySelector('.description');
 let display = document.querySelector('.project_display');
 let panel = document.querySelector('.panel');
+let descriptionSmallScreen = document.getElementsByClassName('body_flex_item_small_screen');
 
-let width = window.innerWidth;
 
-console.log(width)
+let d = document.documentElement;
+
+let clientWidth = d.clientWidth;
+
+  if(clientWidth > 880 ) {
+
+    projectNames[0].addEventListener('click', socialAppDescritpion);
+    projectNames[1].addEventListener('click', landingPageDescritpion);
+    projectNames[2].addEventListener('click', wetherAppDescritpion);
+  
+    // console.log('szerokość większa niż 870px')
+  } else {
+    // console.log('szerokość mniejsza niż 870px')
+  }
+
+  if (clientWidth < 880) {
+
+    
+
+    for (i = 0; i < projectNames.length; i++) {
+
+      projectNames[i].addEventListener("click", function() {
+
+        
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+
+        console.log(panel)
+
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+  
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+          
+        }
+      });
+    }
+  }
+  
 
 
 let buttonClicked = false;
@@ -53,17 +95,17 @@ for (i=0; i<projectNames.length; i++) {
   projectNames[i].addEventListener('click', function() {
     
     panel.classList.remove('close');
-    panel.classList.toggle('active');
-    panel.classList.toggle('change_text');
-    panel.classList.toggle('change_text_twice');
+    panel.classList.add('active');
+    // panel.classList.toggle('change_text');
+    // panel.classList.toggle('change_text_twice');
     
     buttonClicked = true;
     console.log(buttonClicked);
     
-    if(buttonClicked=== true) {
-      console.log('lalala')
-    }
-    return buttonClicked;
+    // if(buttonClicked=== true) {
+    //   console.log('lalala')
+    // }
+    // return buttonClicked;
   });
   
 }
@@ -85,7 +127,7 @@ function socialAppDescritpion() {
   display.classList.add('social_app_description');
   projectHeading.innerText = 'Social-App'; 
 
-  description.innerHTML = "I made the Social-App as part of the assignment during the course. The application has the ability to register (however, after registration, the data is not saved in the API), it is also possible to login and log out. If you are not logged in, 10 posts of random users are displayed on the main page. When authorizing, posts of users are added to which you are subscribed. <br> <span> Technologies: </ span> <br> HTML, CSS, ReactJS, Styled Components"
+  description.innerHTML = "I made the Social-App as part of the assignment during the course. The application has the ability to register (however, after registration, the data is not saved in the API), it is also possible to login and log out. If you are not logged in, 10 posts of random users are displayed on the main page. When authorizing, posts of users are added to which you are subscribed. <br> <br> <span> Technologies: </ span> <br> HTML, CSS, ReactJS, Styled Components, AJAX"
 }
 
 function landingPageDescritpion() {
@@ -102,7 +144,7 @@ function landingPageDescritpion() {
   display.classList.add('clicked');
   display.classList.add('landing_page_description');
   projectHeading.innerText = 'Landing-Page';
-  description.innerHTML = "I made the Landing-Page as part of the assignment during the course. The application has the ability to register (after registration, the data is not saved in the API), it is also possible to login and log out. If you are not logged in, 10 posts of random users are displayed on the main page. When authorizing, posts of users are added to which you are subscribed. <br> <span> Technologies: </ span> <br> HTML, CSS, ReactJS, Styled Components" 
+  description.innerHTML = "I made the Landing-Page as part of the assignment during the course. The application has the ability to register (after registration, the data is not saved in the API), it is also possible to login and log out. If you are not logged in, 10 posts of random users are displayed on the main page. When authorizing, posts of users are added to which you are subscribed. <br> <br> <span> Technologies: </ span> <br> HTML, CSS, SASS, AJAX" 
 }
 
 function wetherAppDescritpion() {
@@ -119,19 +161,19 @@ function wetherAppDescritpion() {
   display.classList.add('clicked');
   display.classList.add('wether_app_description');
   projectHeading.innerText = 'Wether-App';
-  description.innerHTML = "The Wether-App application has the ability to register (after registration, the data is not saved in the API), it is also possible to login and log out. If you are not logged in, 10 posts of random users are displayed on the main page. When authorizing, posts of users are added to which you are subscribed. <br> <span> Technologies: </ span> <br> HTML, CSS, ReactJS, Styled Components <br>" 
+  description.innerHTML = "The Wether-App application has the ability to register (after registration, the data is not saved in the API), it is also possible to login and log out. If you are not logged in, 10 posts of random users are displayed on the main page. When authorizing, posts of users are added to which you are subscribed. <br> <br> <span> Technologies: </ span> <br> HTML, CSS, ReactJS, Styled Components <br>" 
 }
 
-if(width> 880 ) {
+// if(width> 880 ) {
 
-  projectNames[0].addEventListener('click', socialAppDescritpion);
-  projectNames[1].addEventListener('click', landingPageDescritpion);
-  projectNames[2].addEventListener('click', wetherAppDescritpion);
+//   projectNames[0].addEventListener('click', socialAppDescritpion);
+//   projectNames[1].addEventListener('click', landingPageDescritpion);
+//   projectNames[2].addEventListener('click', wetherAppDescritpion);
 
-  console.log('szerokość większa niż 870px')
-} else {
-  console.log('szerokość mniejsza niż 870px')
-}
+//   console.log('szerokość większa niż 870px')
+// } else {
+//   console.log('szerokość mniejsza niż 870px')
+// }
 
 
 // if(buttonClicked === false) {
@@ -157,17 +199,11 @@ console.log(buttonClicked)
 
 //---small-screen settings---//
 
-let descriptionSmallScreen = document.getElementsByClassName('small_screen');
-
 console.log(descriptionSmallScreen)
 
 if(header.classList.contains('header_projects')) {
   console.log('klasa sprawdzona')
 }
 
-// descriptionSmallScreen.addEventListener('click', function showescription() {
-//   for (i=0; i<descriptionSmallScreen.length; i++) {
 
-//   }
-// })
 
