@@ -125,6 +125,7 @@
                 transform: translate(-50%, 0);
                 padding: 20px 0;
 
+
                 &::before {
                     box-sizing: inherit;
                     content: '';
@@ -141,11 +142,22 @@
                 &:hover::before {
                     width: 100%;
                     height: 100%;
-                    background-color: red;
+                    background-color: $second-text-color;
                 }
+
+               
 
                 
             }
+
+            .social_app:hover,
+                .social_app:focus,
+                .landing_page:hover,
+                .landing_page:focus,
+                .weather_app:hover,
+                .weather_app:focus {
+                  color: $base-text-color;
+                }
 
             .body_flex_item_small_screen {
                 max-height: 0;

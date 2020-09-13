@@ -1,0 +1,19 @@
+//---UTILS---//
+@import 'utils/settings';
+@import 'utils/mixins';
+
+
+//---BASE---//
+@import 'base/normalize';
+@import 'base/global';
+
+
+//---LAYOUT---//
+@import 'layout/nav';
+@import 'layout/header';
+@import 'layout/about';
+@import 'layout/team';
+@import 'layout/reserve';
+@import 'layout/blog';
+@import 'layout/contact';
+@import 'layout/footer';

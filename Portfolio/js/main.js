@@ -47,70 +47,15 @@ let panel = document.querySelector('.panel');
 let descriptionSmallScreen = document.getElementsByClassName('body_flex_item_small_screen');
 
 
+
 let d = document.documentElement;
 
 let clientWidth = d.clientWidth;
 
-  if(clientWidth > 880 ) {
-
-    projectNames[0].addEventListener('click', socialAppDescritpion);
-    projectNames[1].addEventListener('click', landingPageDescritpion);
-    projectNames[2].addEventListener('click', wetherAppDescritpion);
-  
-    // console.log('szerokość większa niż 870px')
-  } else {
-    // console.log('szerokość mniejsza niż 870px')
-  }
-
-  if (clientWidth < 880) {
-
-    
-
-    for (i = 0; i < projectNames.length; i++) {
-
-      projectNames[i].addEventListener("click", function() {
-
-        
-        this.classList.toggle("active");
-        var panel = this.nextElementSibling;
-
-        console.log(panel)
-
-        if (panel.style.maxHeight) {
-          panel.style.maxHeight = null;
-  
-        } else {
-          panel.style.maxHeight = panel.scrollHeight + "px";
-          
-        }
-      });
-    }
-  }
-  
 
 
-let buttonClicked = false;
 
-for (i=0; i<projectNames.length; i++) {
-  projectNames[i].addEventListener('click', function() {
-    
-    panel.classList.remove('close');
-    panel.classList.add('active');
-    // panel.classList.toggle('change_text');
-    // panel.classList.toggle('change_text_twice');
-    
-    buttonClicked = true;
-    console.log(buttonClicked);
-    
-    // if(buttonClicked=== true) {
-    //   console.log('lalala')
-    // }
-    // return buttonClicked;
-  });
-  
-}
-
-
+//---Clicked names in full ekran---//
 
 function socialAppDescritpion() {
 
@@ -144,7 +89,7 @@ function landingPageDescritpion() {
   display.classList.add('clicked');
   display.classList.add('landing_page_description');
   projectHeading.innerText = 'Landing-Page';
-  description.innerHTML = "I made the Landing-Page as part of the assignment during the course. The application has the ability to register (after registration, the data is not saved in the API), it is also possible to login and log out. If you are not logged in, 10 posts of random users are displayed on the main page. When authorizing, posts of users are added to which you are subscribed. <br> <br> <span> Technologies: </ span> <br> HTML, CSS, SASS, AJAX" 
+  description.innerHTML = "Landing-Page project which is the hallmark of a sushi restaurant. On the page you can make a table reservation and contact using the form. Some elements are animated with CSS, and reservation information is sent using API. <br> <br> <span> Technologies: </ span> <br> HTML, CSS, SASS, AJAX" 
 }
 
 function wetherAppDescritpion() {
@@ -163,6 +108,35 @@ function wetherAppDescritpion() {
   projectHeading.innerText = 'Wether-App';
   description.innerHTML = "The Wether-App application has the ability to register (after registration, the data is not saved in the API), it is also possible to login and log out. If you are not logged in, 10 posts of random users are displayed on the main page. When authorizing, posts of users are added to which you are subscribed. <br> <br> <span> Technologies: </ span> <br> HTML, CSS, ReactJS, Styled Components <br>" 
 }
+
+let buttonClicked = false;
+
+for (i=0; i<projectNames.length; i++) {
+  projectNames[i].addEventListener('click', function() {
+    
+    panel.classList.remove('close');
+    panel.classList.add('active');
+    // panel.classList.toggle('change_text');
+    // panel.classList.toggle('change_text_twice');
+    
+    buttonClicked = true;
+    console.log(buttonClicked);
+    
+    // if(buttonClicked=== true) {
+    //   console.log('lalala')
+    // }
+    // return buttonClicked;
+  });
+
+}
+
+
+if(clientWidth > 880 ) {
+
+  projectNames[0].addEventListener('click', socialAppDescritpion);
+  projectNames[1].addEventListener('click', landingPageDescritpion);
+  projectNames[2].addEventListener('click', wetherAppDescritpion);  
+} 
 
 // if(width> 880 ) {
 
@@ -195,15 +169,55 @@ function wetherAppDescritpion() {
 // } 
 
 
-console.log(buttonClicked)
-
-//---small-screen settings---//
+//---Small-screen settings---//
 
 console.log(descriptionSmallScreen)
 
 if(header.classList.contains('header_projects')) {
   console.log('klasa sprawdzona')
 }
+
+if (clientWidth < 880) {
+
+    
+  for (i = 0; i < projectNames.length; i++) {
+
+    projectNames[i].addEventListener("click", function() {
+
+      
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+
+      console.log(panel)
+
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+        
+      }
+    });
+  }
+}
+
+//---RWD setting---//
+
+window.addEventListener('resize',function(){
+  // console.log(window.innerWidth);
+  let clientWidth = d.clientWidth;
+  
+  if (clientWidth < 880) {
+    console.log('mały')
+  }
+
+  if(clientWidth > 880) {
+    console.log('duży')
+  }
+
+
+
+});
 
 
 

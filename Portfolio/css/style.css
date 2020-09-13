@@ -538,7 +538,15 @@ a:focus {
   #projects .header_projects button:hover::before {
     width: 100%;
     height: 100%;
-    background-color: red;
+    background-color: #7BDCFE;
+  }
+  #projects .header_projects .social_app:hover,
+  #projects .header_projects .social_app:focus,
+  #projects .header_projects .landing_page:hover,
+  #projects .header_projects .landing_page:focus,
+  #projects .header_projects .weather_app:hover,
+  #projects .header_projects .weather_app:focus {
+    color: #FFFFFF;
   }
   #projects .header_projects .body_flex_item_small_screen {
     max-height: 0;
