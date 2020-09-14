@@ -264,10 +264,63 @@ section {
 }
 
 img {
-  width: 40%;
+  width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+button {
+  padding: 15px 20px;
+  background-color: transparent;
+  border-radius: 30px;
+  font-family: "Cinzel", serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
+}
+
+button:focus {
+  outline: none;
+}
+
+input::-webkit-input-placeholder,
+select::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #000000;
+}
+
+input::-webkit-option-placeholder,
+select::-webkit-option-placeholder,
+textarea::-webkit-option-placeholder {
+  color: #000;
+}
+
+input::-moz-placeholder,
+select::-moz-placeholder,
+textarea::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #000000;
+}
+
+input:-ms-input-placeholder,
+select:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #000000;
+}
+
+input:-moz-placeholder,
+select:-moz-placeholder,
+textarea:-moz-placeholder {
+  /* Firefox 18- */
+  color: #000000;
+}
+
+option {
+  color: black;
 }
 
 #navigation {
@@ -332,27 +385,6 @@ img {
   z-index: -20;
 }
 
-#main_header .header_content .heading_container a {
-  text-decoration: none;
-  text-transform: uppercase;
-  border: 1px solid #ffffff;
-  border-radius: 30px;
-  padding: 15px 20px;
-  font-family: "Cinzel", serif;
-  font-weight: 600;
-  -webkit-transition: all 0.35s;
-  transition: all 0.35s;
-}
-
-#main_header .header_content .heading_container a:hover {
-  background-color: #ffffff;
-  color: #000000;
-}
-
-#main_header .header_content .heading_container a:focus {
-  outline: none;
-}
-
 #main_header .header_content .main_image {
   height: 600px;
   position: absolute;
@@ -362,6 +394,7 @@ img {
 }
 
 #main_header .header_content .main_image img {
+  width: 40%;
   display: block;
   margin: 0;
 }
@@ -435,5 +468,108 @@ img {
           animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
+}
+
+#pop_up {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 40;
+}
+
+#pop_up div.container_flex {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  border-radius: 30px;
+}
+
+#pop_up div.container_flex button#close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: none;
+  padding: 0 20px;
+}
+
+#pop_up div.container_flex button#close:hover {
+  background-color: transparent;
+}
+
+#pop_up div.container_flex button#close i {
+  color: #5e5d5d;
+  font-size: 20px;
+  -webkit-transition: all .35s;
+  transition: all .35s;
+}
+
+#pop_up div.container_flex button#close i:hover {
+  color: #000000;
+}
+
+#pop_up div.container_flex .flex_item {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+
+#pop_up div.container_flex .flex_item img {
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+#pop_up form.container_flex {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 40px 40px;
+}
+
+#pop_up form.container_flex input, #pop_up form.container_flex textarea, #pop_up form.container_flex select {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  padding: 20px 20px;
+  color: #000000;
+  border: none;
+  border-bottom: 1px solid #000000;
+}
+
+#pop_up form.container_flex input:focus, #pop_up form.container_flex textarea:focus, #pop_up form.container_flex select:focus {
+  outline: none;
+}
+
+#pop_up form.container_flex input[type='time'],
+#pop_up form.container_flex input[type='date'] {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+
+#pop_up.hidden {
+  display: none;
+}
+
+#pop_up button {
+  margin-top: 20px;
+  color: #000000;
+  border: 1px solid #000000;
+}
+
+#pop_up button:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+#main_header button {
+  border: 1px solid #ffffff;
+  border-radius: 30px;
+}
+
+#main_header button:hover {
+  background-color: #ffffff;
+  color: #000000;
 }
 /*# sourceMappingURL=style.css.map */

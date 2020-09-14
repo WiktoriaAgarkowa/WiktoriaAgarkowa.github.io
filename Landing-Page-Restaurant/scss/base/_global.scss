@@ -23,7 +23,54 @@ section {
 }
 
 img {
-    width: 40%;
+    width: 100%;
     height: 100%;
     object-fit: cover;
 }
+
+button {
+    padding: 15px 20px;
+    background-color: transparent;
+    border-radius: 30px;
+    font-family: $font-secondary;
+    font-weight: 600;
+    text-transform: $text-transorm-heading;
+    transition: all 0.35s;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+input,
+select,
+textarea {
+    &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        
+        color: #000000;
+    }
+
+    &::-webkit-option-placeholder {
+        color: #000;
+    }
+
+
+    &::-moz-placeholder { /* Firefox 19+ */
+       
+        color: #000000;
+    }
+
+    &:-ms-input-placeholder { /* IE 10+ */
+        
+        color: #000000;
+    }
+
+    &:-moz-placeholder { /* Firefox 18- */
+        
+        color: #000000;
+    }
+}
+
+option {
+    color: black;
+  }

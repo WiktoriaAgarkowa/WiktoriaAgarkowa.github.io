@@ -13,6 +13,49 @@
 </head>
 <body>
 
+    <div id="pop_up" class="hidden">
+
+        <div class="container_flex">
+
+            <button id="close">
+                <i class="fas fa-times"></i>
+            </button>
+
+            <div class="flex_item">
+                <img src="img/nick-karvounis-Ciqxn7FE4vE-unsplash.jpg" alt="">
+            </div>
+    
+            <div class="form flex_item">
+    
+                <form id="form_reserve" class="container_flex reserve_item">
+    
+                    <input type="text" name="name" id="reserve-name" placeholder="Name" class="input_form">
+        
+                    <input type="email" name="email" id="reserve-email" placeholder="E-mail" class="input_form">
+        
+                    <select name="service" placeholder="select service" id="reserve-select" class="input_form">
+                        <option value="">Select service</option>
+                        <option value="normal">Normal</option>
+                        <option value="vip">Vip-zone</option>
+                    </select>
+        
+                    <input type="tel" name="phone" placeholder="Phone number" id="reserve-phone" class="input_form">
+        
+                    <input type="date" name="date" placeholder="Date" id="reserve-date" class="input_form">
+        
+                    <input type="time" name="time" placeholder="Time" id="reserve-time" class="input_form">
+        
+                    <textarea id="reserve-note" name="note" placeholder="Your notes" class="input_form"></textarea>
+        
+                    <button type="submit" class="btn-form">Book a Table</button>
+        
+                    <p id="uwaga1"></p>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
     <nav id="navigation">
 
         <div class="container container_flex">
@@ -23,7 +66,6 @@
                 <li><button class="link"> About</button></li>
                 <li><button class="link"> Menu</button></li>
                 <li><button class="link"> Team</button></li>
-                <li><button class="link"> Reserve</button></li>
                 <li><button class="link"> Blog</button></li>
             </ul>
         </div>
@@ -40,7 +82,7 @@
                     A Premium <br> Sushi <br> Restaurant
                 </h1>
 
-                <a href="#reserve">Book a table</a>
+                <button>Book a table</button>
             </div>
        
     

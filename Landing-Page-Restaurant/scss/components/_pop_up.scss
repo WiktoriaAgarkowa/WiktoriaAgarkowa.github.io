@@ -1,0 +1,77 @@
+#pop_up {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #000000, $alpha: 0.8);
+    z-index: 40;
+
+    div.container_flex {
+
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #ffffff;
+        border-radius: 30px;
+
+        button#close {
+            position: absolute;
+            top: 0;
+            right: 0;
+            border: none;
+            padding: 0 20px;
+
+            &:hover {
+                background-color: transparent;
+            }
+
+            i {
+                color: #5e5d5d;
+                font-size: 20px;
+                transition: all .35s;
+
+                &:hover {
+                    color: #000000;
+                }
+            }
+            
+        }
+
+        .flex_item {
+            flex-basis: 50%;
+
+            img {
+                border-top-left-radius: 30px;
+                border-bottom-left-radius: 30px;
+            }
+        }
+    }
+
+    form.container_flex {
+        flex-direction: row;
+        margin: 40px 40px;
+
+        input,textarea, select {
+            flex-basis: 100%;
+            padding: 20px 20px;
+            color: #000000;
+            border: none;
+            border-bottom: 1px solid #000000;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        input[type='time'],
+        input[type='date'] {
+            flex-basis: 50%;
+        }
+
+    }
+
+}
+
+#pop_up.hidden {
+    display: none;
+}

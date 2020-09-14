@@ -17,28 +17,8 @@
                 margin-top: 0;
                 font-family: $font-secondary;
                 z-index: -20;
-                // overflow: hidden;
             }
 
-            a {
-                text-decoration: none;
-                text-transform: $text-transorm-heading;
-                border: 1px solid #ffffff;
-                border-radius: 30px;
-                padding: 15px 20px;
-                font-family: $font-secondary;
-                font-weight: 600;
-                transition: all 0.35s;
-
-                &:hover {
-                    background-color: #ffffff;
-                    color: #000000;
-                }
-
-                &:focus {
-                    outline: none;
-                }
-            }
         }
         
     
@@ -50,6 +30,7 @@
             right: 0;
 
             img {
+                width: 40%;
                 display: block;
                 margin: 0;
             }
