@@ -17,3 +17,13 @@ html {
     display: flex;
     flex-wrap: wrap;
 }
+
+section {
+    padding: 60px 0;
+}
+
+img {
+    width: 40%;
+    height: 100%;
+    object-fit: cover;
+}

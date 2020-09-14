@@ -1,6 +1,8 @@
 #navigation {
     position: fixed;
     width: 100%;
+    background-color: rgba($color: #000000, $alpha: 0.8);
+    z-index: 30;
 
     .container_flex {
         justify-content: space-between;
@@ -16,10 +18,15 @@
             li {
                 padding: 20px 20px;
                 font-family: $font-primary;
-                text-transform: $text-transorm-heading;
     
-                a {
-                    text-decoration: none;
+                button {
+                    background-color: transparent;
+                    border: none;
+                    text-transform: $text-transorm-heading;
+
+                    &:focus {
+                        outline: none;
+                    }
                 }
             }
         }
