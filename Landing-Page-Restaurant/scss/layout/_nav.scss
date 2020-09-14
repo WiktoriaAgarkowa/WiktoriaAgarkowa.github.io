@@ -1,0 +1,27 @@
+#navigation {
+    position: fixed;
+    width: 100%;
+
+    .container_flex {
+        justify-content: space-between;
+
+        #logo {
+            font-family: $font-secondary;
+            text-transform: $text-transorm-heading;
+        }
+        .nav {
+            justify-content: flex-end;
+            list-style: none;
+    
+            li {
+                padding: 20px 20px;
+                font-family: $font-primary;
+                text-transform: $text-transorm-heading;
+    
+                a {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
