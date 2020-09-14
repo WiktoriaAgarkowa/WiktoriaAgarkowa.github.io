@@ -291,4 +291,102 @@ html {
 #navigation .container_flex .nav li a {
   text-decoration: none;
 }
+
+#main_header {
+  padding: 160px 0;
+}
+
+#main_header .header_content {
+  position: relative;
+}
+
+#main_header .header_content .heading_container {
+  max-width: 63%;
+  margin-left: auto;
+}
+
+#main_header .header_content .heading_container #main_heading {
+  position: relative;
+  font-size: 112px;
+  text-align: left;
+  margin-top: 0;
+  font-family: "Cinzel", serif;
+  z-index: -20;
+}
+
+#main_header .header_content .heading_container a {
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 1px solid #ffffff;
+  border-radius: 30px;
+  padding: 15px 20px;
+  font-family: "Cinzel", serif;
+  font-weight: 600;
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
+}
+
+#main_header .header_content .heading_container a:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+#main_header .header_content .heading_container a:focus {
+  outline: none;
+}
+
+#main_header .header_content .main_image {
+  height: 600px;
+  position: absolute;
+  z-index: -10;
+  top: 0;
+  right: 0;
+}
+
+#main_header .header_content .main_image img {
+  width: 40%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+  margin: 0;
+}
+
+#main_header .header_content .main_image .circle {
+  position: relative;
+  right: 0;
+}
+
+@-webkit-keyframes twist {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes twist {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.twist {
+  -webkit-animation-name: twist;
+          animation-name: twist;
+  -webkit-animation-duration: 20s;
+          animation-duration: 20s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
 /*# sourceMappingURL=style.css.map */
