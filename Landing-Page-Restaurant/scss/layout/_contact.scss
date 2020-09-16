@@ -1,0 +1,9 @@
+#contact {
+    background-color: #fff;
+
+    p {
+        @include p;
+        color: #000;
+        text-align: center;
+    }
+}

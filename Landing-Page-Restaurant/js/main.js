@@ -4,6 +4,7 @@ let btns = document.getElementsByClassName('link');
 let about = document.getElementById('about');
 let menu = document.getElementById('menu');
 let team = document.getElementById('team');
+let blog = document.getElementById('blog')
 
 console.log(btns)
 
@@ -15,14 +16,22 @@ function aboutButtonClick() {
  btns[0].addEventListener('click', aboutButtonClick);
 
 
-function menuButtonClick() {
-    menu.scrollIntoView({behavior: "smooth"});
+function ButtonClick(section) {
+    section.scrollIntoView({behavior: "smooth"});
  }
 
- btns[1].addEventListener('click', menuButtonClick);
+ btns[2].addEventListener('click', function(){ButtonClick(menu)});
+ btns[1].addEventListener('click', function(){ButtonClick(team)});
+ btns[3].addEventListener('click', function(){ButtonClick(blog)});
 
- function teamButtonClick() {
-    team.scrollIntoView({behavior: "smooth"});
- }
+ //---Scroll Top---//
 
- btns[2].addEventListener('click', teamButtonClick);
+//  let btnScroll = document.querySelector('.scroll');
+//  console.log(btnScroll)
+
+function scrollTop() {
+    window.scrollTo(0,0)
+}
+//  btnScroll.addEventListener('click', scrollTop)
+
+ 

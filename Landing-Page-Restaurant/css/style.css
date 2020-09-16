@@ -335,6 +335,9 @@ option {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #navigation .container_flex #logo {
@@ -458,6 +461,8 @@ option {
   text-align: justify;
   padding-bottom: 50px;
   text-align: center;
+  max-width: 50%;
+  margin: auto;
 }
 
 #team .box {
@@ -527,10 +532,97 @@ option {
   }
 }
 
+#blog .section_header h2 {
+  font-family: "Cinzel", serif;
+  font-size: 64px;
+  padding: 30px 0;
+  text-align: center;
+}
+
+#blog .section_header p {
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-size: 16px;
+  text-align: justify;
+  padding-bottom: 50px;
+  text-align: center;
+  max-width: 50%;
+  margin: auto;
+}
+
+#blog .box {
+  padding: 0 10px;
+  margin-top: 30px;
+  text-align: center;
+  width: 33.33%;
+}
+
+#blog .box .article {
+  border: 1px solid #e2e5ea98;
+  padding: 25px;
+  -webkit-transition: all .35s;
+  transition: all .35s;
+}
+
+#blog .box img {
+  width: 100%;
+}
+
+#blog .box h3 {
+  font-family: "Cinzel", serif;
+  font-size: 64px;
+  font-size: 32px;
+}
+
+#blog .box p {
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-size: 16px;
+  text-align: justify;
+  padding: 0 20px;
+  text-align: center;
+}
+
+#blog .box .article:hover {
+  -webkit-box-shadow: 0 5px 30px #f0f0f050;
+          box-shadow: 0 5px 30px #f0f0f050;
+}
+
+#blog .box .article:hover .btn-read-more {
+  background-color: #fff;
+  color: #000;
+}
+
+#contact {
+  background-color: #fff;
+}
+
+#contact p {
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-size: 16px;
+  text-align: justify;
+  color: #000;
+  text-align: center;
+}
+
+footer {
+  padding: 20px 0;
+}
+
+footer p {
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-size: 16px;
+  text-align: justify;
+  text-align: center;
+}
+
+#menu {
+  background-color: #fff;
+}
+
 #menu .menu_heading {
   font-family: "Cinzel", serif;
   font-size: 64px;
   text-align: center;
+  color: #000;
 }
 
 #menu h2 {
@@ -539,6 +631,7 @@ option {
   font-size: 32px;
   text-align: center;
   padding: 20px 0;
+  color: #000;
 }
 
 #menu h3 {
@@ -548,12 +641,14 @@ option {
   font-family: "M PLUS Rounded 1c", sans-serif;
   font-weight: 600;
   text-align: center;
+  color: #000;
 }
 
 #menu p {
   font-family: "M PLUS Rounded 1c", sans-serif;
   font-weight: 300;
   text-align: center;
+  color: #000;
 }
 
 #menu img {
@@ -561,7 +656,6 @@ option {
   width: auto;
   max-height: 35%;
   top: 0;
-  z-index: -1;
 }
 
 #menu .ramen {
@@ -569,7 +663,7 @@ option {
   right: 0;
 }
 
-#menu .sushi {
+#menu .sushi_two {
   max-height: 20%;
   right: 0;
   top: 50%;
@@ -604,6 +698,35 @@ option {
           animation-duration: 20s;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+@-webkit-keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.opacity {
+  -webkit-animation-name: opacity;
+          animation-name: opacity;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
 }
