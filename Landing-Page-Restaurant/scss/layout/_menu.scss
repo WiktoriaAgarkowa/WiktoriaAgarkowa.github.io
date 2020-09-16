@@ -1,0 +1,49 @@
+#menu {
+  
+
+    .menu_heading {
+        @include heading;
+        text-align: center;
+    }
+
+    h2 {
+        @include heading;
+        font-size: $base-font-size * 2;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    h3 {
+        @include heading;
+        font-size: $base-font-size;
+        font-family: $font-primary;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    p {
+        font-family: $font-primary;
+        font-weight: 300;
+        text-align: center;
+    }
+
+    img {
+        position: absolute;
+        width: auto;
+        max-height: 35%;
+        top: 0;
+        z-index: -1;
+    }
+
+    .ramen {
+        max-height: 20%;
+        right: 0;
+    }
+
+    .sushi {
+        max-height: 20%;
+        right: 0;
+        top: 50%;
+    }
+    
+}
