@@ -25,3 +25,25 @@
             border-radius: 100%;
         }
 }
+
+
+@media screen and (max-width: 768px) {
+    #about {
+        .container_flex {
+
+            .flex_item {
+                flex-basis: 100%;
+            }
+
+            h2 {
+                text-align: center;
+                font-size: $base-font-size * 2;
+            }
+
+            p {
+                font-size: $base-font-size;
+                
+            }
+        }
+    }
+}

@@ -47,3 +47,44 @@
         }
     }
 }
+
+
+@media screen and (max-width: 1200px) {
+    #main_header {
+
+        .header_content {
+            .heading_container {
+                max-width: none;
+                margin-left: auto;
+        
+                #main_heading {
+                    position: relative;
+                    font-size: $base-font-size * 5;
+                    text-align: center;
+                    margin-top: 0;
+                    font-family: $font-secondary;
+                    z-index: -20;
+                }
+    
+            }
+        }
+
+        .main_image {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #main_header {
+
+        .header_content {
+            .heading_container {
+
+                #main_heading {
+                    font-size: $base-font-size * 3;
+                }
+            }
+        }
+    }
+}

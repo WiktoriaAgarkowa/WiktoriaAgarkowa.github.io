@@ -1,6 +1,7 @@
 #menu {
     
     background-color: #fff;
+    overflow: hidden;
 
     .menu_heading {
         @include heading;
@@ -32,12 +33,19 @@
         color: #000;
     }
 
+    .sakura {
+        display: none;
+    }
+
     img {
         position: absolute;
         width: auto;
-        max-height: 35%;
         top: 0;
         
+    }
+
+    .maki {
+        max-height: 35%;
     }
 
     .ramen {
@@ -49,6 +57,44 @@
         max-height: 20%;
         right: 0;
         top: 50%;
+        
+
     }
     
+}
+
+
+@media screen and (max-width: 1200px) {
+    #menu {
+
+        .maki {
+            max-height: 19%;
+            top: 30%;
+        }
+
+        .ramen {
+            max-height: 15%;
+        }
+
+        .sushi_two {
+            max-height: 10%;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    #menu {
+
+        .sakura {
+            display: block;
+            max-height: 20%;
+        }
+
+        .maki, .ramen, .sushi_two {
+            display: none;
+        }
+
+    }   
+
 }

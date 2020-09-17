@@ -17,7 +17,7 @@
 
         <div class="container_flex">
 
-            <button id="close">
+            <button id="close_pop_up">
                 <i class="fas fa-times"></i>
             </button>
 
@@ -56,11 +56,27 @@
 
     </div>
 
+    <div class="hide_menu">
+        <ul class="hide_list_menu">
+            <li class="first"><i id="close" class="fas fa-times hide_menu_item"></i></li>
+            <li class="hide_menu_item"><a href="#about">About</a></li>
+            <li class="hide_menu_item"><a href="#team">Team</a></li>
+            <li class="hide_menu_item"><a href="#menu">Menu</a></li>
+            <li class="hide_menu_item"><a href="#blog">Blog</a></li>
+        </ul>
+    </div>
+
     <nav id="navigation">
 
         <div class="container container_flex">
 
             <h1 id="logo">Tokyo Masters</h1>
+
+            <div id="hamburger">
+                <hr>
+                <hr>
+                <hr>
+            </div>
 
             <ul class="nav container_flex">
                 <li><button class="link"> About</button></li>
@@ -83,13 +99,13 @@
                     A Premium <br> Sushi <br> Restaurant
                 </h1>
 
-                <button>Book a table</button>
+                <button class="book">Book a table</button>
             </div>
        
     
-            <div class="main_image">
+            <div class="main_image slideRight">
 
-                <div class="circle">
+                <div class="circle ">
                     <img class="sushi twist" src="img/sushi.png" alt="sushi">
                 </div>
                 
@@ -109,19 +125,28 @@
             <article class="flex_item">
                 <h2>About</h2>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                    Cras vehicula condimentum est, a sagittis nisl tempus at. 
-                    Phasellus faucibus consequat posuere. Sed bibendum 
-                    nisl velit, ac ultrices justo rhoncus pulvinar. Suspendisse
-                     ullamcorper sem nunc, non congue metus iaculis eget. 
-                    Nulla eu placerat nibh, non vestibulum ligula. Maecenas 
-                    mollis vehicula lacus, fermentum tempus nisl eleifend at. 
-                    Phasellus id sapien sed ligula dapibus iaculis in eu ipsum. 
-                    Sed semper venenatis fringilla. Quisque faucibus quam 
-                    vitae felis porttitor gravida. Integer non sollicitudin purus. 
-                    Fusce cursus pharetra nunc, ut hendrerit dui dignissim et.
-                     Mauris eros erat, efficitur non nibh et, fermentum massa. 
-                    Vestibulum vehicula orci vel dui euismod facilisis.</p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscin    elit. 
+                        Cras vehicula condimentum est, a sagittis nisl tempus at. 
+                        Phasellus faucibus consequat posuere. Sed bibendum 
+                        nisl velit, ac ultrices justo rhoncus pulvinar. Suspendisse
+                        ullamcorper sem nunc, non congue metus iaculis eget. 
+                    </p>
+                    
+                    <p>
+                        Nulla eu placerat nibh, non vestibulum ligula. Maecenas 
+                        mollis vehicula lacus, fermentum tempus nisl eleifend at. 
+                        Phasellus id sapien sed ligula dapibus iaculis in eu ipsum. 
+                        Sed semper venenatis fringilla. Quisque faucibus quam 
+                        vitae felis porttitor gravida. Integer non sollicitudin purus. 
+                    </p>
+
+                    <p>
+                        Fusce cursus pharetra nunc, ut hendrerit dui dignissim et.
+                        Mauris eros erat, efficitur non nibh et, fermentum massa. 
+                        Vestibulum vehicula orci vel dui euismod facilisis.
+                    </p>
+                    
             </article>
 
         </div>
@@ -194,9 +219,28 @@
 
     <section id="menu">
 
+        <img class="sakura" src="img/sakura.gif" alt="sakura">
+
         <h2 class="menu_heading">Menu</h2>
 
         <div class="menu_text container">
+
+            <h2>SOUP & SALAD</h2>
+
+            <h3>MISO SOUP(V)</h3>
+            <p>Japanese classic soup, tofu, wakame, spring onion <br> 4.60</p>
+
+            <h3>SPICY MISO SOUP</h3>
+            <p>Spicy shrimp soup, garlic, black mushroom <br> 5.80</p>
+
+            <h3>SUNOMONO (V)</h3>
+            <p>Wakame & cucumber salad with shiso dressing <br> 7.80</p>
+
+            <h3>TOFU SALAD (V)</h3>
+            <p>Chilled tofu and avocado with soy dressing <br> 8.80</p>
+
+            <h3>KINOKO SALAD(V)</h3>
+            <p>Mixed mushroom salad with sesame dressing <br> 9.60</p>
 
             <h2>SASHIMI MORI</h2>
 
@@ -232,23 +276,6 @@
             <h3>WAGYU SUSHI ROLL</h3>
             <p>Japanese wagyu, shiitake, asparagus <br> 28.50</p>
 
-            <h2>SOUP & SALAD</h2>
-
-            <h3>MISO SOUP(V)</h3>
-            <p>Japanese classic soup, tofu, wakame, spring onion <br> 4.60</p>
-
-            <h3>SPICY MISO SOUP</h3>
-            <p>Spicy shrimp soup, garlic, black mushroom <br> 5.80</p>
-
-            <h3>SUNOMONO (V)</h3>
-            <p>Wakame & cucumber salad with shiso dressing <br> 7.80</p>
-
-            <h3>TOFU SALAD (V)</h3>
-            <p>Chilled tofu and avocado with soy dressing <br> 8.80</p>
-
-            <h3>KINOKO SALAD(V)</h3>
-            <p>Mixed mushroom salad with sesame dressing <br> 9.60</p>
-
 
             <h2>Desserts</h2>
 
@@ -269,7 +296,7 @@
 
         </div>
 
-        <img src="img/maki.png" alt="maki">
+        <img class="maki" src="img/maki.png" alt="maki">
         <img class="ramen" src="img/Ramen.png" alt="ramen">
         <img class="sushi_two" src="img/susi1.png" alt="sushi">
 
@@ -350,7 +377,7 @@
     </section>
 
     <footer>
-        <p>Create by Wiktoria Agarkowa</p>
+        <p>Created by Wiktoria Agarkowa</p>
     </footer>
 
     <script src="js/main.js"></script>

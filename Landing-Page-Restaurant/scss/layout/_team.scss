@@ -72,15 +72,29 @@
 }
 
 @media screen and (max-width: 768px) {
-    #service {
+    #team {
         .section_header {
+
+            h2 {
+                font-size: $base-font-size * 2;
+            }
+
             p {
-                @include p;
+                font-size: $base-font-size;
+                max-width: none;
+                padding: 0 20px 50px 20px;
             }
         }
         .box {
             padding: 10px 0;
             width: 100%;
+
+            .social_icons {
+                a {
+                    font-size: $base-font-size + 10;
+                    padding: 20px;
+                }
+            }
         }
         
     }

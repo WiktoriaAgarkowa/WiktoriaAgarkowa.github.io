@@ -14,7 +14,7 @@
         background-color: #ffffff;
         border-radius: 30px;
 
-        button#close {
+        button#close_pop_up {
             position: absolute;
             top: 0;
             right: 0;
@@ -70,8 +70,34 @@
 
     }
 
+    p {
+        @include p;
+        color: #f00;
+    }
+
 }
 
 #pop_up.hidden {
     display: none;
+}
+
+@media screen and (max-width: 1280px) {
+    #pop_up {
+        div.container_flex {
+            
+
+            .flex_item {
+                flex-basis: 100%;
+    
+                img {
+                    display: none;
+                }
+            }
+        }
+
+        p {
+            flex-basis: 100%;
+            text-align: center;
+        }
+    }
 }
