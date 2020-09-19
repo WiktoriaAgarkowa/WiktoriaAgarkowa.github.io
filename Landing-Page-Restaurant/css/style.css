@@ -1058,7 +1058,7 @@ footer p {
       flex-basis: 50%;
 }
 
-#pop_up form.container_flex input[type='date']::-webkit-input-placeholder {
+#pop_up form.container_flex input[type='date'] {
   border-right: 1px solid #000;
 }
 
