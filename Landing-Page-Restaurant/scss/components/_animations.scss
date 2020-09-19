@@ -1,6 +1,12 @@
+.opacity {
+  animation-name: opacity;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
 
+@keyframes opacity {
 
-  @keyframes opacity {
     0% {
       opacity: 0;
     }
@@ -8,13 +14,6 @@
     100% {
       opacity: 1;
     }
-  }
-
-  .opacity {
-    animation-name: opacity;
-    animation-duration: 2s;
-    animation-iteration-count: 1;
-    animation-timing-function: linear;
   }
 
   .slideLeft{
@@ -85,9 +84,6 @@
 }
 
 @keyframes twist {
-  0% {
-    transform: rotate(0deg)
-  }
 
   100% {
     transform: rotate(360deg)
@@ -100,6 +96,23 @@
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   animation-delay: 3s;
+}
+
+@keyframes preloader {
+
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.preloader_rotate {
+  animation: 3s linear 0s normal none infinite running preloader;
+  -webkit-animation: 3s linear 0s normal none infinite running preloader;
+  width: 100px;
+
 }
 
 .slideRight{

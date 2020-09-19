@@ -86,7 +86,8 @@
 @media screen and (max-width: 1280px) {
     #pop_up {
         div.container_flex {
-            
+            width: 100%;
+            border-radius: 0;
 
             .flex_item {
                 flex-basis: 100%;

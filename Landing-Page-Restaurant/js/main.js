@@ -1,3 +1,16 @@
+//---Preloader---//
+
+let body = document.body;
+
+window.onload = function () {
+    body.classList.add('loaded_hiding');
+    window.setTimeout(function () {
+      body.classList.add('loaded');
+      body.classList.remove('loaded_hiding');
+    }, 500);
+  }
+
+
 //---Smooth scroll---//
 
 let btns = document.getElementsByClassName('link');
@@ -24,7 +37,18 @@ function ButtonClick(section) {
  btns[1].addEventListener('click', function(){ButtonClick(team)});
  btns[3].addEventListener('click', function(){ButtonClick(blog)});
 
- //---Hide menu---//
+//---Scroll Top---//
+
+ let btnScroll = document.getElementById('logo');
+
+function scrollTop() {
+    window.scrollTo(0,0)
+}
+
+btnScroll.addEventListener('click', scrollTop) 
+
+
+//---Hide menu---//
 
  document.getElementById('hamburger').addEventListener('click', function(){
     document.getElementsByClassName('hide_menu')[0].classList.toggle('open')
@@ -33,16 +57,6 @@ function ButtonClick(section) {
 document.getElementById('close').addEventListener('click', function(){
     document.getElementsByClassName('hide_menu')[0].classList.toggle('open')
 })
-
- //---Scroll Top---//
-
- let btnScroll = document.getElementById('logo');
-
-function scrollTop() {
-    window.scrollTo(0,0)
-}
-
-btnScroll.addEventListener('click', scrollTop)
 
 //---Pop Up---//
 
@@ -69,8 +83,6 @@ btnClose.addEventListener('click', popUpNoActive);
 //---Form validation---//
 
 let formReserve = document.getElementById('form_reserve');
-
-
 
 const createReservation = (reservation) => {
     const uwaga = document.getElementById('uwaga1');
@@ -205,3 +217,4 @@ function isFullyVisible(el) {
 
     return ((top >= 0) && (bottom <= window.innerHeight));
   }
+
