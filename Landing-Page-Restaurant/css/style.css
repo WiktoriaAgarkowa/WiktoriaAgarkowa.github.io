@@ -1058,6 +1058,10 @@ footer p {
       flex-basis: 50%;
 }
 
+#pop_up form.container_flex input[type='date']::-webkit-input-placeholder {
+  border-right: 1px solid #000;
+}
+
 #pop_up p {
   font-family: "M PLUS Rounded 1c", sans-serif;
   font-size: 16px;
