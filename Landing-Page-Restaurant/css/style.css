@@ -291,12 +291,14 @@ select::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
   color: #000000;
+  background-color: transparent;
 }
 
 input::-webkit-option-placeholder,
 select::-webkit-option-placeholder,
 textarea::-webkit-option-placeholder {
   color: #000;
+  background-color: transparent;
 }
 
 input::-moz-placeholder,
@@ -304,6 +306,7 @@ select::-moz-placeholder,
 textarea::-moz-placeholder {
   /* Firefox 19+ */
   color: #000000;
+  background-color: transparent;
 }
 
 input:-ms-input-placeholder,
@@ -311,6 +314,7 @@ select:-ms-input-placeholder,
 textarea:-ms-input-placeholder {
   /* IE 10+ */
   color: #000000;
+  background-color: transparent;
 }
 
 input:-moz-placeholder,
@@ -318,6 +322,7 @@ select:-moz-placeholder,
 textarea:-moz-placeholder {
   /* Firefox 18- */
   color: #000000;
+  background-color: transparent;
 }
 
 option {
