@@ -306,18 +306,63 @@ a:focus {
   }
 }
 
-#main_header .container_flex {
+#main_header {
+  display: none;
+}
+
+@media screen and (max-width: 880px) {
+  #main_header {
+    position: relative;
+    display: block;
+    overflow: hidden;
+  }
+  #main_header .heading {
+    position: absolute;
+    font-size: 100%;
+    top: 50%;
+    left: 50%;
+  }
+  #main_header .heading h1 {
+    color: #FFFFFF;
+    font-family: "Inconsolata", monospace;
+    font-weight: 300;
+    font-size: 25px;
+    text-align: center;
+    font-size: 100%;
+  }
+  #main_header .heading button {
+    background-color: transparent;
+    border: 1px solid #7BDCFE;
+    color: #7BDCFE;
+    display: block;
+    margin-left: auto;
+    font-family: "Inconsolata", monospace;
+    padding: 10px;
+  }
+  #main_header .heading button:focus {
+    outline: none;
+  }
+  #main_header img {
+    position: relative;
+    width: 120%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    z-index: -1;
+  }
+}
+
+#about .container_flex {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 
-#main_header .container_flex .flex_item_header {
+#about .container_flex .flex_item_header {
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
 }
 
-#main_header .container_flex .flex_item_header h1 {
+#about .container_flex .flex_item_header h1 {
   color: #FFFFFF;
   font-family: "Inconsolata", monospace;
   font-weight: 300;
@@ -325,7 +370,7 @@ a:focus {
   padding-top: 30px;
 }
 
-#main_header .container_flex .flex_item_header p {
+#about .container_flex .flex_item_header p {
   color: #FFFFFF;
   font-family: "Inconsolata", monospace;
   font-weight: 300;
@@ -335,14 +380,14 @@ a:focus {
   line-height: 1.7;
 }
 
-#main_header .container_flex .flex_item_header p .link {
+#about .container_flex .flex_item_header p .link {
   color: #7BDCFE;
   font-family: "Inconsolata", monospace;
   font-weight: 300;
   font-size: 13px;
 }
 
-#main_header .container_flex .flex_item_header a {
+#about .container_flex .flex_item_header a {
   color: #FFFFFF;
   font-family: "Inconsolata", monospace;
   font-weight: 300;
@@ -351,45 +396,45 @@ a:focus {
   text-decoration: none;
 }
 
-#main_header .container_flex .flex_item_header a:hover {
+#about .container_flex .flex_item_header a:hover {
   border-bottom: 1px solid #FFFFFF;
 }
 
-#main_header .container_flex .flex_item_header ul.container_flex {
+#about .container_flex .flex_item_header ul.container_flex {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
   list-style: none;
 }
 
-#main_header .container_flex .flex_item_header ul.container_flex li {
+#about .container_flex .flex_item_header ul.container_flex li {
   padding: 30px 20px;
 }
 
 @media screen and (max-width: 880px) {
-  #main_header {
+  #about {
     padding: 0 20px;
   }
-  #main_header .container_flex {
+  #about .container_flex {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  #main_header .container_flex .flex_item_header {
+  #about .container_flex .flex_item_header {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
   }
-  #main_header .container_flex .flex_item_header h1 {
+  #about .container_flex .flex_item_header h1 {
     text-align: center;
   }
-  #main_header .container_flex .flex_item_header p {
+  #about .container_flex .flex_item_header p {
     font-size: 13px;
     margin: auto;
     display: block;
   }
-  #main_header .container_flex .flex_item_header a {
+  #about .container_flex .flex_item_header a {
     font-size: 13px;
   }
-  #main_header .container_flex .flex_item_header ul.container_flex {
+  #about .container_flex .flex_item_header ul.container_flex {
     padding: 0;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -398,8 +443,9 @@ a:focus {
 }
 
 #projects .header_projects {
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 20px 0;
   border: 1px solid #4A4A4A;
   border-radius: 50px;
@@ -412,6 +458,8 @@ a:focus {
   font-family: "Inconsolata", monospace;
   font-weight: 300;
   font-size: 25px;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
   display: inline;
   padding: 0 55px;
   color: #4A4A4A;
@@ -450,6 +498,26 @@ a:focus {
 }
 
 #projects .header_projects .small_screen + div {
+  display: none;
+}
+
+#projects .social_app {
+  border: 1px solid #7BDCFE;
+}
+
+#projects .landing_page {
+  border: 1px solid #FFE799;
+}
+
+#projects .weather_app {
+  border: 1px solid #FFB496;
+}
+
+#projects .header_projects_small_screen {
+  display: none;
+}
+
+#projects .header_projects_small_screen h2 {
   display: none;
 }
 
@@ -505,6 +573,10 @@ a:focus {
 
 @media screen and (max-width: 880px) {
   #projects .header_projects {
+    display: none;
+  }
+  #projects .header_projects_small_screen {
+    display: block;
     border: none;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -514,14 +586,35 @@ a:focus {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  #projects .header_projects button {
+  #projects .header_projects_small_screen h2 {
+    color: #FFFFFF;
+    font-family: "Inconsolata", monospace;
+    font-weight: 300;
+    font-size: 25px;
+    display: block;
+    text-align: center;
+    padding-bottom: 30px;
+  }
+  #projects .header_projects_small_screen button {
+    color: #FFFFFF;
+    font-family: "Inconsolata", monospace;
+    font-weight: 300;
+    font-size: 25px;
+    font-size: 18px;
+    padding: 0 55px;
+    color: #4A4A4A;
     position: relative;
     left: 50%;
     -webkit-transform: translate(-50%, 0);
             transform: translate(-50%, 0);
     padding: 20px 0;
+    background-color: transparent;
+    border: 0;
+    width: 100%;
+    -webkit-transition: all .5s;
+    transition: all .5s;
   }
-  #projects .header_projects button::before {
+  #projects .header_projects_small_screen button::before {
     -webkit-box-sizing: inherit;
             box-sizing: inherit;
     content: '';
@@ -535,26 +628,30 @@ a:focus {
     transition: all .75s;
     z-index: -1;
   }
-  #projects .header_projects button:hover::before {
+  #projects .header_projects_small_screen button:hover::before {
     width: 100%;
     height: 100%;
     background-color: #7BDCFE;
   }
-  #projects .header_projects .social_app:hover,
-  #projects .header_projects .social_app:focus,
-  #projects .header_projects .landing_page:hover,
-  #projects .header_projects .landing_page:focus,
-  #projects .header_projects .weather_app:hover,
-  #projects .header_projects .weather_app:focus {
-    color: #FFFFFF;
+  #projects .header_projects_small_screen button:focus {
+    outline: none;
   }
-  #projects .header_projects .body_flex_item_small_screen {
+  #projects .header_projects_small_screen .social_app:hover,
+  #projects .header_projects_small_screen .social_app:focus,
+  #projects .header_projects_small_screen .landing_page:hover,
+  #projects .header_projects_small_screen .landing_page:focus,
+  #projects .header_projects_small_screen .weather_app:hover,
+  #projects .header_projects_small_screen .weather_app:focus {
+    color: #FFFFFF;
+    background-color: #7BDCFE;
+  }
+  #projects .header_projects_small_screen .body_flex_item_small_screen {
     max-height: 0;
     overflow: hidden;
-    -webkit-transition: max-height 0.2s ease-out;
-    transition: max-height 0.2s ease-out;
+    -webkit-transition: max-height 0.35s ease-out;
+    transition: max-height 0.35s ease-out;
   }
-  #projects .header_projects .small_screen {
+  #projects .header_projects_small_screen .small_screen {
     color: #FFFFFF;
     font-family: "Inconsolata", monospace;
     font-weight: 300;
@@ -569,12 +666,12 @@ a:focus {
     -webkit-transform: scaleY(1);
             transform: scaleY(1);
   }
-  #projects .header_projects .small_screen_open {
+  #projects .header_projects_small_screen .small_screen_open {
     display: block;
     -webkit-transform: scaleY(1);
             transform: scaleY(1);
   }
-  #projects .header_projects .small_screen + div {
+  #projects .header_projects_small_screen .small_screen + div {
     display: block;
   }
   #projects .project_display {
@@ -761,6 +858,9 @@ footer p {
             transform: translate(-50%, 0);
     margin-top: 20px;
   }
+  #contact form #error_msg {
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 870px) {
@@ -826,11 +926,6 @@ hr:nth-child(1) {
 }
 
 hr:nth-child(2) {
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-}
-
-hr:nth-child(3) {
   -webkit-transform: rotate(120deg);
           transform: rotate(120deg);
 }
@@ -917,6 +1012,18 @@ hr:nth-child(3) {
 
 @media screen and (max-width: 870px) {
   #projects .project_display::before, #projects .project_display::after {
+    display: none;
+  }
+  #projects .clicked::before,
+  #projects .clicked::after {
+    display: none;
+  }
+  #projects .social_app_description::before,
+  #projects .social_app_description::after,
+  #projects .landing_page_description::before,
+  #projects .landing_page_description::after,
+  #projects .wether_app_description::before,
+  #projects .wether_app_description::after {
     display: none;
   }
 }

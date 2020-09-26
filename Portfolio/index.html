@@ -11,8 +11,16 @@
     <title>Wiktoria Agarkowa</title>
 </head>
 <body>
+
+    <header id= "main_header">
+        <div class="heading">
+            <h1>Wiktoria Agarkowa</h1>
+            <button id="scroll_button">Click</button>
+        </div>
+        <img src="img/photo.png" alt="my photo">
+    </header>
     
-    <header id="main_header">
+    <section id="about">
         
         <div class="container">
             <div class="container_flex">
@@ -39,6 +47,7 @@
                 <div class="flex_item_header">
 
                    <ul class="container_flex">
+
                        <li>
                         <a href="https://github.com/WiktoriaAgarkowa/WiktoriaAgarkowa.github.io/tree/master/Portfolio">
                             Portfolio GitHub
@@ -58,10 +67,14 @@
 
         </div>
 
-    </header>
+    </section>
+
+
 
     <section id="body" class="container">
+
         <div class="container_flex">
+
             <div id="contact" class="flex_item_body">
 
                 <h2>Contact</h2>
@@ -80,72 +93,64 @@
                     <p id="error_msg"></p>
                 </form>
 
+        </div>
+
+
+        <div id="projects" class="flex_item_body_middle">
+
+            <div class="header_projects_small_screen container_flex">
+
+                <h2>Projects</h2>
+
+                <button class="project_name_ss social_app">Social-App</button>
+
+                <div class="body_flex_item_small_screen">
+
+                    <p class="small_screen">
+                        I made the Social-App as part of the assignment during the course. The application has the ability to register (however, after registration, the data is not saved in the API), it is also possible to log-in and log-out. If you are not logged in, 10 posts of random users are displayed on the main page. When authorizing, posts of users are added to which you are subscribed. <br> <span> Technologies: </span> <br> HTML, CSS, ReactJS, Styled Components
+                    </p>
+
+                    <div class="sources">
+                        <a href="" target="_blank">Live</a>
+                        <a href="" target="_blank">Code</a>
+                    </div>
+                    
+                </div>
+
+                
+
+                <button class="project_name_ss landing_page">Landing-Page</button>
+
+                <div class="body_flex_item_small_screen">
+
+                    <p class="small_screen">
+                        Landing-Page project which is the hallmark of a sushi restaurant. On the page you can make a table reservation and contact using the form. Some elements are animated with CSS, and reservation information is sent using API. <br> <br> <span> Technologies: </span> <br> HTML, CSS, SASS, AJAX
+                    </p>
+
+                    <div class="sources">
+                        <a href="https://wiktoriaagarkowa.github.io/Landing-Page-Restaurant/index.html" target="_blank">Live</a>
+                        <a href="https://github.com/WiktoriaAgarkowa/WiktoriaAgarkowa.github.io/tree/master/Landing-Page-Restaurant" target="_blank">Code</a>
+                    </div>
+
+                </div>
+
+
             </div>
 
-
-            <div id="projects" class="flex_item_body_middle">
-
-                <div class="header_projects container_flex">
-
-                    
+            <div class="header_projects container_flex">
 
                     <button class="project_name social_app">Social-App</button>
 
-                    <div class="body_flex_item_small_screen">
-
-                        <p class="small_screen">
-                            I made the Social-App as part of the assignment during the course. The application has the ability to register (however, after registration, the data is not saved in the API), it is also possible to login and log out. If you are not logged in, 10 posts of random users are displayed on the main page. When authorizing, posts of users are added to which you are subscribed. <br> <span> Technologies: </span> <br> HTML, CSS, ReactJS, Styled Components
-                        </p>
-
-                        <div class="sources">
-                            <a href="">Live</a>
-                            <a href="">Code</a>
-                        </div>
-                        
-                    </div>
-
-                    
-
                     <button class="project_name landing_page">Landing-Page</button>
 
-                    <div class="body_flex_item_small_screen">
-
-                        <p class="small_screen">
-                            I made the Social-App as part of the assignment during the course. The application has the ability to register (however, after registration, the data is not saved in the API), it is also possible to login and log out. If you are not logged in, 10 posts of random users are displayed on the main page. When authorizing, posts of users are added to which you are subscribed. <br> <span> Technologies: </span> <br> HTML, CSS, ReactJS, Styled Components
-                        </p>
-
-                        <div class="sources">
-                            <a href="https://wiktoriaagarkowa.github.io/Landing-Page-Restaurant/index.html">Live</a>
-                            <a href="https://github.com/WiktoriaAgarkowa/WiktoriaAgarkowa.github.io/tree/master/Landing-Page-Restaurant">Code</a>
-                        </div>
-
-                    </div>
-
-                    
-
-                    <button class="project_name weather_app">Weather-App</button>
-
-                    <div class="body_flex_item_small_screen">
-
-                        <p class="small_screen">
-                            I made the Social-App as part of the assignment during the course. The application has the ability to register (however, after registration, the data is not saved in the API), it is also possible to login and log out. If you are not logged in, 10 posts of random users are displayed on the main page. When authorizing, posts of users are added to which you are subscribed. <br> <span> Technologies: </span> <br> HTML, CSS, ReactJS, Styled Components
-                        </p>
-
-                        <div class="sources">
-                            <a href="">Live</a>
-                            <a href="">Code</a>
-                        </div>
-
-                    </div>
-                </div>
+            </div>
 
                 <div class="hr container_flex">
-                    <hr class="line">
                     <hr class="line">
                     <hr class="line"> 
                 </div>
 
-                <div id="project_display_id" class="project_display">
+                <div id="project_display" class="project_display">
 
                     <header>
 
@@ -162,16 +167,12 @@
                             
     
                             <div class="sources">
-                                <a href="">Live</a>
+                                <a href="" >Live</a>
                                 <a href="">Code</a>
                             </div>
     
                         </div>
 
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
                     </div>
 
                 </div>

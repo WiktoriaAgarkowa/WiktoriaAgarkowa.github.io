@@ -1,7 +1,7 @@
 #projects {
     
     .header_projects {
-        justify-content: space-around;
+        justify-content: space-between;
         padding: 20px 0;
         border: 1px solid $fifth-text-color;
         border-radius: 50px;
@@ -9,6 +9,7 @@
 
         button {
             @include h1;
+            flex-basis: 50%;
             display: inline;
             padding: 0 55px;
             color: $fifth-text-color;
@@ -50,17 +51,25 @@
         }
     }
 
-    // .social_app {
-    //     border: 1px solid $second-text-color;
-    // }
+    .social_app {
+        border: 1px solid $second-text-color;
+    }
 
-    // .laning_page {
-    //     border: 1px solid $third-text-color;
-    // }
+    .landing_page {
+        border: 1px solid $third-text-color;
+    }
 
-    // .wether_app {
-    //     border: 1px solid $fourth-text-color;
-    // }
+    .weather_app {
+        border: 1px solid $fourth-text-color;
+    }
+
+    .header_projects_small_screen {
+        display: none;
+
+        h2 {
+            display: none;
+        }
+    }
 
 
     .project_display {
@@ -114,17 +123,36 @@
     #projects {
 
         .header_projects {
+            display: none;
+        }
 
+        .header_projects_small_screen {
+            display: block;
             border: none;
             flex-direction: column;
             justify-content: center;
 
+            h2 {
+                @include h1;
+                display: block;
+                text-align: center;
+                padding-bottom: 30px;
+            }
+
             button {
+
+                @include h1;
+                font-size: 18px;
+                padding: 0 55px;
+                color: $fifth-text-color;
                 position: relative;
                 left: 50%;
                 transform: translate(-50%, 0);
                 padding: 20px 0;
-
+                background-color: transparent;
+                border: 0;
+                width: 100%;
+                transition: all .5s;
 
                 &::before {
                     box-sizing: inherit;
@@ -145,7 +173,9 @@
                     background-color: $second-text-color;
                 }
 
-               
+               &:focus {
+                   outline: none;
+               }
 
                 
             }
@@ -157,31 +187,14 @@
                 .weather_app:hover,
                 .weather_app:focus {
                   color: $base-text-color;
+                  background-color: $second-text-color;
                 }
 
             .body_flex_item_small_screen {
                 max-height: 0;
                 overflow: hidden;
-                transition: max-height 0.2s ease-out;
+                transition: max-height 0.35s ease-out;
             }
-
-            // .social_app:hover,
-            // .social_app:focus  {
-            //     background-color: $second-text-color;
-            //     color: $base-text-color;
-            // }
-
-            // .landing_page:hover,
-            // .landing_page:focus {
-            //     background-color: $third-text-color;
-            //     color: $base-text-color;
-            // }
-
-            // .weather_app:hover,
-            // .weather_app:focus {
-            //     background-color: $fourth-text-color;
-            //     color: $base-text-color;
-            // }
 
             
 

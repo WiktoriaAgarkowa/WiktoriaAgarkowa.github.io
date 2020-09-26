@@ -89,5 +89,19 @@
                 display: none;
             }
         }
+
+        .clicked::before,
+        .clicked::after {
+            display: none;
+        }
+
+        .social_app_description::before,
+        .social_app_description::after,
+        .landing_page_description::before,
+        .landing_page_description::after,
+        .wether_app_description::before,
+        .wether_app_description::after {
+            display: none;
+        }
     }
 }
