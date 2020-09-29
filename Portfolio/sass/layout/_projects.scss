@@ -1,5 +1,5 @@
 #projects {
-    
+
     .header_projects {
         justify-content: space-between;
         padding: 20px 0;
@@ -73,10 +73,10 @@
 
 
     .project_display {
-
+        
         h2 {
             @include h1;
-            font-size: 100px;
+            font-size: 130px;
             text-align: center;
             color: $fifth-text-color;
             transition: all 0.5s;
@@ -91,7 +91,7 @@
             .description {
                 padding: 0 20px 30px 20px;
                 font-family: $secondary-font;
-                color: white;
+                color: $base-text-color;
                 text-align: center;
             }
 

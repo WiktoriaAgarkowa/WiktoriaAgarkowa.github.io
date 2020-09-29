@@ -6,6 +6,10 @@ html {
     background-color: $base-bg-color;
 }
 
+section {
+    opacity: 0;
+}
+
 .container {
     max-width: 1400px;
     margin: auto;
@@ -24,6 +28,7 @@ a {
 }
 
 #body {
+    display: none;
     padding: 50px 0;
 }
 
@@ -41,6 +46,7 @@ a {
     }
 
     #body {
+        display: none;
         padding: 50px 50px;
     }
 
@@ -60,7 +66,12 @@ a {
         padding: 0;
     }
 
+    section {
+        opacity: 1;
+    }
+
     #body {
+        display: block;
         padding: 50px 0;
     }
 }

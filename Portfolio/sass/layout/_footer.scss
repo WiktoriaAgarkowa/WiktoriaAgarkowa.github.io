@@ -1,17 +1,19 @@
 footer {
+    display: none;
     position: relative;
-    bottom: -70px;
+  
     p {
         color: $base-text-color;
         font-family: $secondary-font;
         text-align: center;
+        font-size: 10px;
     }
 
 }
 
 @media screen and (max-width: 880px) {
     footer {
-
+        display: block;
         bottom: 10px;
         p {
             font-size: small;

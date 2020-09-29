@@ -1,7 +1,11 @@
 #about {
+    opacity: 0;
+    transition: all .4s;
 
     .container_flex {
         justify-content: space-between;
+        flex-direction: row-reverse;
+        
 
         .flex_item_header {
             flex-basis: 50%;
@@ -9,6 +13,7 @@
             h1 {
                 @include h1;
                 padding-top: 30px;
+                text-align: right;
             }
         
             p {
@@ -16,12 +21,33 @@
                 max-width: 500px;
                 text-align: justify;
                 line-height: 1.7;
+                margin-left: auto;
 
                 .link {
                     color: $second-text-color;
                     font-family: $base-font;
                     font-weight: 300;
                     font-size: 13px;
+                }
+            }
+
+            button {
+                background-color: $second-text-color;
+                border: 1px solid $second-text-color;
+                color: $base-text-color;
+                display: block;
+                margin-left: auto;
+                font-family: $base-font;
+                padding: 10px 20px;
+                transition: all .35s;
+
+                &:focus {
+                    outline: none;
+                }
+
+                &:hover {
+                    background-color: $fifth-text-color;
+                    border: 1px solid $fifth-text-color;
                 }
             }
         
@@ -38,7 +64,7 @@
             ul.container_flex {
                 justify-content: flex-end;
                 list-style: none;
-
+                padding-left: 0;
                 li {
                     padding: 30px 20px;
                 }
@@ -54,7 +80,7 @@
 
     #about {
         padding: 0 20px;
-
+        opacity: 1;
         .container_flex {
             flex-wrap: wrap;
 
@@ -73,6 +99,10 @@
 
                 a {
                     font-size: 13px;
+                }
+
+                button {
+                    display: none;
                 }
 
                 ul.container_flex {
