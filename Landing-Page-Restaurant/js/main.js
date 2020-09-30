@@ -155,7 +155,6 @@ const reservationValidate = (event) => {
     if(emptyField) {
         createReservation(reservation);
     } else {
-        uwaga.classList.add('error');
         uwaga.innerText = 'Please fill in the required fields'
     }
 }
@@ -187,14 +186,11 @@ function scrolling(e) {
 
     if (isPartiallyVisible(sushi)) {
         sushi.classList.add('slideLeft')
-    } else {
-        sushi.classList.remove('slideLeft')
-    }
+    } 
 
-    if (isPartiallyVisible(ramen)) {
-        ramen.classList.add('slideDown')
-    } else {
-        ramen.classList.remove('slideDown')
+    if (isFullyVisible(ramen)) {
+        ramen.classList.add('slideLeft')
+        ramen.classList.remove('hide')
     }
     
 }

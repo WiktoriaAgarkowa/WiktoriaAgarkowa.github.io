@@ -445,11 +445,10 @@ option {
   position: absolute;
   z-index: -10;
   top: 0;
-  right: 0;
 }
 
 #main_header .header_content .main_image img {
-  width: 40%;
+  width: 70%;
   display: block;
   margin: 0;
 }
@@ -781,7 +780,12 @@ footer p {
   top: 50%;
 }
 
-@media screen and (max-width: 1200px) {
+#menu .hide {
+  -webkit-transform: translateX(150%);
+          transform: translateX(150%);
+}
+
+@media screen and (max-width: 1600px) {
   #menu .maki {
     max-height: 19%;
     top: 30%;
@@ -794,7 +798,7 @@ footer p {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1080px) {
   #menu .sakura {
     display: block;
     max-height: 20%;
@@ -863,36 +867,6 @@ footer p {
   }
 }
 
-.slideDown {
-  animation-name: slideDown;
-  -webkit-animation-name: slideDown;
-  animation-duration: 1s;
-  -webkit-animation-duration: 1s;
-  animation-timing-function: ease;
-  -webkit-animation-timing-function: ease;
-  visibility: visible !important;
-}
-
-@keyframes slideDown {
-  0% {
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
-  }
-  100% {
-    -webkit-transform: translateY(0%);
-            transform: translateY(0%);
-  }
-}
-
-@-webkit-keyframes slideDown {
-  0% {
-    -webkit-transform: translateY(-100%);
-  }
-  100% {
-    -webkit-transform: translateY(0%);
-  }
-}
-
 @-webkit-keyframes twist {
   100% {
     -webkit-transform: rotate(360deg);
@@ -918,6 +892,36 @@ footer p {
           animation-timing-function: linear;
   -webkit-animation-delay: 3s;
           animation-delay: 3s;
+}
+
+.slideRight {
+  animation-name: slideRight;
+  -webkit-animation-name: slideRight;
+  animation-duration: 2s;
+  -webkit-animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-timing-function: ease-in-out;
+  visibility: visible !important;
+}
+
+@keyframes slideRight {
+  0% {
+    -webkit-transform: translateX(-150%);
+            transform: translateX(-150%);
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+
+@-webkit-keyframes slideRight {
+  0% {
+    -webkit-transform: translateX(-150%);
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+  }
 }
 
 @-webkit-keyframes preloader {
@@ -946,36 +950,6 @@ footer p {
   animation: 3s linear 0s normal none infinite running preloader;
   -webkit-animation: 3s linear 0s normal none infinite running preloader;
   width: 100px;
-}
-
-.slideRight {
-  animation-name: slideRight;
-  -webkit-animation-name: slideRight;
-  animation-duration: 3s;
-  -webkit-animation-duration: 3s;
-  animation-timing-function: ease-in-out;
-  -webkit-animation-timing-function: ease-in-out;
-  visibility: visible !important;
-}
-
-@keyframes slideRight {
-  0% {
-    -webkit-transform: translateX(-150%);
-            transform: translateX(-150%);
-  }
-  100% {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
-  }
-}
-
-@-webkit-keyframes slideRight {
-  0% {
-    -webkit-transform: translateX(-150%);
-  }
-  100% {
-    -webkit-transform: translateX(0%);
-  }
 }
 
 #pop_up {
@@ -1060,6 +1034,10 @@ footer p {
 
 #pop_up form.container_flex input[type='date'] {
   border-right: 1px solid #000;
+}
+
+#pop_up form.container_flex .error {
+  border-bottom: 1px solid #f00;
 }
 
 #pop_up p {

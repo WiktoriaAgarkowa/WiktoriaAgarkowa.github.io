@@ -57,14 +57,17 @@
         max-height: 20%;
         right: 0;
         top: 50%;
-        
 
+    }
+
+    .hide {
+        transform: translateX(150%);
     }
     
 }
 
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1600px) {
     #menu {
 
         .maki {
@@ -82,7 +85,7 @@
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1080px) {
 
     #menu {
 

@@ -50,38 +50,6 @@
 }
 
 
-.slideDown{
-  animation-name: slideDown;
-  -webkit-animation-name: slideDown;  
-
-  animation-duration: 1s; 
-  -webkit-animation-duration: 1s;
-
-  animation-timing-function: ease;    
-  -webkit-animation-timing-function: ease;    
-
-  visibility: visible !important;                     
-}
-
-@keyframes slideDown {
-  0% {
-      transform: translateY(-100%);
-  }
-  
-  100% {
-      transform: translateY(0%);
-  }       
-}
-
-@-webkit-keyframes slideDown {
-  0% {
-      -webkit-transform: translateY(-100%);
-  }
-
-  100% {
-      -webkit-transform: translateY(0%);
-  }   
-}
 
 @keyframes twist {
 
@@ -97,6 +65,42 @@
   animation-timing-function: linear;
   animation-delay: 3s;
 }
+
+
+.slideRight{
+  animation-name: slideRight;
+  -webkit-animation-name: slideRight; 
+
+  animation-duration: 2s; 
+  -webkit-animation-duration: 2s;
+
+  animation-timing-function: ease-in-out; 
+  -webkit-animation-timing-function: ease-in-out;     
+
+  visibility: visible !important; 
+}
+
+@keyframes slideRight {
+  0% {
+      transform: translateX(-150%);
+  }
+            
+  100% {
+      transform: translateX(0%);
+  }   
+}
+
+@-webkit-keyframes slideRight {
+  0% {
+      -webkit-transform: translateX(-150%);
+  }
+  
+  100% {
+      -webkit-transform: translateX(0%);
+  }
+}
+
+
 
 @keyframes preloader {
 
@@ -115,37 +119,3 @@
 
 }
 
-.slideRight{
-  animation-name: slideRight;
-  -webkit-animation-name: slideRight; 
-
-  animation-duration: 3s; 
-  -webkit-animation-duration: 3s;
-
- 
-
-  animation-timing-function: ease-in-out; 
-  -webkit-animation-timing-function: ease-in-out;     
-
-  visibility: visible !important; 
-}
-
-@keyframes slideRight {
-  0% {
-      transform: translateX(-150%);
-  }
-   
-  100% {
-      transform: translateX(0%);
-  }   
-}
-
-@-webkit-keyframes slideRight {
-  0% {
-      -webkit-transform: translateX(-150%);
-  }
-         
-  100% {
-      -webkit-transform: translateX(0%);
-  }
-}
