@@ -16,39 +16,6 @@
     }
   }
 
-  .slideLeft{
-    animation-name: slideLeft;
-    -webkit-animation-name: slideLeft;  
- 
-    animation-duration: 2s; 
-    -webkit-animation-duration: 2s;
- 
-    animation-timing-function: ease-in-out; 
-    -webkit-animation-timing-function: ease-in-out;     
- 
-    visibility: visible !important; 
-}
- 
-@keyframes slideLeft {
-    0% {
-        transform: translateX(150%);
-    }
-              
-    100% {
-        transform: translateX(0%);
-    }
-}
- 
-@-webkit-keyframes slideLeft {
-    0% {
-        -webkit-transform: translateX(150%);
-    }
-    
-    100% {
-        -webkit-transform: translateX(0%);
-    }
-}
-
 
 
 @keyframes twist {
@@ -118,4 +85,6 @@
   width: 100px;
 
 }
+
+
 

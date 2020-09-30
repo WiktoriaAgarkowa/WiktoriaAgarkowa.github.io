@@ -51,18 +51,22 @@
     .ramen {
         max-height: 20%;
         right: 0;
+        transform: translateX(150%);
+        transition: all .5s;
     }
 
     .sushi_two {
-        max-height: 20%;
+        max-height: 19%;
         right: 0;
         top: 50%;
-
-    }
-
-    .hide {
         transform: translateX(150%);
+        transition: all .7s;
     }
+
+    .open {
+        transform: translateX(0%);
+    }
+
     
 }
 

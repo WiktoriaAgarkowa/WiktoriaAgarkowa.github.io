@@ -17,9 +17,8 @@ let btns = document.getElementsByClassName('link');
 let about = document.getElementById('about');
 let menu = document.getElementById('menu');
 let team = document.getElementById('team');
-let blog = document.getElementById('blog')
-
-console.log(btns)
+let blog = document.getElementById('blog');
+let contact = document.getElementById('managers');
 
 
 function aboutButtonClick() {
@@ -36,6 +35,7 @@ function ButtonClick(section) {
  btns[2].addEventListener('click', function(){ButtonClick(menu)});
  btns[1].addEventListener('click', function(){ButtonClick(team)});
  btns[3].addEventListener('click', function(){ButtonClick(blog)});
+ btns[4].addEventListener('click', function(){ButtonClick(contact)});
 
 //---Scroll Top---//
 
@@ -65,7 +65,6 @@ let popUp = document.getElementById('pop_up');
 let btnClose = document.getElementById('close_pop_up');
 const uwaga = document.getElementById('uwaga1');
 
-console.log(btnClose)
 
 const popUpActive = () => {
     popUp.classList.remove('hidden')
@@ -162,6 +161,9 @@ const reservationValidate = (event) => {
 formReserve.addEventListener('submit', reservationValidate);
 
 //---Scroll animation---//
+
+let sushi = document.querySelector('.sushi_two');
+let ramen = document.querySelector('.ramen');
  
 let isScrolling = false;
  
@@ -170,29 +172,31 @@ let isScrolling = false;
     function throttleScroll(e) {
       if (isScrolling == false) {
         window.requestAnimationFrame(function() {
-          scrolling(e);
+          scrollingFunction(e);
           isScrolling = false;
         });
       }
       isScrolling = true;
     }
  
-document.addEventListener("DOMContentLoaded", scrolling, false);
+document.addEventListener("DOMContentLoaded", scrollingFunction, false);
 
-let sushi = document.querySelector('.sushi_two');
-let ramen = document.querySelector('.ramen');
 
-function scrolling(e) {
+function scrollingFunction (e) {
 
-    if (isPartiallyVisible(sushi)) {
-        sushi.classList.add('slideLeft')
-    } 
+    if (isFullyVisible(sushi)) {
+        sushi.classList.add('open')
+    } else {
+        sushi.classList.remove('open')
+    }
 
     if (isFullyVisible(ramen)) {
-        ramen.classList.add('slideLeft')
-        ramen.classList.remove('hide')
+        ramen.classList.add('open')
+    } else {
+        ramen.classList.remove('open')
     }
-    
+
+
 }
 
 function isPartiallyVisible(el) {
@@ -212,5 +216,11 @@ function isFullyVisible(el) {
     var bottom = elementBoundary.bottom;
 
     return ((top >= 0) && (bottom <= window.innerHeight));
-  }
+
+}
+
+scrollingFunction(ramen);
+
+
+
 
