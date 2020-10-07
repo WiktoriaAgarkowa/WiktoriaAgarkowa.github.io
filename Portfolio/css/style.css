@@ -396,9 +396,16 @@ a:focus {
 .header_full_screen button {
   position: absolute;
   top: 50%;
-  right: 30%;
+  left: 70%;
   -webkit-transition: all .5s;
   transition: all .5s;
+}
+
+@media screen and (max-width: 1670px) {
+  .header_full_screen button {
+    top: 60%;
+    left: 10%;
+  }
 }
 
 @media screen and (max-width: 880px) {
@@ -537,6 +544,33 @@ a:focus {
 
 #about .container_flex .flex_item_header ul.container_flex li {
   padding: 30px 20px;
+}
+
+@media screen and (max-width: 1680px) {
+  #about .container_flex {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  #about .container_flex .flex_item_header {
+    -ms-flex-preferred-size: 70%;
+        flex-basis: 70%;
+  }
+  #about .container_flex .flex_item_header h1 {
+    text-align: left;
+  }
+  #about .container_flex .flex_item_header p {
+    margin-left: 0;
+  }
+  #about .container_flex .flex_item_header button {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+  #about .container_flex .flex_item_header ul.container_flex li {
+    padding: 30px 20px 30px 0;
+  }
 }
 
 @media screen and (max-width: 880px) {

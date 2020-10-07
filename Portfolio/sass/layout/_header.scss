@@ -44,7 +44,7 @@
         object-fit: cover;
     }
 
-     header {
+    header {
         position: absolute;
         top: 50%;
         left: 10%;
@@ -61,18 +61,28 @@
             color:  $fifth-text-color;
             font-size: 16px;
         }
-     }
+    }
         
     button {
         position: absolute;
         top: 50%;
-        right: 30%;
+        left: 70%;
         @extend %btn;
         transition: all .5s;
     }
         
     
 
+}
+
+@media screen and (max-width: 1670px) {
+    .header_full_screen {
+        button {
+                top: 60%;
+                left: 10%;
+        }
+        
+    }
 }
 
 @media screen and (max-width: 880px) {

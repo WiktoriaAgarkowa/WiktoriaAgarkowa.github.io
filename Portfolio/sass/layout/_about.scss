@@ -76,6 +76,38 @@
     
 }
 
+@media screen and (max-width: 1680px) {
+    #about {
+        .container_flex {
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            .flex_item_header {
+                flex-basis: 70%;
+
+                h1 {
+                    text-align: left;
+                }
+
+                p {
+                    margin-left: 0;
+                }
+
+                button {
+                    margin-left: 0;
+                    margin-top: 20px;
+                }
+
+                ul.container_flex {
+                    
+                    li {
+                        padding: 30px 20px 30px 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 880px) {
 
     #about {
@@ -83,7 +115,6 @@
         opacity: 1;
         .container_flex {
             flex-wrap: wrap;
-
             .flex_item_header {
                 flex-basis: 100%;
 
