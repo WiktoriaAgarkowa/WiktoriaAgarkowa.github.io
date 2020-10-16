@@ -1,11 +1,4 @@
 
-
-
-
-let html = document.querySelector('html');
-
-
-
 //---Start animation---//
 
 let name = document.querySelector('.name_occupation');
@@ -59,6 +52,7 @@ btnNext.addEventListener('click', function() {
 
 //---Project Animation---//
 
+let html = document.querySelector('html');
 let heading = document.getElementsByClassName('heading_progect');
 
 
