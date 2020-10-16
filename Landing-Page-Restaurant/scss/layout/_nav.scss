@@ -43,15 +43,14 @@
     }
 }
 
-
-@media screen and (max-width: 890px) {
+@media screen and (max-width: 1040px) {
 
     #navigation {
         .container_flex {
             justify-content: space-around;
 
             #logo {
-                font-size: $base-font-size + 10;
+                font-size: $base-font-size;
             }
 
             .nav {
@@ -63,7 +62,8 @@
     }
 }
 
-@media screen and (max-width: 768px) {
+
+@media screen and (max-width: 790px) {
     #navigation {
         .container_flex {
             justify-content: space-around;

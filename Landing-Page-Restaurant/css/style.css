@@ -381,20 +381,20 @@ option {
   outline: none;
 }
 
-@media screen and (max-width: 890px) {
+@media screen and (max-width: 1040px) {
   #navigation .container_flex {
     -ms-flex-pack: distribute;
         justify-content: space-around;
   }
   #navigation .container_flex #logo {
-    font-size: 26px;
+    font-size: 16px;
   }
   #navigation .container_flex .nav li {
     padding: 20px 10px;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 790px) {
   #navigation .container_flex {
     -ms-flex-pack: distribute;
         justify-content: space-around;

@@ -186,8 +186,10 @@ function scrollingFunction (e) {
 
     if (isFullyVisible(sushi)) {
         sushi.classList.add('open')
+        console.log('widać')
     } else {
         sushi.classList.remove('open')
+        console.log('nie widać')
     }
 
     if (isFullyVisible(ramen)) {
