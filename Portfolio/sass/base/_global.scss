@@ -4,11 +4,17 @@
 
 html {
     background-color: $base-bg-color;
+    transition: all 0.45s;
+}
+
+.black {
+    background-color: $base-text-color;
 }
 
 section {
     opacity: 0;
 }
+
 
 .container {
     max-width: 1400px;
@@ -61,7 +67,12 @@ a {
 }
 
 
-@media screen and (max-width: 870px) {
+@media screen and (max-width: 880px) {
+
+    // html {
+    //     background-color: $base-text-color;
+    // }
+
     .container {
         padding: 0;
     }

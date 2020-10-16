@@ -1,12 +1,12 @@
-@mixin h1 {
-    color: $base-text-color;
-    font-family: $base-font;
+@mixin h1 ($color) {
+    color: $color;
+    font-family: $secondary-font;
     font-weight: 300;
     font-size: 25px;
 }
 
-@mixin p {
-    color: $base-text-color;
+@mixin p($color) {
+    color: $color;
     font-family: $base-font;
     font-weight: 300;
     font-size: 12px;

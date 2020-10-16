@@ -15,7 +15,7 @@
     <header id= "main_header">
         <div class="heading">
             <h1>Wiktoria Agarkowa</h1>
-            <button id="scroll_button">Click</button>
+            <h2>Junior Front-End Developer</h2>
         </div>
         <img src="img/photo.png" alt="my photo">
     </header>
@@ -32,18 +32,16 @@
     
     
     <section id="about">
-        
         <div class="container">
             <div class="container_flex">
 
                 <div class="flex_item_header">
 
-                    <h1>About Me</h1>
+                    <h1 class="text">About Me</h1>
 
-                    <p>
+                    <p class="text">
                         My name is Wiktoria. I have been working as a graphic designer for three years.
-                        I mainly designed outdoor and print advertising
-                         (<a class="link" href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.behance.net%2FViktoriya_097a%3Ffbclid%3DIwAR24smbyL4eTwjFYQjuVTJf_GA69zVHEjti7dVHk3nQxB3qWsdaKQcJQTpk&h=AT1sb0dp5eN-qokLJN2thjohSXF1JV_wknQDLZrU-aFjANbYPfJng7Amg5SDpsB4Vy9TxE1va1jFvNLPWIwvq9QyML8xvKCVvUoQEtm1njQrOmUxP2iUBYTz7K4zXL-NaJk">Behance</a>) . 
+                        I mainly designed outdoor and print advertising. 
                          In early 2020 I decided
                         to expand my abilities and start learning front-end programming languages. <br> <br>
 
@@ -54,7 +52,7 @@
                         using ifferent technologies.
                     </p>
 
-                    <button class="second_btn">My projects</button>
+                    <button class="second_btn">Next</button>
                 </div>
 
                 <div class="flex_item_header">
@@ -62,13 +60,13 @@
                    <ul class="container_flex">
 
                        <li>
-                        <a href="https://github.com/WiktoriaAgarkowa/WiktoriaAgarkowa.github.io/tree/master/Portfolio">
+                        <a class="text" href="https://github.com/WiktoriaAgarkowa/WiktoriaAgarkowa.github.io/tree/master/Portfolio">
                             Portfolio GitHub
                         </a>
                        </li>
 
                        <li>
-                        <a download="" href="">
+                        <a class="text" download="" href="./cv.pdf">
                             Download CV
                         </a>
                        </li>
@@ -82,143 +80,132 @@
 
     </section>
 
+    <section id="projects">
 
+        <div class="project">
+            <h2 class="heading_progect">Social-App</h2>
 
-    <section id="body" class="container">
+                <div class="container">
+                    <div class="container_flex">
 
-        <div class="container_flex">
+                        <div class="flex_item">
+                            <img src="img/social-app.png" alt="social-app">
+                        </div>
 
-            <div id="contact" class="flex_item_body">
+                        <div class="description flex_item">
 
-                <h2>Contact</h2>
+                            <p class="text">
+                                I made the Social-App as part of the assignment during the course. The application has the ability to register (however, after registration, the data is not saved in the API), it is also possible to log-in and log-out. If you are not logged in, 10 posts of random users are displayed on the main page.
+                                The application has the ability to publish posts. Soon it will be possible to like and subscribe to other users' profiles.<br><br> 
+                                <span> Technologies: </span> <br> HTML, CSS, ReactJS, Styled Components
+                            </p>
+                            
+                            <div class="sources">
+                                <a href="" target="_blank">Live</a>
+                                <a href="https://github.com/WiktoriaAgarkowa/social-app" target="_blank">Code</a>
+                            </div>
 
-                <form id="contact_form" class="flex_item" action="https://formspree.io/xgenbkvz" method="POST" >
+                        </div>
 
-                    <input id="name" class="input_form" type="text" name="name" placeholder="Name">
-                    
-                    <input id="email" class="input_form" type="email" name="email" placeholder="E-mail">
-                   
-                    <textarea id="message" class="input_form" name="message" placeholder="Message" ></textarea>
-                    
-
-                    <button type="submit">Send</button>
-
-                    <p id="error_msg"></p>
-                </form>
-
-        </div>
-
-
-        <div id="projects" class="flex_item_body_middle">
-
-            <div class="header_projects_small_screen container_flex">
-
-                <h2>Projects</h2>
-
-                <button class="project_name_ss social_app">Social-App</button>
-
-                <div class="body_flex_item_small_screen">
-
-                    <p class="small_screen">
-                        I made the Social-App as part of the assignment during the course. The application has the ability to register (however, after registration, the data is not saved in the API), it is also possible to log-in and log-out. If you are not logged in, 10 posts of random users are displayed on the main page. When authorizing, posts of users are added to which you are subscribed. <br> <span> Technologies: </span> <br> HTML, CSS, ReactJS, Styled Components
-                    </p>
-
-                    <div class="sources">
-                        <a class="live" target="_blank">Live</a>
-                        <a class="code" target="_blank" href="https://github.com/WiktoriaAgarkowa/social-app">Code</a>
                     </div>
-                    
+
                 </div>
+        </div>
 
                 
 
-                <button class="project_name_ss landing_page">Landing-Page</button>
+            
+        <div class="project">
 
-                <div class="body_flex_item_small_screen">
+            <h2 class="heading_progect">Landing-Page</h2>
 
-                    <p class="small_screen">
-                        Landing-Page project which is the hallmark of a sushi restaurant. On the page you can make a table reservation and contact using the form. Some elements are animated with CSS, and reservation information is sent using API. <br> <br> <span> Technologies: </span> <br> HTML, CSS, SASS, AJAX
-                    </p>
-
-                    <div class="sources">
-                        <a href="https://wiktoriaagarkowa.github.io/Landing-Page-Restaurant/index.html" target="_blank">Live</a>
-                        <a href="https://github.com/WiktoriaAgarkowa/WiktoriaAgarkowa.github.io/tree/master/Landing-Page-Restaurant" target="_blank">Code</a>
+            <div class="container">
+                <div class="container_flex">
+                    <div class="flex_item">
+                        <img src="img/landing-page.png" alt="social-app">
                     </div>
 
-                </div>
+                    <div class="description flex_item">
 
-
-            </div>
-
-            <div class="header_projects container_flex">
-
-                    <button class="project_name social_app">Social-App</button>
-
-                    <button class="project_name landing_page">Landing-Page</button>
-
-            </div>
-
-                <div class="hr container_flex">
-                    <hr class="line">
-                    <hr class="line"> 
-                </div>
-
-                <div id="project_display" class="project_display">
-
-                    <header>
-
-                        <h2 class="main_headnig">Projects</h2>
-                        
-                    </header>
-
-                    <div class="project_panel">
-                        <div class="panel close">
-
-                            <p class="description">
-    
-                            </p>
-                            
-    
-                            <div class="sources">
-                                <a href="" >Live</a>
-                                <a href="">Code</a>
-                            </div>
-    
+                        <p class="text">
+                                Landing-Page project which is the hallmark of a sushi restaurant. On the page you can make a table reservation and contact using the form. Some elements are animated with CSS, and reservation information is sent using API. <br> <br> <span> Technologies: </span> <br> HTML, CSS, JavaScript, SASS, AJAX
+                        </p>
+                                        
+                        <div class="sources">
+                            <a href="https://wiktoriaagarkowa.github.io/Landing-Page-Restaurant/index.html" target="_blank">Live</a>
+                            <a href="https://github.com/WiktoriaAgarkowa/WiktoriaAgarkowa.github.io/tree/master/Landing-Page-Restaurant" target="_blank">Code</a>
                         </div>
 
                     </div>
 
                 </div>
 
-
             </div>
 
+        </div>
 
+    </section>
 
-            <div id="skills" class="flex_item_body">
+    <section id="skills">
+        <div class="container">
+            <h2 class="text">Technologies</h2>
 
-                <h2>
-                Other <br> technologies <br>
-                 & tools
-                </h2>
+            <ul class="container_flex">
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+                <li>AJAX</li>
+                <li>SASS</li>
+                <li>ReactJS</li>
+                <li>jQuery</li>
+                <li>Bootstrap</li>
+                <li>WordPress</li>
+                <li>GIT</li>
+                <li>Adobe Photoshop</li>
+                <li>Adobe Illustrator</li>
+            </ul>
+        </div>
+    </section>
 
-                <p>
-                    jQuery, Bootstrap, WordPress,
-                    GIT, Github, Adobe Photoshop,
-                    Adobe Illustrator, Corel Draw
-                </p> 
+    <section id="contact">
+        <div class="container">
+
+            <h2 class="text">Contact</h2>
+
+            <div class="container_flex">
+                <div class="flex_item">
+
+                    <a class="text" href="https://www.linkedin.com/in/wiktoria-agarkowa-5b3626155" target="_blank">
+                        <i class="fab fa-linkedin text"></i> LinkedIn
+                    </a>
+                </div>
+
+                <div class="flex_item">
+
+                    <i class="fas fa-phone-square text"></i>
+                    <p class="text">+48 539 429 941</p>
+
+                </div>
+
+                <div class="flex_item">
+                    <i class="fas fa-envelope text"></i>
+                    <p class="text">victoriaagarkova96@gmail.com</p>
+                </div>
+                
             </div>
         </div>
     </section>
 
-    <footer>
-        <div class="container">
-            <p>
-                © WIKTORIA AGARKOWA <br>
-                2020
-            </p>
-        </div>
-    </footer>
+
+
+        <footer>
+            <div class="container">
+                <p class="text">
+                    © WIKTORIA AGARKOWA <br>
+                    2020
+                </p>
+            </div>
+        </footer>
 
     <script src="js/main.js"></script>
 </body>

@@ -1,41 +1,74 @@
 #skills {
-
+    display: none;
+    padding: 50px 0;
     h2 {
-        @include h1;
-        text-align: right;
+        @include h1($base-text-color);
+        text-align: center;
     }
 
-    p {
-        @include p;
-        max-width: 200px;
-        text-align: right;
-        display: block;
-        margin-left: auto;
-        line-height: 1.7;
+    ul {
+        list-style: none;
+        width: 100%;
+        padding: 0;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        flex-wrap: wrap;
+
+        li {
+            font-family: $base-font;
+            padding: 20px;
+            margin: 20px;
+            background-color: $base-bg-color;
+            border-radius: 20px;
+            flex-basis: 20%;
+            transition: all .35s;
+
+            -webkit-box-shadow: 2px 4px 26px -5px rgba(207,205,207,1);
+            -moz-box-shadow: 2px 4px 26px -5px rgba(207,205,207,1);
+            box-shadow: 2px 4px 26px -5px rgba(207,205,207,1);
+
+            &:hover {
+                -webkit-box-shadow: none;
+                -moz-box-shadow: none;
+                box-shadow: none;
+                background-color: $fifth-text-color;
+                color: $base-bg-color;
+                cursor: pointer;
+            }
+        }
     }
 }
 
-@media screen and (max-width: 1480px) {
-    #skills.flex_item_body {
-        flex-basis: 100%;
-
-        p, h2 {
-            text-align: center;
-            max-width: none;
-        }
-
-        h2 {
-            padding-top: 50px;
-        }
-    }
-}
 
 @media screen and (max-width: 880px) {
     #skills {
-        padding-bottom: 40px;
+        display: block;
+        padding: 0;
+        ul {
+            width: 100%;
+            li {
+                flex-basis: 45%;
+                padding: 10px;
+                margin: 10px;
+            }
+        }
+    }
+}
 
-        p {
-            font-size: 13px;
+@media screen and (max-width: 500px) {
+    #skills {
+
+        ul {
+            width: 80%;
+            li {
+                flex-basis: 100%;
+                padding: 10px;
+                margin: 10px;
+            }
         }
     }
 }

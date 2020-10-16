@@ -1,229 +1,161 @@
 #projects {
+    display: none;
 
-    .header_projects {
-        justify-content: space-between;
-        padding: 20px 0;
-        border: 1px solid $fifth-text-color;
-        border-radius: 50px;
-        transition: all .5s;
-
-        button {
-            @include h1;
-            flex-basis: 50%;
-            display: inline;
-            padding: 0 55px;
-            color: $fifth-text-color;
-            text-decoration: none;
-            background-color: transparent;
-            border: 0;
-            transition: all .5s;
-        }
-
-        button:focus {
-            outline: none;
-        }
-
-        button:hover {
-            cursor: pointer;
-        }
-
-        .social_app:hover,
-        .social_app:focus  {
-            color: $second-text-color;
-        }
-
-        .landing_page:hover,
-        .landing_page:focus {
-            color: $third-text-color;
-        }
-
-        .weather_app:hover,
-        .weather_app:focus {
-            color: $fourth-text-color;
-        }
-
-        .small_screen {
-            display: none;
-        }
-
-        .small_screen + div {
-            display: none;
-        }
+    & .project:first-child {
+        margin-bottom: 100px;
     }
 
-    .social_app {
-        border: 1px solid $second-text-color;
-    }
-
-    .landing_page {
-        border: 1px solid $third-text-color;
-    }
-
-    .weather_app {
-        border: 1px solid $fourth-text-color;
-    }
-
-    .header_projects_small_screen {
-        display: none;
+    .project {
+        padding: 200px 0 0 0;
+        position: relative;
 
         h2 {
-            display: none;
-        }
-    }
-
-
-    .project_display {
-        
-        h2 {
-            @include h1;
-            font-size: 130px;
+            font-family: $secondary-font;
+            font-size: 250px;
+            width: 100%;
+            position: absolute;
+            top: -210px;
+            left: -1620px;
             text-align: center;
+            color: $third-text-color;
+            transition: all 1s;
+        }
+
+        .active {
+            left: 0;
+        }
+
+        .color_dark {
             color: $fifth-text-color;
-            transition: all 0.5s;
-            margin: 0;
         }
 
-        .panel {
-            overflow: hidden;
-            transition: transform 0.5s ease-out;
-            height: auto;
+        .color_light {
+            color: $base-bg-color;
+        }
 
+        .container_flex {
+            flex-direction: row;
+            align-items: center;
+            .flex_item {
+                flex-basis: 70%;
+    
+                img {
+                    object-fit: cover;
+                    width: 100%;
+                }
+            }
+    
             .description {
-                padding: 0 20px 30px 20px;
-                font-family: $secondary-font;
-                color: $base-text-color;
-                text-align: center;
-            }
-
-            .example {
-                @include p;
+                flex-basis: 25%;
+                padding: 20px;
     
-                padding-bottom: 20px;
-            }
-            
-        }
+                p {
+                    @include p($base-text-color);
+                    text-align: justify;
+                    line-height: 1.5;
+                    max-width: 700px;
+                    display: block;
+                    margin: auto;
+                }
 
-    }
+                .sources {
+                    margin-top: 20px; 
 
-    .sources {
-        text-align: center;
-        padding: 0 0 20px 0;
-
-        a {
-            @include p;
-            padding: 0 10px;
-        }
-    }
-
+                    a {
+                        color: $base-text-color;
+                        text-decoration: none;
+                        font-family: $base-font;
+                        padding: 10px;
+                        margin-top: 20px;
+                        position: relative;
+                        transition: all .35s;
     
+                        &::before {
+                            box-sizing: inherit;
+                            content: '';
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            background-color: $second-text-color;
+                            width: 0;
+                            height: 100%;
+                            z-index: -1;
+                            transition: all .35s;
+                        }
+                        
+                        &:hover {
+                            
+    
+                            &::before {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 
-@media screen and (max-width: 880px) {
+@media screen and (max-width: 1260px) {
     #projects {
-
-        .header_projects {
-            display: none;
-        }
-
-        .header_projects_small_screen {
-            display: block;
-            border: none;
-            flex-direction: column;
-            justify-content: center;
+        padding: 100px 0;
+        .project {
 
             h2 {
-                @include h1;
-                display: block;
-                text-align: center;
-                padding-bottom: 30px;
-            }
-
-            button {
-
-                @include h1;
-                font-size: 18px;
-                padding: 0 55px;
-                color: $fifth-text-color;
-                position: relative;
-                left: 50%;
-                transform: translate(-50%, 0);
-                padding: 20px 0;
-                background-color: transparent;
-                border: 0;
-                width: 100%;
-                transition: all .5s;
-
-                &::before {
-                    box-sizing: inherit;
-                    content: '';
-                    position: absolute;
-                    border: 2px solid transparent;
-                    width: 0;
-                    height: 0;
-                    bottom: 0;
-                    right: 0;
-                    transition: all .75s;
-                    z-index: -1;
-                }
-
-                &:hover::before {
-                    width: 100%;
-                    height: 100%;
-                    background-color: $second-text-color;
-                }
-
-               &:focus {
-                   outline: none;
-               }
-
-                
-            }
-
-            .social_app:hover,
-                .social_app:focus,
-                .landing_page:hover,
-                .landing_page:focus,
-                .weather_app:hover,
-                .weather_app:focus {
-                  color: $base-text-color;
-                  background-color: $second-text-color;
-                }
-
-            .body_flex_item_small_screen {
-                max-height: 0;
-                overflow: hidden;
-                transition: max-height 0.35s ease-out;
-            }
-
-            
-
-            .small_screen {
-                @include p;
-                display: block;
-                max-width: 500px;
-                text-align: justify;
-                line-height: 1.7;
-                font-size: 13px;
-                margin: auto;
-                padding: 20px 20px;
-                transform: scaleY(1);
-            }
-
-            .small_screen_open {
-                display: block;
-                transform: scaleY(1);
-            }
-
-            .small_screen + div {
-                display: block;
+                font-size: 150px;
+                top: -150px;
             }
         }
+    }
+}
 
-        .project_display {
-            display: none;
+@media screen and (max-width: 880px) {
+    #projects {
+        display: block;
+        opacity: 1;
+        padding-top: 150px;
+
+        & .project:first-child {
+            margin-bottom: 180px;
         }
-        
 
+        .project {
+            padding: 30px 0;
+
+            h2 {
+                font-size: 70px;
+            }
+
+            .container_flex {
+                flex-wrap: wrap;
+                .flex_item {
+                    flex-basis: 100%;
+
+                    img {
+                        max-width: 700px;
+                        display: block;
+                        margin: auto;
+                    }
+                }
+
+                .description {
+                    p {
+                        text-align: justify;
+                        padding: 30px;
+                    }
+
+                    .sources {
+                        text-align: center;
+
+                        a {
+                            background-color: rgba($color: $second-text-color, $alpha: 0.4);
+                        }
+                    }
+                }
+                    
+            }
+        }
     }
 }

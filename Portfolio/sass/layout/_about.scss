@@ -2,6 +2,7 @@
     opacity: 0;
     transition: all .4s;
 
+
     .container_flex {
         justify-content: space-between;
         flex-direction: row-reverse;
@@ -11,13 +12,14 @@
             flex-basis: 50%;
 
             h1 {
-                @include h1;
+                @include h1($base-bg-color);
                 padding-top: 30px;
                 text-align: right;
+                font-family: $secondary-font;
             }
         
             p {
-                @include p;
+                @include p($base-bg-color);
                 max-width: 500px;
                 text-align: justify;
                 line-height: 1.7;
@@ -34,7 +36,7 @@
             button {
                 background-color: $second-text-color;
                 border: 1px solid $second-text-color;
-                color: $base-text-color;
+                color: $base-bg-color;
                 display: block;
                 margin-left: auto;
                 font-family: $base-font;
@@ -52,7 +54,7 @@
             }
         
             a {
-                @include h1;
+                @include h1($base-bg-color);
                 font-size: 12px;
                 text-decoration: none;
                 
@@ -111,7 +113,7 @@
 @media screen and (max-width: 880px) {
 
     #about {
-        padding: 0 20px;
+        padding: 50px 20px;
         opacity: 1;
         .container_flex {
             flex-wrap: wrap;
@@ -120,16 +122,20 @@
 
                 h1 {
                     text-align: center;
+                    color: $base-text-color;
                 }
 
                 p {
                     font-size: 13px;
                     margin: auto;
                     display: block;
+                    color: $base-text-color;
+                    max-width: 700px;
                 }
 
                 a {
                     font-size: 13px;
+                    color: $base-text-color;
                 }
 
                 button {

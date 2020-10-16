@@ -5,10 +5,12 @@
 
         input, textarea {
             display: block;
-            margin: 10px 0;
+            margin-bottom: 20px;
             padding: 10px 15px;
+            padding-right: 150px;
             background-color: transparent;
-            border: 1px solid $base-text-color;
+            border: none;
+            border-bottom: 1px solid $fifth-text-color;
             color: $base-text-color;
             font-family: $base-font;
             font-size: 12px;
