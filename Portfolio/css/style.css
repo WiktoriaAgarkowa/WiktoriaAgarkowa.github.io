@@ -375,7 +375,7 @@ a:focus {
 
 .header_full_screen header {
   position: absolute;
-  top: 50%;
+  top: 450px;
   left: 10%;
   -webkit-transition: all .6s ease-in;
   transition: all .6s ease-in;
@@ -401,7 +401,7 @@ a:focus {
 
 .header_full_screen button {
   position: absolute;
-  top: 50%;
+  top: 450px;
   left: 70%;
   -webkit-transition: all .5s;
   transition: all .5s;
@@ -409,7 +409,7 @@ a:focus {
 
 @media screen and (max-width: 1670px) {
   .header_full_screen button {
-    top: 60%;
+    top: 600px;
     left: 10%;
   }
 }
