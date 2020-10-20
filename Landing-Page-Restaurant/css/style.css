@@ -602,6 +602,14 @@ option {
           box-shadow: 0 5px 30px #f0f0f050;
 }
 
+@media screen and (max-width: 910px) {
+  #team .box h3 {
+    max-width: 180px;
+    display: block;
+    margin: auto;
+  }
+}
+
 @media screen and (max-width: 768px) {
   #team .section_header h2 {
     font-size: 32px;
@@ -614,6 +622,9 @@ option {
   #team .box {
     padding: 10px 0;
     width: 100%;
+  }
+  #team .box h3 {
+    max-width: none;
   }
   #team .box .social_icons a {
     font-size: 26px;
@@ -680,6 +691,14 @@ option {
   color: #000;
 }
 
+@media screen and (max-width: 995px) {
+  #blog .box h3 {
+    max-width: 190px;
+    display: block;
+    margin: auto;
+  }
+}
+
 @media screen and (max-width: 768px) {
   #blog .section_header h2 {
     font-size: 32px;
@@ -692,6 +711,9 @@ option {
   #blog .box {
     padding: 10px 0;
     width: 100%;
+  }
+  #blog .box h3 {
+    max-width: none;
   }
 }
 
