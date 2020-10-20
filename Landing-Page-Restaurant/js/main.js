@@ -13,29 +13,21 @@ window.onload = function () {
 
 //---Smooth scroll---//
 
-let btns = document.getElementsByClassName('link');
-let about = document.getElementById('about');
-let menu = document.getElementById('menu');
-let team = document.getElementById('team');
-let blog = document.getElementById('blog');
-let contact = document.getElementById('managers');
+const anchors = document.querySelectorAll('a[href*="#"]')
+console.log(anchors)
 
-
-function aboutButtonClick() {
-    about.scrollIntoView({block: "center", behavior: "smooth"});
- }
-
- btns[0].addEventListener('click', aboutButtonClick);
-
-
-function ButtonClick(section) {
-    section.scrollIntoView({behavior: "smooth"});
- }
-
- btns[2].addEventListener('click', function(){ButtonClick(menu)});
- btns[1].addEventListener('click', function(){ButtonClick(team)});
- btns[3].addEventListener('click', function(){ButtonClick(blog)});
- btns[4].addEventListener('click', function(){ButtonClick(contact)});
+for (let anchor of anchors) {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault()
+    
+    const blockID = anchor.getAttribute('href').substr(1)
+    
+    document.getElementById(blockID).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    })
+  })
+}
 
 //---Scroll Top---//
 

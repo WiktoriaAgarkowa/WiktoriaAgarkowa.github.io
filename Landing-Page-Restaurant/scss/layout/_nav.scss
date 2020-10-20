@@ -29,10 +29,11 @@
                 padding: 20px 20px;
                 font-family: $font-primary;
     
-                button {
-                    background-color: transparent;
-                    border: none;
+                a {
+                    text-decoration: none;
                     text-transform: $text-transorm-heading;
+                    font-family: $font-secondary;
+                    padding: 0 20px;
 
                     &:focus {
                         outline: none;

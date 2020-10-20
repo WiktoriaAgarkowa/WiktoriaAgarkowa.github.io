@@ -371,13 +371,14 @@ option {
   font-family: "M PLUS Rounded 1c", sans-serif;
 }
 
-#navigation .container_flex .nav li button {
-  background-color: transparent;
-  border: none;
+#navigation .container_flex .nav li a {
+  text-decoration: none;
   text-transform: uppercase;
+  font-family: "Cinzel", serif;
+  padding: 0 20px;
 }
 
-#navigation .container_flex .nav li button:focus {
+#navigation .container_flex .nav li a:focus {
   outline: none;
 }
 
