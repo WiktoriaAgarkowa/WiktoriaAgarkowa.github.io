@@ -79,8 +79,11 @@
 
 @media screen and (max-width: 1670px) {
     .header_full_screen {
+        header {
+            top: 350px;
+        }
         button {
-                top: 600px;
+                top: 500px;
                 left: 10%;
         }
         

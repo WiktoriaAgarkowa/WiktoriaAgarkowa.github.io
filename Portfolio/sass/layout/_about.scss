@@ -67,6 +67,7 @@
                 justify-content: flex-end;
                 list-style: none;
                 padding-left: 0;
+                align-items: center;
                 li {
                     padding: 30px 20px;
                 }
@@ -100,10 +101,13 @@
                 }
 
                 ul.container_flex {
-                    
+                    align-items: center;
+
                     li {
                         padding: 30px 20px 30px 0;
+
                     }
+
                 }
             }
         }

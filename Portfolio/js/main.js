@@ -1,4 +1,3 @@
-
 //---Start animation---//
 
 let name = document.querySelector('.name_occupation');
@@ -11,7 +10,6 @@ let body = document.getElementById('body');
 let footer = document.querySelector('footer');
 console.log(sections)
 
-
 btnStart.addEventListener('click', function() {
   name.style.left = '-50%';
   this.style.opacity = '0';
@@ -19,12 +17,12 @@ btnStart.addEventListener('click', function() {
 
   setTimeout(function(){ 
     headerFullScreen.style.zIndex = '0';
-    about.style.opacity = '1';
+    sections[0].style.opacity = '1';
   }, 500);
 })
 
 let text = document.getElementsByClassName('text');
-console.log(text);
+
 
 let projects = document.getElementById('projects');
 
@@ -35,20 +33,42 @@ btnNext.addEventListener('click', function() {
   this.style.opacity = '0';
 
   setTimeout(() => {
-  for(i=0; i<text.length;i++){
-    text[i].style.color = '#131212';
-  }
-  
-  for(i=1; i<sections.length; i++) {
-    sections[i].style.display = 'block';
-  }
-  
-  for (const section of sections) {
-    section.style.opacity = '1'
-  }
-  footer.style.display = "block"
+
+    let arrow = document.querySelector('.arrow');
+
+    for(i=0; i<text.length;i++){
+      text[i].style.color = '#131212';
+    }
+    
+    for(i=1; i<sections.length; i++) {
+      sections[i].style.display = 'block';
+    }
+    
+    for (const section of sections) {
+      section.style.opacity = '1'
+    }
+    arrow.style.display = 'block';
+    footer.style.display = 'block';
   }, 300);
 })
+
+//---Smooth scroll---//
+
+const anchors = document.querySelectorAll('a[href*="#"]')
+console.log(anchors)
+
+for (let anchor of anchors) {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault()
+    
+    const blockID = anchor.getAttribute('href').substr(1)
+    
+    document.getElementById(blockID).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    })
+  })
+}
 
 //---Project Animation---//
 
@@ -72,10 +92,20 @@ let isScrolling = false;
  
 document.addEventListener("DOMContentLoaded", headingShow, false);
 
+console.log(text)
 
 function headingShow() {
 
+
   let sources = document.getElementsByClassName('sources');
+  let arrowUp = document.querySelector('.arrow_up')
+
+  
+  if(isPartiallyVisible(text[0]) == false) {
+    arrowUp.style.display = 'block';
+  } else {
+    arrowUp.style.display = 'none';
+  }
 
 
   if(isPartiallyVisible(sources[1])) {
@@ -149,6 +179,7 @@ function isFullyVisible(el) {
   return ((top > 0) && (bottom <= window.innerHeight));
 
 }
+
 
 
 
