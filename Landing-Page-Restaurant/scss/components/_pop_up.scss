@@ -52,6 +52,7 @@
         margin: 40px 40px;
 
         input,textarea, select {
+            -webkit-appearance: none;
             flex-basis: 100%;
             padding: 20px 20px;
             color: #000000;
