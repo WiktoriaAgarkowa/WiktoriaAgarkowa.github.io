@@ -8,7 +8,7 @@ let btnNext = document.querySelector('.second_btn');
 let sections = document.querySelectorAll('section');
 let body = document.getElementById('body');
 let footer = document.querySelector('footer');
-console.log(sections)
+
 
 btnStart.addEventListener('click', function() {
   name.style.left = '-50%';
@@ -55,7 +55,7 @@ btnNext.addEventListener('click', function() {
 //---Smooth scroll---//
 
 const anchors = document.querySelectorAll('a[href*="#"]')
-console.log(anchors)
+
 
 for (let anchor of anchors) {
   anchor.addEventListener('click', function (e) {
@@ -92,7 +92,7 @@ let isScrolling = false;
  
 document.addEventListener("DOMContentLoaded", headingShow, false);
 
-console.log(text)
+
 
 function headingShow() {
 
