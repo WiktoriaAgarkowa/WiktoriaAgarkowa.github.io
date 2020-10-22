@@ -1,5 +1,17 @@
+//---Preloader---//
+
+let body = document.body;
+
+window.onload = function () {
+    body.classList.add('loaded_hiding');
+    window.setTimeout(function () {
+      body.classList.add('loaded');
+      body.classList.remove('loaded_hiding');
+    }, 500);
+  }
+
+
 let sections = document.querySelectorAll('section');
-let body = document.getElementById('body');
 let footer = document.querySelector('footer');
 let header = document.querySelector('.header_full_screen');
 let text = document.getElementsByClassName('text');
