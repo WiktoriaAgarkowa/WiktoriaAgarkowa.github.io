@@ -469,6 +469,7 @@ a:focus {
 #about {
   -webkit-transition: all .4s;
   transition: all .4s;
+  padding-bottom: 200px;
 }
 
 #about .container_flex {
@@ -560,28 +561,27 @@ a:focus {
   #about .container_flex {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   #about .container_flex .flex_item_header {
     -ms-flex-preferred-size: 70%;
         flex-basis: 70%;
   }
   #about .container_flex .flex_item_header h1 {
-    text-align: left;
+    text-align: center;
   }
   #about .container_flex .flex_item_header p {
-    margin-left: 0;
-  }
-  #about .container_flex .flex_item_header button {
-    margin-left: 0;
-    margin-top: 20px;
+    margin: auto;
   }
   #about .container_flex .flex_item_header ul.container_flex {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   #about .container_flex .flex_item_header ul.container_flex li {
     padding: 30px 20px 30px 0;
@@ -1115,6 +1115,7 @@ footer p {
 
 #about .container_flex .flex_item_header .arrow a {
   display: block;
+  text-align: right;
 }
 
 #about .container_flex .flex_item_header .arrow a i {
@@ -1130,6 +1131,19 @@ footer p {
 
 #about .container_flex .flex_item_header .arrow a:hover {
   border-bottom: none;
+}
+
+#about .container_flex .flex_item_header ul > .arrow {
+  display: none;
+}
+
+@media screen and (max-width: 1680px) {
+  #about .container_flex .flex_item_header p + .arrow {
+    display: none;
+  }
+  #about .container_flex .flex_item_header ul > .arrow {
+    display: block;
+  }
 }
 
 @media screen and (max-width: 880px) {

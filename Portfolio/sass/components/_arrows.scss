@@ -27,6 +27,7 @@
 
                 a {
                     display: block;
+                    text-align: right;
                     
                     i {
                         font-size: 40px;
@@ -43,8 +44,29 @@
                     }
                 }
             }
+
+            ul > .arrow {
+                display: none;
+            }
         }
     }
+}
+
+@media screen and (max-width: 1680px) {
+    #about {
+        .container_flex {
+            .flex_item_header {
+                p + .arrow {
+                    display: none;
+                }
+            
+                ul > .arrow {
+                    display: block;
+                }
+            }
+        }
+    }
+
 }
 
 
