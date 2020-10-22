@@ -241,6 +241,12 @@ input[type="checkbox"], input[type="radio"] {
           box-sizing: border-box;
 }
 
+body > div {
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-overflow-scrolling: touch;
+}
+
 html {
   background-color: #f3f3f3;
   -webkit-transition: all 0.45s;
