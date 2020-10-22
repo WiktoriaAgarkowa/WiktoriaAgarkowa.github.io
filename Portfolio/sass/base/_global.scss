@@ -5,16 +5,12 @@
 html {
     background-color: $base-bg-color;
     transition: all 0.45s;
+    scroll-behavior: smooth;
 }
 
 .black {
     background-color: $base-text-color;
 }
-
-section {
-    opacity: 0;
-}
-
 
 .container {
     max-width: 1400px;
@@ -31,20 +27,6 @@ a {
     &:focus {
         outline: none;
     }
-}
-
-
-#body {
-    display: none;
-    padding: 50px 0;
-}
-
-.flex_item_body {
-    flex-basis: 20%;
-}
-
-.flex_item_body_middle {
-    flex-basis: 60%;
 }
 
 @media screen and (max-width: 1480px) {

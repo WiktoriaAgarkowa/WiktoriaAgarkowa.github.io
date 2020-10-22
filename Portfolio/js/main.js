@@ -1,56 +1,11 @@
-//---Start animation---//
-
-let name = document.querySelector('.name_occupation');
-let btnStart = document.getElementById('btn_start');
-let bg = document.querySelector('.black_background');
-let headerFullScreen = document.querySelector('.header_full_screen');
-let btnNext = document.querySelector('.second_btn');
 let sections = document.querySelectorAll('section');
 let body = document.getElementById('body');
 let footer = document.querySelector('footer');
-
-
-btnStart.addEventListener('click', function() {
-  name.style.left = '-50%';
-  this.style.opacity = '0';
-  bg.style.opacity = '0.4';
-
-  setTimeout(function(){ 
-    headerFullScreen.style.zIndex = '0';
-    sections[0].style.opacity = '1';
-  }, 500);
-})
-
+let header = document.querySelector('.header_full_screen');
 let text = document.getElementsByClassName('text');
 
 
 let projects = document.getElementById('projects');
-
-
-btnNext.addEventListener('click', function() {
-
-  headerFullScreen.style.opacity = '0';
-  this.style.opacity = '0';
-
-  setTimeout(() => {
-
-    let arrow = document.querySelector('.arrow');
-
-    for(i=0; i<text.length;i++){
-      text[i].style.color = '#131212';
-    }
-    
-    for(i=1; i<sections.length; i++) {
-      sections[i].style.display = 'block';
-    }
-    
-    for (const section of sections) {
-      section.style.opacity = '1'
-    }
-    arrow.style.display = 'block';
-    footer.style.display = 'block';
-  }, 300);
-})
 
 //---Smooth scroll---//
 
@@ -101,7 +56,7 @@ function headingShow() {
   let arrowUp = document.querySelector('.arrow_up')
 
   
-  if(isPartiallyVisible(text[0]) == false) {
+  if(isPartiallyVisible(text[0]) == false && isPartiallyVisible(header) == false) {
     arrowUp.style.display = 'block';
   } else {
     arrowUp.style.display = 'none';

@@ -1,5 +1,4 @@
 #about {
-    opacity: 0;
     transition: all .4s;
 
 
@@ -12,25 +11,19 @@
             flex-basis: 50%;
 
             h1 {
-                @include h1($base-bg-color);
+                @include h1($base-text-color);
                 padding-top: 30px;
                 text-align: right;
                 font-family: $secondary-font;
             }
         
             p {
-                @include p($base-bg-color);
+                @include p($base-text-color);
                 max-width: 500px;
                 text-align: justify;
                 line-height: 1.7;
                 margin-left: auto;
 
-                .link {
-                    color: $second-text-color;
-                    font-family: $base-font;
-                    font-weight: 300;
-                    font-size: 13px;
-                }
             }
 
             button {
@@ -54,7 +47,7 @@
             }
         
             a {
-                @include h1($base-bg-color);
+                @include h1($base-text-color);
                 font-size: 12px;
                 text-decoration: none;
                 

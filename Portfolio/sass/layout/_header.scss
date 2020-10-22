@@ -1,76 +1,71 @@
-%btn {
-    background-color: $second-text-color;
-    border: 1px solid $second-text-color;
-    color: $base-bg-color;
-    display: block;
-    margin-left: auto;
-    font-family: $base-font;
-    padding: 10px;
-    transition: all .35s;
-
-    &:focus {
-        outline: none;
-    }
-
-    &:hover {
-        background-color: $fifth-text-color;
-        border: 1px solid $fifth-text-color;
-    }
-}
-
 #main_header {
     display: none;
 }
 
 .header_full_screen {
-    z-index: 10;
     width: 100%;
     height: 100%;
-    position: absolute;
+    position: relative;
     overflow: hidden;
     opacity: 1;
     transition: all .4s;
-   
-    .black_background {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background-color: #000;
-        opacity: 0;
-        transition: all .4s;
-    }
 
     img {
         object-fit: cover;
-        // width: 100%;
-        // height: 100%;
+        height: 100%;
     }
 
-    header {
+    .container_flex {
         position: absolute;
-        top: 450px;
-        left: 10%;
-        transition: all .6s ease-in;
+        top: 40%;
+        align-items: center;
+        padding: 0 100px;
+        justify-content: space-between;
+        width: 90%;
 
-        h1 {
-            @include h1($base-bg-color);
-            font-size: 40px;
-            margin: 0;
+        header {
+    
+            h1 {
+                @include h1($base-bg-color);
+                font-size: 40px;
+                margin: 0;
+            }
+    
+            h2 {
+                @include h1 ($base-bg-color);
+                color:  $fifth-text-color;
+                font-size: 16px;
+            }
         }
+            
 
-        h2 {
-            @include h1 ($base-bg-color);
-            color:  $fifth-text-color;
-            font-size: 16px;
-        }
-    }
-        
-    button {
-        position: absolute;
-        top: 450px;
-        left: 70%;
-        @extend %btn;
-        transition: all .5s;
+
+            a {
+                @include btn($base-text-color);
+                transition: all .5s;
+                position: relative;
+                z-index: 10;
+            }
+
+            a::before {
+                box-sizing: inherit;
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: $second-text-color;
+                z-index: -1;
+                width: 0;
+                height: 100%;
+                transition: all .5s;
+            }
+
+            a:hover {
+                &::before {
+                    width: 100%;
+                }
+            }
+
     }
         
     
@@ -79,12 +74,20 @@
 
 @media screen and (max-width: 1670px) {
     .header_full_screen {
-        header {
-            top: 350px;
-        }
-        button {
-                top: 500px;
-                left: 10%;
+        
+        .container_flex {
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-wrap: wrap;
+
+            header {
+                flex-basis: 100%;
+                margin-bottom: 30px;
+            }
+
+            a {
+                @include btn($base-bg-color);
+            }
         }
         
     }

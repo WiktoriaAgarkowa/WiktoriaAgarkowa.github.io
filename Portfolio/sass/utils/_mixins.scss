@@ -11,3 +11,17 @@
     font-weight: 300;
     font-size: 12px;
 }
+
+@mixin btn ($color) {
+    border-left: 1px solid $second-text-color;
+    color: $color;
+    font-family: $base-font;
+    padding: 15px;
+    text-decoration: none;
+    transition: all .35s;
+
+    &:focus {
+        outline: none;
+    }
+
+}
