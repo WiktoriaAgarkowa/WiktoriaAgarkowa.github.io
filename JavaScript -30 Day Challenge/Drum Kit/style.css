@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    background-image: url("img/raphael-schaller-zbUvPw1wUIw-unsplash.jpg");
+    background-size: cover;
+    height: 100%;
+    position: relative;
+}
+
+
+.keys {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+}
+
+.key {
+    color: #fff;
+    font-family: 'Viga', sans-serif;
+    width: 100px;
+    padding: 20px 0;
+    text-align: center;
+    border: 1px solid #fff;
+    transition: all 0.07s;
+}
+
+.playing {
+    transform: scale(1.1);
+    border: 1px solid rgba(181,229,255,1);
+    box-shadow: 0 0 10px rgba(181,229,255,1);
+}
+
+kbd {
+    font-size: 20px;
+}
+
+
+@media screen and (max-width: 1250px) {
+    .keys {
+        width: 90%;
+    }
+
+    .key {
+        flex-basis: 30%;
+    }
+}
