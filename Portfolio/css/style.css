@@ -694,7 +694,7 @@ a:focus {
   padding: 20px;
 }
 
-#projects .project .container_flex .description p {
+#projects .project .container_flex .description .text {
   color: #131212;
   font-family: "Inconsolata", monospace;
   font-weight: 300;
@@ -705,6 +705,10 @@ a:focus {
   max-width: 700px;
   display: block;
   margin: auto;
+}
+
+#projects .project .container_flex .description ul.text {
+  padding: 0;
 }
 
 #projects .project .container_flex .description .sources {
