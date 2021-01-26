@@ -1,0 +1,24 @@
+* {
+    box-sizing: border-box;
+    font-family: $font;
+}
+
+html {
+    transition: all 0.45s;
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 1400px;
+    margin: auto;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+    text-transform: uppercase;
+    
+    &:focus {
+        outline: none;
+    }
+}

@@ -1,0 +1,21 @@
+//---UTILS---//
+@import 'utils/settings';
+@import 'utils/mixins';
+
+//---BASE---//
+@import 'base/normalize';
+@import 'base/global';
+
+//---LAYOUT---//
+@import 'layout/header';
+@import 'layout/about';
+@import 'layout/projects';
+@import 'layout/price';
+@import 'layout/contact';
+@import 'layout/footer';
+
+//---COMPONENTS---//
+@import 'components/form';
+@import 'components/slider';
+@import 'components/preloader';
+@import 'components/animations';

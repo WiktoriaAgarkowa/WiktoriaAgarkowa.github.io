@@ -1,0 +1,15 @@
+#header {
+    
+    .carousel-indicators {
+        bottom: 25%;
+        
+        li {
+            width: 10px;
+            height: 10px;
+            border-bottom: none;
+            border-top: none;
+            border-radius: 20px;
+            bottom: 50%;
+        }
+    }
+}
