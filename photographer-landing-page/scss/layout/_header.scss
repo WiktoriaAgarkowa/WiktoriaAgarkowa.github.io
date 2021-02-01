@@ -1,42 +1,57 @@
-#header {
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
+#menu {
 
     .container {
         position: relative;
-    }
 
-    nav {
-        position: absolute;
-        z-index: 10;
-        width: 1400px;
-        ul {
-            margin: 0;
-            padding: 40px 0;
-            @include flex (space-between, row, center);
+        nav {
+            position: absolute;
+            z-index: 10;
+            width: 100%;
 
-            h1 {
-            
-                text-align: center;
-                font-weight: 400;
-                text-transform: uppercase;
+            ul {
                 margin: 0;
-                font-size: $base-size*3;
-                color: $white;
-            }
+                padding: 40px 0;
+                @include flex (space-between, row, center);
+    
+                h1 {
+                
+                    text-align: center;
+                    font-weight: 400;
+                    text-transform: uppercase;
+                    margin: 0;
+                    font-size: $base-size*3;
+                    color: $white;
+                }
+    
+                .flex_item {
 
-            .flex_item {
-                li {
-                    display: inline;
-                    padding: 20px;
-                    font-size: $base-size;
-                    
-                    a {
-                        color: $white;
+                    li {
+                        display: inline;
+                        padding: 20px;
+                        font-size: $base-size;
+                        
+                        a {
+                            color: $white;
+                            text-decoration: none;
+                        }
                     }
                 }
             }
         }
     }
+
 }
+
+#header_mob {
+    height: 100vh;
+}
+
+// @media screen and (max-width: 970px) {
+//     #header_full {
+//       display: none;
+//     }
+
+//     #header_mob {
+//        position: relative;
+//     }
+// }

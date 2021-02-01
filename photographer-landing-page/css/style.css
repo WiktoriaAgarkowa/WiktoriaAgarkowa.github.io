@@ -263,23 +263,17 @@ a:focus {
   outline: none;
 }
 
-#header {
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-}
-
-#header .container {
+#menu .container {
   position: relative;
 }
 
-#header nav {
+#menu .container nav {
   position: absolute;
   z-index: 10;
-  width: 1400px;
+  width: 100%;
 }
 
-#header nav ul {
+#menu .container nav ul {
   margin: 0;
   padding: 40px 0;
   display: -webkit-box;
@@ -299,7 +293,7 @@ a:focus {
           align-items: center;
 }
 
-#header nav ul h1 {
+#menu .container nav ul h1 {
   text-align: center;
   font-weight: 400;
   text-transform: uppercase;
@@ -308,14 +302,19 @@ a:focus {
   color: #ffffff;
 }
 
-#header nav ul .flex_item li {
+#menu .container nav ul .flex_item li {
   display: inline;
   padding: 20px;
   font-size: 12px;
 }
 
-#header nav ul .flex_item li a {
+#menu .container nav ul .flex_item li a {
   color: #ffffff;
+  text-decoration: none;
+}
+
+#header_mob {
+  height: 100vh;
 }
 
 #about {
@@ -397,16 +396,62 @@ a:focus {
   color: #000000;
 }
 
-#header .carousel-indicators {
+#header_mob {
+  display: none;
+}
+
+#header_full {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#header_full .carousel-indicators {
   bottom: 25%;
 }
 
-#header .carousel-indicators li {
+#header_full .carousel-indicators li {
   width: 10px;
   height: 10px;
   border-bottom: none;
   border-top: none;
   border-radius: 20px;
   bottom: 50%;
+}
+
+@media screen and (max-width: 970px) {
+  #header_full {
+    display: none;
+  }
+  #header_mob {
+    display: block;
+    overflow-y: hidden;
+    height: 100%;
+    width: 100%;
+  }
+  #header_mob .slider {
+    -ms-scroll-snap-type: x mandatory;
+        scroll-snap-type: x mandatory;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-overflow-scrolling: touch;
+    overflow-x: scroll;
+    height: 100%;
+  }
+  #header_mob .slider div {
+    border-right: 1px solid white;
+    padding: 0;
+    width: 100%;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    scroll-snap-align: start;
+    text-align: center;
+    position: relative;
+    height: 100%;
+  }
+  #header_mob .slider div img {
+    width: 120%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
