@@ -1,0 +1,167 @@
+$font-size: 1rem;
+
+
+html {
+    font-size: $font-size;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .flex_item {
+        margin: auto;
+    }
+
+    form {
+
+        padding: 30px;
+        input[type='text'],
+        input[type='submit'],
+        button,
+        select {
+            padding: 10px;
+            border-radius: 20px;
+            border: 1px solid gray;
+            transition: all .35s;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        input.add_category {
+            width: 0;
+            padding: 0;
+            transition: all .5s;
+        }
+
+        input.open {
+            width: auto;
+            padding: 10px;
+        }
+
+        #priority {
+            display: flex;
+            flex-direction: row;
+
+            .radio {
+                padding: 10px;
+            }
+        }
+
+        input.error {
+            border: 1px solid red;
+        }
+
+        input[type='submit']:hover,
+        button:hover {
+            cursor: pointer;
+            background-color: rgb(255, 255, 255);
+        } 
+
+    }
+
+
+    #books {
+        width: 70%;
+
+        .counter {
+            text-align: center;
+            padding: 20px;
+            margin: 0 0 50px 0;
+            background-color: #fcd5ce;
+            color: #264653;
+            border-radius: 20px;
+
+            p {
+                display: inline;
+                padding: 10px;
+            }
+        }
+
+        #filter {
+            margin: 0 0 30px 0;
+
+            h1 {
+                font-size: $font-size;
+            }
+        }
+
+        table {
+            width: 100%;
+            text-align: center;
+            margin: auto;
+            padding: 20px;
+            border-collapse: collapse;
+
+            thead {
+                background-color: #fae1dd;
+
+                tr {
+                    td {
+                        padding: 10px;
+                        border: none;
+                    }
+                }
+            }
+            
+            tbody {
+
+                background-color: #f8edeb;
+
+                tr {
+                    button {
+                        padding: 10px 20px;
+                        border-radius: 20px;
+                        border: none;
+                        transition: all .35s;
+                        background-color: transparent;
+    
+                        &:hover {
+                            cursor: pointer;
+                            background-color: rgb(255, 255, 255);
+                        }
+                        &:focus {
+                            outline: none;
+                        }
+                    }
+                    td {
+                        border: none;
+                        padding: 10px;
+                        width: 20%;
+    
+                    }
+    
+                    &:focus {
+                        outline: 3px solid greenyellow;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+@media print {
+
+    button {
+        display: none;
+    }
+
+    #print_content {
+        width: 100%;
+    }
+
+    td,
+    th {
+      border: 1px solid #000;
+    }
+
+    td {
+        padding: 10px;
+        width: 20%;
+    }
+  }
