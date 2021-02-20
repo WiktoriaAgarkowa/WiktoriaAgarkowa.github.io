@@ -1,3 +1,7 @@
+#hide_menu {
+    display: none;
+}
+
 #menu {
 
     .container {
@@ -13,15 +17,6 @@
                 padding: 40px 0;
                 @include flex (space-between, row, center);
     
-                h1 {
-                
-                    text-align: center;
-                    font-weight: 400;
-                    text-transform: uppercase;
-                    margin: 0;
-                    font-size: $base-size*3;
-                    color: $white;
-                }
     
                 .flex_item {
 
@@ -46,12 +41,50 @@
     height: 100vh;
 }
 
-// @media screen and (max-width: 970px) {
-//     #header_full {
-//       display: none;
-//     }
+@media screen and (max-width: 970px) {
+    #hide_menu {
+        display: block;
+        position: absolute;
+        z-index: 20;
+        width: 100%;
 
-//     #header_mob {
-//        position: relative;
-//     }
-// }
+        i {
+            font-size: 20px;
+            position: absolute;
+            z-index: 30;
+
+            &:hover {
+                cursor: pointer;
+                color: red;
+            }
+        }
+
+        .name {
+            position: relative;
+            width: 100%;
+        }
+
+        .hide_list_menu {
+            background-color: $white;
+            height: 100%;
+            padding: 0;
+            text-align: center;
+            list-style: none;
+            overflow: hidden;
+            transition: all .45s;
+
+            .hide_menu_item {
+                padding: 20px 0;
+            }
+        }
+
+        .close {
+            height: 0%;
+        }
+
+    }
+
+    #menu {
+        display: none;
+    }
+}

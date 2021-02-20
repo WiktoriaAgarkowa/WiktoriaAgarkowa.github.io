@@ -28,10 +28,15 @@
         display: none;
     }
 
+    #header_mob, 
+    .slider,
+    div {
+        height: 100%;
+    }
+
     #header_mob {
         display: block;
         overflow-y: hidden;
-        height: 100%;
         width: 100%;
 
         .slider {
@@ -39,7 +44,6 @@
             display: flex;
             -webkit-overflow-scrolling: touch;
             overflow-x: scroll;
-            height: 100%;
     
             div {
                 border-right: 1px solid white;
@@ -49,7 +53,6 @@
                 scroll-snap-align: start;
                 text-align: center;
                 position: relative;
-                height: 100%;
 
                 img {
                     width: 120%;

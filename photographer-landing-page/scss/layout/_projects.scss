@@ -1,0 +1,61 @@
+#portfolio {
+
+    .container {
+        max-width: 100%;
+        margin: auto;
+        padding: 0;
+        .row {
+            margin: 20px 0;
+            transition: all .5s;
+            .col {
+                position: relative;
+                height: 700px;
+                overflow: hidden;
+                padding: 0;
+                
+                img {
+                    min-width: 100%;
+                    min-height: 100%;
+                    position: absolute;
+                    top: -20%;
+                    transition: all .5s;
+
+                    &:nth-child(2) {
+                        z-index: 10;
+                        opacity: 1;
+                    }
+
+                    &:hover {
+                        cursor: pointer;
+
+                        &:nth-child(2) {
+                            opacity: 0;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+
+    #video {
+        padding: 100px 0;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        
+
+        h2 {
+            font-family: $font-cyr;
+            text-transform: uppercase;
+            text-align: center;
+            padding: 30px;
+        }
+
+        video {
+            margin: auto;
+            padding: 30px;
+        }
+     
+    }
+}

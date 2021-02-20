@@ -1,0 +1,15 @@
+#price {
+    text-align: center;
+    padding: 50px;
+    
+    h1,
+    h2,
+    p {
+        font-family: $font-cyr;
+    }
+
+    h1 {
+        font-size: $base-size * 4;
+        padding: 20px;
+    }
+}
