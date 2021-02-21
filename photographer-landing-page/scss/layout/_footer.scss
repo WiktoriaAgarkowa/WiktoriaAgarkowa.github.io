@@ -1,0 +1,16 @@
+footer {
+    .container {
+            p {
+                text-align: center;
+                .email, .instagram {
+                    padding: 20px;
+                }
+
+                .instagram {
+                    text-transform: lowercase;
+                    text-decoration: none;
+                    color: black;
+                }
+            }
+    }
+}
