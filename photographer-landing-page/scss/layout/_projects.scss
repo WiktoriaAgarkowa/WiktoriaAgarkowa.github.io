@@ -17,7 +17,6 @@
                     min-width: 100%;
                     min-height: 100%;
                     position: absolute;
-                    // top: -20%;
                     transition: all .5s;
 
                     &:nth-child(2) {
@@ -39,7 +38,7 @@
     }
 
     #video {
-        padding: 100px 0;
+        padding: 100px 0 0 0;
         position: relative;
         display: flex;
         flex-direction: column;
@@ -55,7 +54,22 @@
         video {
             margin: auto;
             padding: 30px;
+            width: 40%;
         }
      
     }
+}
+
+@media screen and (max-width: 970px) {
+    #portfolio {
+        #video {
+            
+            video {
+                padding: 0;
+                margin: 30px auto;
+                width: 80%;
+            }
+        }
+    }
+
 }

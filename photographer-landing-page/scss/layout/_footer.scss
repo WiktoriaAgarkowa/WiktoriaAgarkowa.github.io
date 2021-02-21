@@ -2,14 +2,11 @@ footer {
     .container {
             p {
                 text-align: center;
-                .email, .instagram {
-                    padding: 20px;
-                }
-
-                .instagram {
+                a {
                     text-transform: lowercase;
                     text-decoration: none;
                     color: black;
+                    padding: 20px;
                 }
             }
     }

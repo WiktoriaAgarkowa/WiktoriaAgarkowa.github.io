@@ -3,7 +3,7 @@
     .container {
         display: flex;
         flex-direction: row-reverse;
-        align-items: center;
+        align-items: flex-start;
         justify-content: center;
 
         header {
@@ -11,40 +11,7 @@
             h1, p {
                 font-family: $font-cyr;
                 text-align: center;
-            }
-        }
-
-        form {
-            width: 100%;
-            flex-basis: 50%;
-            
-            input, textarea {
-                width: 50%;
-                margin: 10px 0;
-                border: none;
-                border-radius: 10px;
-                -webkit-box-shadow: 1px 0px 12px 0px rgba(150,150,150,0.40); 
-                box-shadow: 1px 0px 12px 0px rgba(150,150,150,0.40);
-                &:focus {
-                    outline: none;
-                }
-            }
-
-            input {
-                display: block;
-                padding: 10px 30px 10px 10px;
-            }
-
-            textarea {
-                padding: 10px 0 50px 10px;
-            }
-
-            button {
-                background-color: black;
-                color: white;
-                display: block;
-                padding: 10px;
-                border: none;
+                padding: 0 50px;
             }
         }
     }
