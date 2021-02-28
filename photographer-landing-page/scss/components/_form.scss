@@ -31,3 +31,16 @@ form {
         border: none;
     }
 }
+
+@media screen and (max-width: 840px) {
+    form {
+
+        textarea {
+            margin-bottom: 20px;
+        }
+
+        button {
+            margin: auto;
+        }
+    }
+}

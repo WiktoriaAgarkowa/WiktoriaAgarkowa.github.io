@@ -3,15 +3,71 @@
     .container {
         display: flex;
         flex-direction: row-reverse;
+        flex-wrap: wrap;
         align-items: flex-start;
         justify-content: center;
 
         header {
+            flex-basis: 50%;
             width: 45%;
             h1, p {
                 font-family: $font-cyr;
                 text-align: center;
                 padding: 0 50px;
+            }
+        }
+
+        form {
+            width: 300px;
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #contact {
+        .container {
+            header {
+                flex-basis: 50%;
+
+                p {
+                    font-size: $base-size + 2;
+                }
+            }
+
+            form {
+                flex-basis: 50%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 840px) {
+    #contact {
+        padding: 100px 20px;
+        .container {
+            header {
+                flex-basis: 100%;
+                padding: 20px 0;
+            }
+
+            form {
+                flex-basis: 70%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #contact {
+        padding: 50px 5px;
+        .container {
+            header {
+                flex-basis: 100%;
+                padding: 20px 0;
+            }
+
+            form {
+                flex-basis: 70%;
             }
         }
     }

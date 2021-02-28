@@ -19,6 +19,10 @@
         .bio {
             @include flex (space-between, row, center);
 
+            img:nth-child(2) {
+                display: none;
+            }
+
 
             div {
                 font-size: $base-size + 2;
@@ -35,7 +39,7 @@
                     padding: 10px;
                     transition: all .45s;
 
-                    &:hover {
+                    &:hover, &:active {
                         background-color: white;
                         color: $black;
                        
@@ -48,12 +52,48 @@
     }
 }
 
+
+@media screen and (max-width: 1540px) {
+    #about {
+        .container {
+            padding: 10px;
+        }
+    }
+}
+
 @media screen and (max-width: 970px) {
     #about {
         .container {
+
+            a {
+                padding: 10px;
+
+                i {
+                    font-size: $base-size * 2;
+                }
+            }
+
             .bio {
                 img:nth-child(1) {
                     display: none;
+                }
+
+                img:nth-child(2) {
+                    display: block;
+                    width: 100%;
+                }
+
+                div {
+                    width: 89%;
+                    margin: auto;
+
+                    p {
+                        margin-bottom: 45px;
+                    }
+
+                    a {
+                        margin: auto;
+                    }
                 }
             }
         }

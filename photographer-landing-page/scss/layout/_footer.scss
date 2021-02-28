@@ -11,3 +11,21 @@ footer {
             }
     }
 }
+
+@media screen and (max-width: 840px) {
+    footer {
+        .container {
+            padding: 0 0 10px 0;
+            p, a {
+                font-size: $base-size;
+                display: block;
+            }
+
+            p {
+                a {
+                    padding: 0;
+                }
+            }
+        }
+    }
+}

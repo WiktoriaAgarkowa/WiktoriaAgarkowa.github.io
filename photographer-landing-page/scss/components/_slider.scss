@@ -23,15 +23,19 @@
 
 }
 
+@media screen and (max-width: 1540px) {
+    #header_full {
+        height: auto;
+
+        .carousel-indicators {
+            bottom: 0;
+        }
+    }
+}
+
 @media screen and (max-width: 970px) {
     #header_full {
         display: none;
-    }
-
-    #header_mob, 
-    .slider,
-    div {
-        height: 100%;
     }
 
     #header_mob {
