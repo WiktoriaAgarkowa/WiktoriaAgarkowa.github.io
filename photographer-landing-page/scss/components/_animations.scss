@@ -1,0 +1,14 @@
+@keyframes opacity {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+.swipe {
+    animation-name: opacity;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;    
+}
