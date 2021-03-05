@@ -8,7 +8,9 @@ form {
         border: none;
         border-radius: 10px;
         -webkit-box-shadow: 1px 0px 12px 0px rgba(150,150,150,0.40); 
+        -moz-box-shadow: 1px 0px 12px 0px rgba(150,150,150,0.40);
         box-shadow: 1px 0px 12px 0px rgba(150,150,150,0.40);
+        
         &:focus {
             outline: none;
         }

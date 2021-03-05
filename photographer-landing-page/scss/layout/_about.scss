@@ -2,6 +2,7 @@
     padding: 10px 0 100px 0;
 
     .container {
+
         a {
             color: $black;
             text-decoration: none;
@@ -30,6 +31,15 @@
                 padding-top: 10%;
                 text-align: justify;
                 @include flex (flex-end, column, flex-end);
+
+                h1, p {
+                    font-family: $font-cyr;
+                }
+
+                h1 {
+                    font-size: $base-size *3;
+                    font-weight: 500;
+                }
 
                 a {
                     border: 1px solid $black;
@@ -87,8 +97,12 @@
                     width: 89%;
                     margin: auto;
 
+                    h1 {
+                        text-align: center;
+                    }
+
                     p {
-                        margin-bottom: 45px;
+                        margin-bottom: 20px;
                     }
 
                     a {

@@ -52,6 +52,10 @@
             font-size: $base-size;
         }
 
+        .swipe_left {
+            left: 10%;
+        }
+
         .slider {
             scroll-snap-type: x mandatory;  
             display: flex;

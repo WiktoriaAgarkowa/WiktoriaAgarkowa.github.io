@@ -12,6 +12,14 @@
                 height: 700px;
                 overflow: hidden;
                 padding: 0;
+
+                p {
+                    z-index: 40;
+                    position: absolute;
+                    color: $white;
+                    bottom: 0;
+                    right: 10%;
+                }
                 
                 img {
                     min-width: 100%;
@@ -74,7 +82,7 @@
 
 }
 
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 600px) {
     #portfolio {
         .container {
             .row {
@@ -82,6 +90,15 @@
                 .col-12 {
                     height: 400px;
                     margin: 3px 0;
+                }
+            }
+
+            .row:nth-child(1) {
+                .col-12:nth-child(1) {
+                    img {
+                        left: -200px;
+                        top: -50px;
+                    }
                 }
             }
         }

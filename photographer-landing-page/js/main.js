@@ -1,8 +1,9 @@
 let close = document.getElementById('close'); 
-let menu = document.querySelector('.hide_list_menu');
-let menuItems = document.getElementsByClassName('hide_menu_item')
+let menuItems = document.getElementsByClassName('hide_menu_item');
 
-const hideMenu = () => {
+function hideMenu() {
+    let menu = document.querySelector('.hide_list_menu');
+
     menu.classList.toggle('close_menu');
     close.classList.toggle('open');
 }
@@ -15,16 +16,21 @@ for (let item of menuItems) {
 
 function swipe () {
     let mobileSlider = document.querySelector('.slider')
-    console.log(mobileSlider.children[1])
+    let hideMenuContainer = document.getElementById('hide_menu')
 
     isFullyVisible(mobileSlider.children[0])
 
-    // if(isFullyVisible(mobileSlider.children[2])) {
-    //     console.log('koniec')
-    // } else if(isFullyVisible(mobileSlider.children[0])) {
-    //     console.log('początek')
-    // }
+    for(let i=0; i<mobileSlider.children.length; i++){
+        if(isPartiallyVisible(mobileSlider.children[i])) {
+            hideMenuContainer.style.backgroundColor = 'transparent';
+        } else {
+            hideMenuContainer.style.backgroundColor = 'rgba(0,0,0,0.7)';
+        }
+    }
 }
+
+window.addEventListener('scroll', swipe, false)
+
 swipe();
 
 function isPartiallyVisible(el) {
@@ -43,9 +49,9 @@ function isFullyVisible(el) {
     var top = elementBoundary.top;
     var bottom = elementBoundary.bottom;
 
-    console.log(top)
-    console.log(bottom)
-    console.log(window.innerHeight)
+    // console.log(top)
+    // console.log(bottom)
+    // console.log(window.innerHeight)
 
     return ((top >= 0) && (bottom <= window.innerHeight));
 

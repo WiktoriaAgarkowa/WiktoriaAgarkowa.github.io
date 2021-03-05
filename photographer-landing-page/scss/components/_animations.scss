@@ -7,8 +7,24 @@
     }
 }
 
+@keyframes loading {
+    0%, 100% {
+        letter-spacing: normal;
+    }
+    50% {
+        letter-spacing: 2ch;
+    }
+}
+
 .swipe {
     animation-name: opacity;
     animation-duration: 4s;
     animation-iteration-count: infinite;    
+}
+
+.load {
+    animation-name: loading;
+    animation-timing-function: ease-in-out;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
 }
