@@ -1,4 +1,5 @@
 let close = document.getElementById('close'); 
+let menuContainer = document.getElementById('hide_menu'); 
 let menuItems = document.getElementsByClassName('hide_menu_item');
 
 function hideMenu() {
@@ -8,7 +9,7 @@ function hideMenu() {
     close.classList.toggle('open');
 }
 
-close.addEventListener('click', hideMenu)
+menuContainer.addEventListener('click', hideMenu)
 
 for (let item of menuItems) {
     item.addEventListener('click', hideMenu)
