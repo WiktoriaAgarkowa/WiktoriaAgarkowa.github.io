@@ -1,5 +1,5 @@
 #portfolio {
-
+    position: relative;
     .container {
         max-width: 100%;
         margin: auto;
@@ -43,6 +43,23 @@
 
             }
         }
+    }
+
+    a {
+        
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        color: $white;
+        background-color: $black;
+        border: 1px solid $black;
+        padding: 20px 20px;
+        transition: all .4s;
+    }
+
+    a:hover, a:active {
+        background-color: transparent;
+        color: $black;
     }
 
     #video {

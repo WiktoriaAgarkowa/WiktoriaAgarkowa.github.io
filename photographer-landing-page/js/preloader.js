@@ -7,13 +7,13 @@ window.onload = function () {
       body.classList.remove('loaded_hiding');
 }, 500);
 }
-let video = document.querySelector('video')
+// let video = document.querySelector('video')
 
-function playVideo (e) {
-    if(video.readyState >= 3) {
-        console.log('wideo gra')
-    }
-}
+// function playVideo (e) {
+//     if(video.readyState >= 3) {
+//         console.log('wideo gra')
+//     }
+// }
 
-video.addEventListener('loadeddata', playVideo)
+// video.addEventListener('loadeddata', playVideo)
 

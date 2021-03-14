@@ -556,6 +556,10 @@ a:focus {
   }
 }
 
+#portfolio {
+  position: relative;
+}
+
 #portfolio .container {
   max-width: 100%;
   margin: auto;
@@ -602,6 +606,23 @@ a:focus {
 
 #portfolio .container .row .col-12 img:hover:nth-child(2), #portfolio .container .row .col-12 img:active:nth-child(2) {
   opacity: 0;
+}
+
+#portfolio a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #000000;
+  border: 1px solid #000000;
+  padding: 20px 20px;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+}
+
+#portfolio a:hover, #portfolio a:active {
+  background-color: transparent;
+  color: #000000;
 }
 
 #portfolio #video {
