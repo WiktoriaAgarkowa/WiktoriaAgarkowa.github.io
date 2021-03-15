@@ -67,7 +67,7 @@ function headingShow() {
   let sources = document.getElementsByClassName('sources');
   let arrowUp = document.querySelector('.arrow_up')
 
-  
+
   if(isPartiallyVisible(text[0]) == false && isPartiallyVisible(header) == false) {
     arrowUp.style.display = 'block';
   } else {
@@ -75,7 +75,7 @@ function headingShow() {
   }
 
 
-  if(isPartiallyVisible(sources[1])) {
+  if(isPartiallyVisible(sources[1]) || isPartiallyVisible(sources[3])) {
 
     html.classList.add('black');
 
