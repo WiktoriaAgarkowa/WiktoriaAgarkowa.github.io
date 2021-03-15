@@ -11,11 +11,6 @@ function hideMenu() {
 
 menuContainer.addEventListener('click', hideMenu)
 
-// for (let item of menuItems) {
-//     item.addEventListener('click', function(e){
-//         console.log('e.target')
-//     })
-// }
 
 function swipe () {
     let mobileSlider = document.querySelector('.slider')
