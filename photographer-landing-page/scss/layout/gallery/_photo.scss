@@ -1,0 +1,23 @@
+#gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    // width: 100%;
+
+    div {
+        flex-basis: 25%;
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 970px) {
+    #gallery {
+        div {
+            flex-basis: 33%;
+        }
+    }
+}
