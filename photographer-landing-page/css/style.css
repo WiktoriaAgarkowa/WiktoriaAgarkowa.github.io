@@ -857,12 +857,32 @@ footer .container p a {
 
 #gallery div img {
   width: 100%;
+  position: relative;
+}
+
+#gallery .video-container {
+  position: relative;
+  padding-bottom: 25%;
+  height: 0;
+  overflow: hidden;
+}
+
+#gallery .video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-width: 0;
+  outline-width: 0;
 }
 
 @media screen and (max-width: 970px) {
   #gallery div {
-    -ms-flex-preferred-size: 33%;
-        flex-basis: 33%;
+    -ms-flex-preferred-size: 33.3%;
+        flex-basis: 33.3%;
+  }
+  #gallery .video-container {
+    padding-bottom: 33.3%;
   }
 }
 

@@ -10,6 +10,24 @@
 
         img {
             width: 100%;
+            position: relative;
+        }
+
+    }
+
+    .video-container {
+        position: relative;
+        padding-bottom: 25%;
+        height: 0;
+        overflow: hidden;
+
+        video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            border-width: 0;
+            outline-width: 0;
         }
     }
 }
@@ -17,7 +35,11 @@
 @media screen and (max-width: 970px) {
     #gallery {
         div {
-            flex-basis: 33%;
+            flex-basis: 33.3%;
+        }
+
+        .video-container {
+            padding-bottom: 33.3%;
         }
     }
 }
